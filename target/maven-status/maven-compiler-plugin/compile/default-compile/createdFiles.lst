@@ -1,0 +1,5 @@
+com\mycompany\scannonpreview\ScannonPreview.class
+com\mycompany\scannonpreview\ui\entities\PanelCannon.class
+com\mycompany\scannonpreview\ui\Window.class
+com\mycompany\scannonpreview\utils\ResourceUtils.class
+com\mycompany\scannonpreview\ui\entities\PanelTask.class
