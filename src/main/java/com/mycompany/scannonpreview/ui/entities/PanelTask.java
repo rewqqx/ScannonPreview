@@ -2,12 +2,18 @@
 package com.mycompany.scannonpreview.ui.entities;
 
 
+import com.mycompany.scannonpreview.interfaces.Movable;
 import com.mycompany.scannonpreview.objects.Vector2D;
 
-public class PanelTask extends javax.swing.JPanel {
+import java.awt.*;
+
+public class PanelTask extends javax.swing.JPanel implements Movable {
 
 
-    private Vector2D location = new Vector2D(0, 0);
+    Vector2D size = new Vector2D(256, 128);
+
+    Vector2D speed = new Vector2D(0,1);
+    Vector2D location = new Vector2D(0,0);
 
     public PanelTask(String expression) {
         initComponents();
@@ -36,8 +42,26 @@ public class PanelTask extends javax.swing.JPanel {
         add(tExpression, new java.awt.GridBagConstraints());
     }// </editor-fold>//GEN-END:initComponents
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel tExpression;
-    // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void move() {
+        location = new Vector2D(location.x + speed.x, location.y + speed.y);
+        setLocation(location.x, location.y);
+    }
+
+    @Override
+    public Vector2D getDrawSize() {
+        return size;
+    }
+
+    @Override
+    public Vector2D getDrawLocation() {
+        return location;
+    }
+
+    @Override
+    public Component getComponent() {
+        return this;
+    }
 }

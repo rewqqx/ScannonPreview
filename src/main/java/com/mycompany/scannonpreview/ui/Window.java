@@ -2,20 +2,23 @@ package com.mycompany.scannonpreview.ui;
 
 import com.mycompany.scannonpreview.controller.PlayerController;
 import com.mycompany.scannonpreview.factory.TaskFactory;
-import com.mycompany.scannonpreview.ui.entities.PanelCannon;
+import com.mycompany.scannonpreview.ui.entities.Cannon;
 
 import javax.swing.*;
-import java.awt.*;
+
+import static com.mycompany.scannonpreview.singleton.GameHandler.getGameHandler;
 
 
 public class Window extends javax.swing.JFrame {
 
-    TaskFactory factory = new TaskFactory(this);
+    TaskFactory factory = new TaskFactory();
 
     public Window() {
         initComponents();
-        ((PanelCannon) (pCannon)).setController(new PlayerController());
+        ((Cannon) (pCannon)).setController(new PlayerController());
         factory.start();
+
+        getGameHandler().setRenderer(Render);
     }
 
     public JPanel getRenderPanel(){
@@ -28,7 +31,7 @@ public class Window extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         Render = new javax.swing.JPanel();
-        pCannon = new PanelCannon();
+        pCannon = new Cannon();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 51));

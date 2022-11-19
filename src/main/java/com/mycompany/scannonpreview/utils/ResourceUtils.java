@@ -26,6 +26,7 @@ public class ResourceUtils {
         BufferedImage dimg = new BufferedImage(size.x, size.y, BufferedImage.TYPE_INT_ARGB);
 
         Graphics2D g2d = dimg.createGraphics();
+
         g2d.drawImage(tmp, 0, 0, null);
         g2d.dispose();
 
@@ -44,10 +45,13 @@ public class ResourceUtils {
 
         int x = w / 2;
         int y = h / 2;
-        g2d.setBackground(new Color(255, 255, 255, 0));
+
         at.rotate(rads, x, y);
         g2d.setTransform(at);
+
+        g2d.setBackground(new Color(255, 255, 255, 0));
         g2d.clearRect(0, 0, w, h);
+
         g2d.drawImage(image, 0, 0, null);
         g2d.dispose();
 

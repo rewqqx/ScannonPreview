@@ -18,7 +18,7 @@ import static com.mycompany.scannonpreview.utils.ResourceUtils.*;
 /**
  * @author crewd
  */
-public class PanelCannon extends JPanel implements Controllable {
+public class Cannon extends JPanel implements Controllable {
 
     private double rotation = 0;
 
@@ -29,7 +29,7 @@ public class PanelCannon extends JPanel implements Controllable {
 
     Controller controller;
 
-    public PanelCannon() {
+    public Cannon() {
         try {
             texture = resizeImage(getBufferedImageFromFile("resources/textures/cannon.svg"), size);
         } catch (Exception e) {
