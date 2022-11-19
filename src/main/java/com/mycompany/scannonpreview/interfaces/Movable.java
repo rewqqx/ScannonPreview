@@ -1,8 +1,10 @@
 package com.mycompany.scannonpreview.interfaces;
 
 import com.mycompany.scannonpreview.objects.Vector2D;
+import com.mycompany.scannonpreview.ui.entities.Panel;
 
 import java.awt.*;
+
 
 public interface Movable {
 
@@ -13,4 +15,6 @@ public interface Movable {
     public Component getComponent();
 
     public void collide(Movable instigator);
+
+    public Panel getPanel();
 }

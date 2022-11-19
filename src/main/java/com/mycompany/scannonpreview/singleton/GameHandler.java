@@ -1,9 +1,9 @@
 package com.mycompany.scannonpreview.singleton;
 
 import com.mycompany.scannonpreview.interfaces.Movable;
+import com.mycompany.scannonpreview.ui.entities.Panel;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +13,6 @@ public class GameHandler {
     private int FRAME_RATE = 30;
 
     private List<Movable> movableList = new ArrayList<>();
-
     private JPanel renderer;
 
     private GameHandler() {
@@ -52,6 +51,17 @@ public class GameHandler {
         renderer.remove(item.getComponent());
         renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int) item.getDrawLocation().x, (int) item.getDrawLocation().y, (int) item.getDrawSize().x, (int) item.getDrawSize().y));
 
+    }
+
+    public List<Panel> getPanels() {
+        List<Panel> res = new ArrayList<>();
+        for(Movable item : movableList){
+            if(item.getPanel() != null){
+                res.add(item.getPanel());
+            }
+        }
+
+        return res;
     }
 
     public static GameHandler getGameHandler() {

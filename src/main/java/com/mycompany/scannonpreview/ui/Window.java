@@ -35,6 +35,8 @@ public class Window extends javax.swing.JFrame {
         Render = new javax.swing.JPanel();
         pCannon = new Cannon();
         pBotCanon = new Cannon();
+        tBotScore = new javax.swing.JLabel();
+        tBotScore1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 51));
@@ -81,6 +83,16 @@ public class Window extends javax.swing.JFrame {
 
         Render.add(pBotCanon, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 300, 157, 163));
 
+        tBotScore.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        tBotScore.setForeground(new java.awt.Color(50, 50, 50));
+        tBotScore.setText("Score: 100");
+        Render.add(tBotScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+
+        tBotScore1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        tBotScore1.setForeground(new java.awt.Color(50, 50, 50));
+        tBotScore1.setText("Score: 100");
+        Render.add(tBotScore1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, -1, -1));
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -98,5 +110,7 @@ public class Window extends javax.swing.JFrame {
     private javax.swing.JPanel Render;
     private javax.swing.JPanel pBotCanon;
     private javax.swing.JPanel pCannon;
+    private javax.swing.JLabel tBotScore;
+    private javax.swing.JLabel tBotScore1;
     // End of variables declaration//GEN-END:variables
 }

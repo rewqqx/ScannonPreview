@@ -18,7 +18,7 @@ public class Panel extends javax.swing.JPanel implements Movable {
 
     Color color = new Color(255, 255, 255);
 
-    private boolean activated = false;
+    public boolean activated = false;
 
     private String expression = "";
     private int reward = 0;
@@ -64,6 +64,11 @@ public class Panel extends javax.swing.JPanel implements Movable {
             activated = true;
             System.out.println("Hit: ");
         }
+    }
+
+    @Override
+    public Panel getPanel() {
+        return this;
     }
 
     @Override
