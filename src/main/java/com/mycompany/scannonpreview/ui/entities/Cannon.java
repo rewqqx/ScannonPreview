@@ -8,8 +8,7 @@ import com.mycompany.scannonpreview.interfaces.Controllable;
 import com.mycompany.scannonpreview.controller.Controller;
 import com.mycompany.scannonpreview.objects.Vector2D;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 
@@ -58,6 +57,9 @@ public class Cannon extends JPanel implements Controllable {
         if (texture == null) {
             return;
         }
+
+        g.setColor(new Color(255, 204, 51));
+        g.fillRect(0,0,getWidth(),getHeight());
 
         resizeTexture();
 
