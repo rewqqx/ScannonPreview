@@ -11,4 +11,6 @@ public interface Movable {
     public Vector2D getDrawLocation();
 
     public Component getComponent();
+
+    public void collide(Movable instigator);
 }

@@ -27,8 +27,9 @@ public class GameHandler {
                 while (true) {
                     try {
                         if (renderer != null) {
-                        moveItems();
+                            moveItems();
                             renderer.updateUI();
+                            doCollision();
                         }
                         Thread.sleep((int) (1000 / FRAME_RATE));
                     } catch (InterruptedException e) {
@@ -49,7 +50,7 @@ public class GameHandler {
 
     private void reattachMovable(Movable item) {
         renderer.remove(item.getComponent());
-        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int)item.getDrawLocation().x, (int)item.getDrawLocation().y, (int)item.getDrawSize().x, (int)item.getDrawSize().y));
+        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int) item.getDrawLocation().x, (int) item.getDrawLocation().y, (int) item.getDrawSize().x, (int) item.getDrawSize().y));
 
     }
 
@@ -63,8 +64,10 @@ public class GameHandler {
     }
 
     public void addMovable(Movable item) {
-        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int)item.getDrawLocation().x,(int) item.getDrawLocation().y, (int)item.getDrawSize().x,(int) item.getDrawSize().y));
-        movableList.add(item);
+        if (renderer != null) {
+            renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int) item.getDrawLocation().x, (int) item.getDrawLocation().y, (int) item.getDrawSize().x, (int) item.getDrawSize().y));
+            movableList.add(item);
+        }
     }
 
     public void setRenderer(JPanel panel) {
@@ -73,5 +76,38 @@ public class GameHandler {
 
     public JPanel getRenderer() {
         return renderer;
+    }
+
+    private void doCollision() {
+        for (Movable a : movableList) {
+            for (Movable b : movableList) {
+                if (!a.equals(b)) {
+                    if (checkCollide(a, b)) {
+                        a.collide(b);
+                        b.collide(a);
+                    }
+                }
+            }
+        }
+    }
+
+    private Boolean checkCollide(Movable a, Movable b) {
+        if (a.getDrawLocation().x < b.getDrawLocation().x - a.getDrawSize().x) {
+            return false;
+        }
+
+        if (a.getDrawLocation().y < b.getDrawLocation().y - a.getDrawSize().y) {
+            return false;
+        }
+
+        if (a.getDrawLocation().x > b.getDrawLocation().x + b.getDrawLocation().x) {
+            return false;
+        }
+
+        if (a.getDrawLocation().y > b.getDrawLocation().y + b.getDrawLocation().y) {
+            return false;
+        }
+
+        return true;
     }
 }

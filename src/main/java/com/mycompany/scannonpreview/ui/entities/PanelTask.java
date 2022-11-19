@@ -15,6 +15,8 @@ public class PanelTask extends javax.swing.JPanel implements Movable {
     Vector2D speed = new Vector2D(0,1);
     Vector2D location = new Vector2D(0,0);
 
+    private boolean activated = false;
+
     public PanelTask(String expression) {
         initComponents();
 
@@ -62,5 +64,13 @@ public class PanelTask extends javax.swing.JPanel implements Movable {
     @Override
     public Component getComponent() {
         return this;
+    }
+
+    @Override
+    public void collide(Movable instigator) {
+        if(!activated){
+            activated = true;
+            System.out.println("Hit: " + tExpression.getText());
+        }
     }
 }

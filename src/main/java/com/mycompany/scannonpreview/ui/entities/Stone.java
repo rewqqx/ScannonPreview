@@ -71,4 +71,9 @@ public class Stone extends JPanel implements Movable {
     public Component getComponent() {
         return this;
     }
+
+    @Override
+    public void collide(Movable instigator) {
+
+    }
 }

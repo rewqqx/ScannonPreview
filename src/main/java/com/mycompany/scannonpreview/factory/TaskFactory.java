@@ -11,7 +11,7 @@ import java.util.List;
 import static com.mycompany.scannonpreview.singleton.GameHandler.getGameHandler;
 
 public class TaskFactory {
-    private int SPAWN_RATE = 5000;
+    private int SPAWN_RATE = 6000;
 
     private List<String> expressions = new ArrayList<>();
 
