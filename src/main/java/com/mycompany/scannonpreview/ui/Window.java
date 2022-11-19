@@ -1,5 +1,6 @@
 package com.mycompany.scannonpreview.ui;
 
+import com.mycompany.scannonpreview.controller.BotController;
 import com.mycompany.scannonpreview.controller.PlayerController;
 import com.mycompany.scannonpreview.factory.TaskFactory;
 import com.mycompany.scannonpreview.ui.entities.Cannon;
@@ -16,6 +17,7 @@ public class Window extends javax.swing.JFrame {
     public Window() {
         initComponents();
         ((Cannon) (pCannon)).setController(new PlayerController());
+        ((Cannon) (pBotCanon)).setController(new BotController());
         factory.start();
 
         getGameHandler().setRenderer(Render);
@@ -32,6 +34,7 @@ public class Window extends javax.swing.JFrame {
 
         Render = new javax.swing.JPanel();
         pCannon = new Cannon();
+        pBotCanon = new Cannon();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 51));
@@ -43,7 +46,7 @@ public class Window extends javax.swing.JFrame {
         Render.setBackground(new java.awt.Color(255, 204, 0));
         Render.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pCannon.setBackground(new java.awt.Color(0, 0, 0));
+        pCannon.setBackground(new java.awt.Color(255, 204, 0));
         pCannon.setMaximumSize(new java.awt.Dimension(400, 400));
         pCannon.setMinimumSize(new java.awt.Dimension(400, 400));
         pCannon.setPreferredSize(new java.awt.Dimension(400, 400));
@@ -59,7 +62,24 @@ public class Window extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        Render.add(pCannon, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 243, 157, 163));
+        Render.add(pCannon, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 300, 157, 163));
+
+        pBotCanon.setBackground(new java.awt.Color(255, 204, 0));
+        pBotCanon.setMaximumSize(new java.awt.Dimension(400, 400));
+        pBotCanon.setMinimumSize(new java.awt.Dimension(400, 400));
+
+        javax.swing.GroupLayout pBotCanonLayout = new javax.swing.GroupLayout(pBotCanon);
+        pBotCanon.setLayout(pBotCanonLayout);
+        pBotCanonLayout.setHorizontalGroup(
+            pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pBotCanonLayout.setVerticalGroup(
+            pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Render.add(pBotCanon, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 300, 157, 163));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -76,6 +96,7 @@ public class Window extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Render;
+    private javax.swing.JPanel pBotCanon;
     private javax.swing.JPanel pCannon;
     // End of variables declaration//GEN-END:variables
 }

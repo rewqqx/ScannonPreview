@@ -1,5 +1,6 @@
 package com.mycompany.scannonpreview.factory;
 
+import com.mycompany.scannonpreview.objects.StringInt;
 import com.mycompany.scannonpreview.objects.Vector2D;
 import com.mycompany.scannonpreview.ui.entities.Panel;
 
@@ -11,7 +12,7 @@ import static com.mycompany.scannonpreview.singleton.GameHandler.getGameHandler;
 public class TaskFactory {
     private int SPAWN_RATE = 6000;
 
-    private List<String> expressions = new ArrayList<>();
+    private List<StringInt> expressions = new ArrayList<>();
 
     private Vector2D size = new Vector2D(200, 80);
 
@@ -20,9 +21,11 @@ public class TaskFactory {
     }
 
     private void generateTestExpressions() {
-        expressions.add("x+3=5");
-        expressions.add("x-1=6");
-        expressions.add("x=2");
+        expressions.add(new StringInt("x+3=5", 0));
+        expressions.add(new StringInt("x=8", 30));
+        expressions.add(new StringInt("x=5-3", -30));
+        expressions.add(new StringInt("x=1", 30));
+        expressions.add(new StringInt("x=2", -30));
     }
 
     private void tick() {
@@ -44,8 +47,8 @@ public class TaskFactory {
 
     private void spawn() {
         if (expressions.size() > 0) {
-            Panel task = new Panel(expressions.get(0), 30);
-            task.setVectorLocation(new Vector2D(500, 0));
+            Panel task = new Panel(expressions.get(0).str , expressions.get(0).val);
+            task.setVectorLocation(new Vector2D(350, 0));
             getGameHandler().addMovable(task);
 
             System.out.println("Task generated: " + expressions.get(0));

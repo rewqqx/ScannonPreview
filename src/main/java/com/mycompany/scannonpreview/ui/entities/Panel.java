@@ -81,7 +81,7 @@ public class Panel extends javax.swing.JPanel implements Movable {
             if (reward > 0) {
                 graphics.setColor(new Color(50, 200, 50));
             } else {
-                graphics.setColor(color);
+                graphics.setColor(new Color(200, 50, 50));
             }
         }
 
