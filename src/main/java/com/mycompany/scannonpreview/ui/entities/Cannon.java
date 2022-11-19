@@ -23,6 +23,8 @@ public class Cannon extends JPanel implements Controllable {
 
     private double rotation = 0;
 
+    private double relativeRolation = Math.PI / 8;
+
     Vector2D size = new Vector2D(512, 512);
     Vector2D aim = new Vector2D(0, 0);
 
@@ -60,7 +62,7 @@ public class Cannon extends JPanel implements Controllable {
         resizeTexture();
 
         Graphics2D graphic = (Graphics2D) g;
-        graphic.drawImage(rotateImage(texture, rotation), null, 0, 0);
+        graphic.drawImage(rotateImage(texture, rotation + relativeRolation), null, 0, 0);
 
     }
 

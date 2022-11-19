@@ -1,10 +1,8 @@
 package com.mycompany.scannonpreview.factory;
 
 import com.mycompany.scannonpreview.objects.Vector2D;
-import com.mycompany.scannonpreview.ui.Window;
-import com.mycompany.scannonpreview.ui.entities.PanelTask;
+import com.mycompany.scannonpreview.ui.entities.Panel;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +44,7 @@ public class TaskFactory {
 
     private void spawn() {
         if (expressions.size() > 0) {
-            PanelTask task = new PanelTask(expressions.get(0));
+            Panel task = new Panel(expressions.get(0), 30);
             task.setVectorLocation(new Vector2D(500, 0));
             getGameHandler().addMovable(task);
 
