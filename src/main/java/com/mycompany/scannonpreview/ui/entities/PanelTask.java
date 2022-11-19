@@ -47,7 +47,6 @@ public class PanelTask extends javax.swing.JPanel implements Movable {
     @Override
     public void move() {
         location = new Vector2D(location.x + speed.x, location.y + speed.y);
-        setLocation(location.x, location.y);
     }
 
     @Override

@@ -49,7 +49,7 @@ public class GameHandler {
 
     private void reattachMovable(Movable item) {
         renderer.remove(item.getComponent());
-        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints(item.getDrawLocation().x, item.getDrawLocation().y, item.getDrawSize().x, item.getDrawSize().y));
+        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int)item.getDrawLocation().x, (int)item.getDrawLocation().y, (int)item.getDrawSize().x, (int)item.getDrawSize().y));
 
     }
 
@@ -63,7 +63,7 @@ public class GameHandler {
     }
 
     public void addMovable(Movable item) {
-        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints(item.getDrawLocation().x, item.getDrawLocation().y, item.getDrawSize().x, item.getDrawSize().y));
+        renderer.add(item.getComponent(), new org.netbeans.lib.awtextra.AbsoluteConstraints((int)item.getDrawLocation().x,(int) item.getDrawLocation().y, (int)item.getDrawSize().x,(int) item.getDrawSize().y));
         movableList.add(item);
     }
 

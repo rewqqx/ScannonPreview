@@ -22,8 +22,8 @@ public class ResourceUtils {
     }
 
     public static BufferedImage resizeImage(BufferedImage image, Vector2D size) {
-        Image tmp = image.getScaledInstance(size.x, size.y, Image.SCALE_SMOOTH);
-        BufferedImage dimg = new BufferedImage(size.x, size.y, BufferedImage.TYPE_INT_ARGB);
+        Image tmp = image.getScaledInstance((int)size.x, (int)size.y, Image.SCALE_SMOOTH);
+        BufferedImage dimg = new BufferedImage((int)size.x, (int)size.y, BufferedImage.TYPE_INT_ARGB);
 
         Graphics2D g2d = dimg.createGraphics();
 

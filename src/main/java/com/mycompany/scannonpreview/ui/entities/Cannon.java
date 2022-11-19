@@ -13,6 +13,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 
+import static com.mycompany.scannonpreview.singleton.GameHandler.getGameHandler;
 import static com.mycompany.scannonpreview.utils.ResourceUtils.*;
 
 /**
@@ -82,7 +83,13 @@ public class Cannon extends JPanel implements Controllable {
         }
     }
 
+    private Vector2D calculateDirection(){
+        return new Vector2D(Math.cos(rotation), Math.sin(rotation) );
+    }
+
     @Override
     public void action() {
+        Stone stone = new Stone(new Vector2D(getLocation().x + getWidth() / 2,getLocation().y + getHeight() /2),calculateDirection());
+        getGameHandler().addMovable(stone);
     }
 }
