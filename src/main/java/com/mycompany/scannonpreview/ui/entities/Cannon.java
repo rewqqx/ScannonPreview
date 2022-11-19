@@ -10,7 +10,7 @@ import com.mycompany.scannonpreview.objects.Vector2D;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import static com.mycompany.scannonpreview.singleton.GameHandler.getGameHandler;
 import static com.mycompany.scannonpreview.utils.ResourceUtils.*;
@@ -27,9 +27,13 @@ public class Cannon extends JPanel implements Controllable {
     Vector2D size = new Vector2D(512, 512);
     Vector2D aim = new Vector2D(0, 0);
 
+    private int score = 0;
+
     BufferedImage texture = null;
 
     Controller controller;
+
+    JLabel scoreText;
 
     public Cannon() {
         try {
@@ -37,6 +41,11 @@ public class Cannon extends JPanel implements Controllable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void setScoreField(JLabel field) {
+        scoreText = field;
+        scoreText.setText("Score: " + score);
     }
 
     public void setController(Controller controller) {
@@ -59,7 +68,7 @@ public class Cannon extends JPanel implements Controllable {
         }
 
         g.setColor(new Color(255, 204, 51));
-        g.fillRect(0,0,getWidth(),getHeight());
+        g.fillRect(0, 0, getWidth(), getHeight());
 
         resizeTexture();
 
@@ -78,7 +87,7 @@ public class Cannon extends JPanel implements Controllable {
         try {
             aim = new Vector2D(location.x - (getWidth() / 2) - getLocationOnScreen().x, location.y - (getHeight() / 2) - getLocationOnScreen().y);
             if (location.x - (getWidth() / 2) - getLocationOnScreen().x < 0) {
-                updateRotation(Math.PI+aim.toAngle());
+                updateRotation(Math.PI + aim.toAngle());
             } else {
                 updateRotation(aim.toAngle());
             }
@@ -87,13 +96,20 @@ public class Cannon extends JPanel implements Controllable {
         }
     }
 
-    private Vector2D calculateDirection(){
-        return new Vector2D(Math.cos(rotation), Math.sin(rotation) );
+    private Vector2D calculateDirection() {
+        return new Vector2D(Math.cos(rotation), Math.sin(rotation));
+    }
+
+    public void addScore(int add) {
+        this.score += add;
+        System.out.println(score + " -> " + add);
+        scoreText.setText("Score: " + score);
+        scoreText.updateUI();
     }
 
     @Override
     public void action() {
-        Stone stone = new Stone(new Vector2D(getLocation().x + getWidth() / 2,getLocation().y + getHeight() /2),calculateDirection());
+        Stone stone = new Stone(this, new Vector2D(getLocation().x + getWidth() / 2, getLocation().y + getHeight() / 2), calculateDirection());
         getGameHandler().addMovable(stone);
     }
 }

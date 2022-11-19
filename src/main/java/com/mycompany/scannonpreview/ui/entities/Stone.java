@@ -19,8 +19,11 @@ public class Stone extends JPanel implements Movable {
     Vector2D location = new Vector2D(0,0);
     BufferedImage texture = null;
 
-    public Stone(Vector2D location, Vector2D speed) {
+    Cannon owner;
 
+    public Stone(Cannon owner, Vector2D location, Vector2D speed) {
+
+        this.owner = owner;
         this.speed = speed;
         this.location = new Vector2D(location.x - size.x/2, location.y-size.y/2);
 
@@ -68,13 +71,17 @@ public class Stone extends JPanel implements Movable {
     }
 
     @Override
+    public Cannon getOwner() {
+        return owner;
+    }
+
+    @Override
     public Component getComponent() {
         return this;
     }
 
     @Override
     public void collide(Movable instigator) {
-
     }
 
     @Override

@@ -17,13 +17,15 @@ public class Window extends javax.swing.JFrame {
     public Window() {
         initComponents();
         ((Cannon) (pCannon)).setController(new PlayerController());
+        ((Cannon) (pCannon)).setScoreField(tBotScore1);
         ((Cannon) (pBotCanon)).setController(new BotController());
+        ((Cannon) (pBotCanon)).setScoreField(tBotScore);
         factory.start();
 
         getGameHandler().setRenderer(Render);
     }
 
-    public JPanel getRenderPanel(){
+    public JPanel getRenderPanel() {
         return Render;
     }
 
@@ -56,12 +58,12 @@ public class Window extends javax.swing.JFrame {
         javax.swing.GroupLayout pCannonLayout = new javax.swing.GroupLayout(pCannon);
         pCannon.setLayout(pCannonLayout);
         pCannonLayout.setHorizontalGroup(
-            pCannonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+                pCannonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
         );
         pCannonLayout.setVerticalGroup(
-            pCannonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+                pCannonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
         );
 
         Render.add(pCannon, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 300, 157, 163));
@@ -73,12 +75,12 @@ public class Window extends javax.swing.JFrame {
         javax.swing.GroupLayout pBotCanonLayout = new javax.swing.GroupLayout(pBotCanon);
         pBotCanon.setLayout(pBotCanonLayout);
         pBotCanonLayout.setHorizontalGroup(
-            pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+                pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
         );
         pBotCanonLayout.setVerticalGroup(
-            pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+                pBotCanonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
         );
 
         Render.add(pBotCanon, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 300, 157, 163));

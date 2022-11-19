@@ -21,4 +21,8 @@ public class Vector2D {
         return Math.atan((double) y / (double) x);
     }
 
+    public double norm() {
+        return Math.sqrt(x * x + y * y);
+    }
+
 }

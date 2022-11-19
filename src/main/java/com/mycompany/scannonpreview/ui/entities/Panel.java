@@ -21,7 +21,7 @@ public class Panel extends javax.swing.JPanel implements Movable {
     public boolean activated = false;
 
     private String expression = "";
-    private int reward = 0;
+    public int reward = 0;
 
     public Panel(String expression, int reward) {
         this.reward = reward;
@@ -54,14 +54,20 @@ public class Panel extends javax.swing.JPanel implements Movable {
     }
 
     @Override
+    public Cannon getOwner() {
+        return null;
+    }
+
+    @Override
     public Component getComponent() {
         return this;
     }
 
     @Override
     public void collide(Movable instigator) {
-        if (!activated) {
+        if (!activated && instigator.getOwner() != null) {
             activated = true;
+            instigator.getOwner().addScore(reward);
             System.out.println("Hit: ");
         }
     }
@@ -108,7 +114,7 @@ public class Panel extends javax.swing.JPanel implements Movable {
         graphics.fillRect(a / 2, 0, width - b / 2 - a / 2, height / 2);
         graphics.fillRect(d / 2, height / 2, width - c / 2 - d / 2, height / 2 + 1);
 
-        drawCenteredString(graphics, expression, new Rectangle(0, 0, width, height), new Font("Arial", Font.BOLD , 32));
+        drawCenteredString(graphics, expression, new Rectangle(0, 0, width, height), new Font("Arial", Font.BOLD, 32));
 
 
     }
