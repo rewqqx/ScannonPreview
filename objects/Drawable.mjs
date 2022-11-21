@@ -42,4 +42,14 @@ export class Drawable {
 
     tick() {
     }
+
+    roundedRect(context, x, y, width, height, radius) {
+        context.beginPath();
+        context.moveTo(x, y + radius);
+        context.arcTo(x, y + height, x + radius, y + height, radius);
+        context.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+        context.arcTo(x + width, y, x + width - radius, y, radius);
+        context.arcTo(x, y, x, y + radius, radius);
+        context.fill();
+    }
 }

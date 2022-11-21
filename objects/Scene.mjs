@@ -1,6 +1,9 @@
+import {TaskFactory} from "../factory/TaskFactory.mjs";
+
 export class Scene {
     constructor(context) {
         this.context = context;
+        this.factory = new TaskFactory(this);
         this.items = []
     }
 
@@ -13,7 +16,6 @@ export class Scene {
         this.items.forEach(value => {
             value.draw();
         })
-        this.context.fill();
     }
 
     clearItems() {
@@ -23,6 +25,7 @@ export class Scene {
     }
 
     tick() {
+        this.factory.tick();
         this.clearItems();
 
         this.items.forEach(value => {
