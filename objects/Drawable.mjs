@@ -52,4 +52,14 @@ export class Drawable {
         context.arcTo(x, y, x, y + radius, radius);
         context.fill();
     }
+
+    drawImage(ctx, image, x, y, w, h, degrees) {
+        ctx.clearRect(x - 5, y - 5, w + 10, h + 10);
+        ctx.save();
+        ctx.translate(x + w / 2, y + h / 2);
+        ctx.rotate(degrees);
+        ctx.translate(-x - w / 2, -y - h / 2);
+        ctx.drawImage(image, x, y, w, h);
+        ctx.restore();
+    }
 }

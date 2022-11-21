@@ -1,28 +1,22 @@
 import {Scene} from './objects/Scene.mjs'
-import {Ball} from './objects/implementations/Ball.mjs'
-import {Task} from './objects/implementations/Task.mjs'
+import {Cannon} from './objects/implementations/Cannon.mjs'
+import {PlayerController} from "./controller/implementation/PlayerController.mjs";
 
 let c = document.getElementById("canvas");
 let context = canvas.getContext("2d");
-
-
-/*
-let image = new Image();
-image.onload = function () {
-    context.drawImage(image, 0, 0, 100, 100)
-}
-image.src = 'resources/stone.svg';*/
-
 
 c.width = 1920;
 c.height = 1080;
 
 let scene = new Scene(context);
 
-scene.addItem(new Ball(context, 50, 50))
-scene.addItem(new Task(context, 100, 100))
+let cannon = new Cannon(context, 0, 500);
 
-setInterval(tick, 1);
+scene.addItem(cannon);
+
+let controller = new PlayerController(cannon);
+
+setInterval(tick, 10);
 
 function tick() {
     scene.tick();

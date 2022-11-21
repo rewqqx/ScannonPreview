@@ -35,7 +35,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Projects/ScannonPreview/resources",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propDebugger",
+    "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -55,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669040685990</updated>
-      <workItem from="1669040687115" duration="10396000" />
+      <workItem from="1669040687115" duration="13420000" />
     </task>
     <servers />
   </component>
@@ -83,5 +83,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

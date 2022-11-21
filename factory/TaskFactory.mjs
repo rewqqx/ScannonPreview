@@ -4,7 +4,7 @@ export class TaskFactory {
 
     constructor(scene) {
         this.counter = 0;
-        this.counterLimit = 1000;
+        this.counterLimit = 200;
 
         this.index = 0;
 
