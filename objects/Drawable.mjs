@@ -9,15 +9,15 @@ export class Drawable {
 
 
     setSize(x, y) {
-        this.sizeX = x;
-        this.sizeY = y;
+        this.width = x;
+        this.height = y;
     }
 
     setImage(path) {
         let self = this
         let image = new Image();
         image.onload = function () {
-            self.context.drawImage(image, self.x, self.y, self.sizeX, self.sizeY);
+            self.context.drawImage(image, self.x, self.y, self.width, self.height);
             self.image = image;
             console.log(self.image.src);
         }
@@ -26,13 +26,20 @@ export class Drawable {
 
     draw() {
         try {
-            this.context.drawImage(this.image, this.x, this.y, this.sizeX, this.sizeY);
+            this.context.drawImage(this.image, this.x, this.y, this.width, this.height);
         } catch (e) {
 
         }
     }
 
+    clear() {
+        this.context.clearRect(this.x, this.y, this.width, this.height);
+    }
+
     getName() {
         return 'drawable'
+    }
+
+    tick() {
     }
 }

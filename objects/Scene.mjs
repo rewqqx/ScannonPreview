@@ -9,10 +9,26 @@ export class Scene {
     }
 
     drawItems() {
+        this.context.beginPath();
         this.items.forEach(value => {
-            console.log(value.getName());
             value.draw();
         })
         this.context.fill();
+    }
+
+    clearItems() {
+        this.items.forEach(value => {
+            value.clear();
+        })
+    }
+
+    tick() {
+        this.clearItems();
+
+        this.items.forEach(value => {
+            value.tick();
+        })
+
+        this.drawItems();
     }
 }

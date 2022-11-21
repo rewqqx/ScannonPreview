@@ -22,4 +22,8 @@ let scene = new Scene(context);
 scene.addItem(new Ball(context, 50, 50))
 scene.addItem(new Task(context, 100, 100))
 
-scene.drawItems();
+setInterval(tick, 1);
+
+function tick() {
+    scene.tick();
+}
