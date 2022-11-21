@@ -2,13 +2,17 @@ import {Drawable} from "../Drawable.mjs";
 
 export class Cannon extends Drawable {
 
-    constructor(context, x, y) {
+    constructor(context, scene, x, y) {
         super(context, x, y);
 
+        this.scene = scene;
+
         this.rotation = 0;
-        this.relativeRotation = Math.PI + Math.PI / 8;
+        this.relativeRotation = Math.PI;
 
         this.setLookAtLocation(0, 0);
+
+        this.setSize(196, 196);
 
         this.setImage('resources/cannon.svg')
     }
@@ -21,8 +25,8 @@ export class Cannon extends Drawable {
     }
 
     calculateAngle() {
-        let x = this.x - this.width / 2 - this.targetX;
-        let y = this.y - this.height / 2 - this.targetY;
+        let x = this.x  - this.targetX;
+        let y = this.y  - this.targetY;
 
         let angle = Math.atan(y / x);
 
@@ -41,4 +45,7 @@ export class Cannon extends Drawable {
         }
     }
 
+    action() {
+
+    }
 }

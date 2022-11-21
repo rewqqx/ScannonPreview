@@ -8,9 +8,17 @@ export class PlayerController extends Controller {
         onmousemove = (event) => {
             this.mouseMoveEvent(event);
         };
+
+        onmousedown = (event) => {
+            this.mouseClickEvent(event)
+        }
     }
 
     mouseMoveEvent(event) {
         this.controllable.setLookAtLocation(event.x, event.y);
+    }
+
+    mouseClickEvent(event) {
+        this.controllable.action();
     }
 }

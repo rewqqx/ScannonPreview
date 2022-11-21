@@ -10,7 +10,7 @@ c.height = 1080;
 
 let scene = new Scene(context);
 
-let cannon = new Cannon(context, 0, 500);
+let cannon = new Cannon(context, scene, 0, 500);
 
 scene.addItem(cannon);
 
