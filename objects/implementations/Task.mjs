@@ -27,6 +27,10 @@ export class Task extends Drawable {
         this.context.fillText(this.text, this.x + 50, this.y + 50);
     }
 
+    clear() {
+        this.context.clearRect(this.x, this.y, this.width, this.height);
+    }
+
     getName() {
         return 'task'
     }

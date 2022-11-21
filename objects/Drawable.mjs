@@ -26,14 +26,14 @@ export class Drawable {
 
     draw() {
         try {
-            this.context.drawImage(this.image, this.x, this.y, this.width, this.height);
+            this.context.drawImage(this.image, this.x - this.width / 2, this.y - this.height / 2, this.width, this.height);
         } catch (e) {
 
         }
     }
 
     clear() {
-        this.context.clearRect(this.x, this.y, this.width, this.height);
+        this.context.clearRect(this.x - this.width / 2 - 2, this.y - this.height / 2 - 2, this.width + 4, this.height + 4);
     }
 
     getName() {

@@ -5,10 +5,14 @@ export class Ball extends Drawable {
     constructor(context, x, y) {
         super(context, x, y);
 
-        this.speedX = 0;
-        this.speedY = 0;
+        this.setSpeed(0, 0);
 
         this.setImage('resources/stone.svg')
+    }
+
+    setSpeed(x, y) {
+        this.speedX = x;
+        this.speedY = y;
     }
 
     getName() {

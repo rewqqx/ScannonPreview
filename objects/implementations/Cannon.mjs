@@ -1,4 +1,5 @@
 import {Drawable} from "../Drawable.mjs";
+import {Ball} from "./Ball.mjs";
 
 export class Cannon extends Drawable {
 
@@ -25,8 +26,8 @@ export class Cannon extends Drawable {
     }
 
     calculateAngle() {
-        let x = this.x  - this.targetX;
-        let y = this.y  - this.targetY;
+        let x = this.x - this.targetX;
+        let y = this.y - this.targetY;
 
         let angle = Math.atan(y / x);
 
@@ -45,7 +46,19 @@ export class Cannon extends Drawable {
         }
     }
 
-    action() {
 
+    action() {
+        let ball = new Ball(this.context, this.x + this.width / 2, this.y + this.height / 2);
+
+        let x = this.targetX - this.x;
+        let y = this.targetY - this.y;
+
+        let speed = 5;
+
+        let norm = Math.sqrt(x * x + y * y);
+
+        ball.setSpeed(x * speed / norm, y * speed / norm);
+
+        this.scene.addItem(ball);
     }
 }
