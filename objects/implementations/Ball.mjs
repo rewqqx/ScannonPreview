@@ -1,4 +1,5 @@
 import {Drawable} from "../Drawable.mjs";
+import {Collision} from "../Collision.mjs";
 
 export class Ball extends Drawable {
 
@@ -7,12 +8,11 @@ export class Ball extends Drawable {
 
         this.setSpeed(0, 0);
 
-        this.setImage('resources/stone.svg')
-    }
+        this.collision = new Collision('circle', this);
+        this.collision.setRadius(this.width);
+        this.collision.setOffset(32, 32);
 
-    setSpeed(x, y) {
-        this.speedX = x;
-        this.speedY = y;
+        this.setImage('resources/stone.svg')
     }
 
     getName() {

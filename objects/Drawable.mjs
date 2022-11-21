@@ -13,6 +13,11 @@ export class Drawable {
         this.height = y;
     }
 
+    setSpeed(x, y) {
+        this.speedX = x;
+        this.speedY = y;
+    }
+
     setImage(path) {
         let self = this
         let image = new Image();
@@ -41,6 +46,10 @@ export class Drawable {
     }
 
     tick() {
+    }
+
+    collideAction() {
+
     }
 
     roundedRect(context, x, y, width, height, radius) {

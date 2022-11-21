@@ -1,22 +1,26 @@
 import {Drawable} from "../Drawable.mjs";
+import {Collision} from "../Collision.mjs";
 
 export class Task extends Drawable {
 
     constructor(context, x, y) {
         super(context, x, y);
 
-        this.setSize(300, 150);
+        this.isCollided = false;
 
-        this.speedX = 0;
-        this.speedY = 1;
+        this.setSize(300, 150);
+        this.setSpeed(0, 1);
+
+        this.collision = new Collision('rectangle', this);
+        this.collision.setSize(300, 150);
+        this.collision.setOffset(150, 75);
 
         this.color = 'grey'
-
         this.text = 'x + 5 = 10'
     }
 
     draw() {
-        this.context.fillStyle = this.color
+        this.context.fillStyle = this.selectBorderColor();
         this.roundedRect(this.context, this.x, this.y, this.width, this.height, 10);
 
         this.context.fillStyle = 'white'
@@ -46,5 +50,21 @@ export class Task extends Drawable {
 
     setText(text) {
         this.text = text;
+    }
+
+    selectBorderColor() {
+        if (!this.isCollided) {
+            return 'grey';
+        }
+
+        if (this.isCollided) {
+            return 'green';
+        }
+    }
+
+    collideAction() {
+        if (!this.isCollided) {
+            this.isCollided = true;
+        }
     }
 }
