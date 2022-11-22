@@ -12,7 +12,7 @@ export class Ball extends Drawable {
         this.collision.setRadius(this.width);
         this.collision.setOffset(32, 32);
 
-        this.setImage('resources/stone.svg')
+        this.setImage('scripts/resources/stone.svg')
     }
 
     getName() {
