@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Controller.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/implementation/PlayerController.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/TaskFactory.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/Collision.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/Drawable.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/Scene.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/implementations/Ball.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/implementations/Cannon.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/implementations/Task.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cannon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stone.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +65,7 @@
       <recent name="D:\Projects\ScannonPreview\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="D:\Projects\ScannonPreview\objects\implementations" />
     </key>
   </component>
@@ -79,7 +89,7 @@
       <updated>1669040685990</updated>
       <workItem from="1669040687115" duration="14674000" />
       <workItem from="1669056923243" duration="4972000" />
-      <workItem from="1669133575154" duration="1754000" />
+      <workItem from="1669133575154" duration="1930000" />
     </task>
     <servers />
   </component>
@@ -101,7 +111,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/objects/Collision.mjs</url>
+          <url>file://$PROJECT_DIR$/scripts/objects/Collision.mjs</url>
           <line>56</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
