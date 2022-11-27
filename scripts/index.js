@@ -1,12 +1,15 @@
+
+
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
 import {PlayerController} from "./controller/implementation/PlayerController.mjs";
 
-let c = document.getElementById("canvas");
+let can = document.getElementById("canvas");
 let context = canvas.getContext("2d");
+can.style.display = "none";
 
-c.width = 1920;
-c.height = 1080;
+can.width = 1920;
+can.height = 1080;
 
 let scene = new Scene(context);
 
