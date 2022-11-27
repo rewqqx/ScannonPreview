@@ -25,11 +25,11 @@ export class Task extends Drawable {
 
         this.context.fillStyle = 'black'
         this.context.font = '48px serif';
-        this.context.fillText(this.text, this.x + 50, this.y + 50);
+        this.context.fillText(this.text, this.x + 25, this.y + this.height / 2 + 12);
     }
 
     clear() {
-        this.context.clearRect(this.x, this.y, this.width, this.height);
+        this.context.clearRect(this.x - 1, this.y - 1, this.width + 2, this.height + 2);
     }
 
     getName() {
@@ -48,6 +48,12 @@ export class Task extends Drawable {
     setData(data) {
         this.data = data;
         this.text = data.expression;
+
+        this.context.font = '48px serif';
+
+        const metrics = this.context.measureText(this.text);
+
+        this.setSize(metrics.width + 50, 100);
     }
 
     selectBorderColor() {

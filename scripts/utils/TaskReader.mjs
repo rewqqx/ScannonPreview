@@ -1,4 +1,4 @@
-import {Task} from "../objects/Task.mjs";
+import {STask} from "../objects/Task.mjs";
 
 export function readTaskFromFile(path) {
     let result = [];
@@ -13,7 +13,7 @@ export function readTaskFromFile(path) {
 
                 for (let i = 0; i < sequence.length; i++) {
                     let node = sequence[i];
-                    let task = new Task();
+                    let task = new STask();
 
                     task.setExpression(node.unicode);
                     task.setReward(task.scoreForHit);
