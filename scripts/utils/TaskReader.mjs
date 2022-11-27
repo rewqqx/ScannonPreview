@@ -1,0 +1,29 @@
+import {Task} from "../objects/Task.mjs";
+
+export function readTaskFromFile(path) {
+    let result = [];
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+                let sequence = json.sequence;
+
+                for (let i = 0; i < sequence.length; i++) {
+                    let node = sequence[i];
+                    let task = new Task();
+
+                    task.setExpression(node.unicode);
+                    task.setReward(task.scoreForHit);
+                    task.setPunishment(task.scoreForSkip);
+
+                    result.push(task);
+                }
+            }
+        }
+    }
+    request.send(null);
+    return result;
+}

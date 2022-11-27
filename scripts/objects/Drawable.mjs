@@ -52,6 +52,7 @@ export class Drawable {
 
     }
 
+
     roundedRect(context, x, y, width, height, radius) {
         context.beginPath();
         context.moveTo(x, y + radius);
@@ -62,13 +63,17 @@ export class Drawable {
         context.fill();
     }
 
-    drawImage(ctx, image, x, y, w, h, degrees) {
-        ctx.clearRect(x, y, w, h);
-        ctx.save();
-        ctx.translate(x + w / 2, y + h / 2);
-        ctx.rotate(degrees);
-        ctx.translate(-x - w / 2, -y - h / 2);
-        ctx.drawImage(image, x, y, w, h);
-        ctx.restore();
+    // TODO: Rename function and arguments:
+    // degrees -> rotateAngleInDegrees
+    // drawImage -> transformAndDraw
+    // h,w,x,y
+    drawImage(context, image, x, y, w, h, degrees) {
+        context.clearRect(x, y, w, h);
+        context.save();
+        context.translate(x + w / 2, y + h / 2);
+        context.rotate(degrees);
+        context.translate(-x - w / 2, -y - h / 2);
+        context.drawImage(image, x, y, w, h);
+        context.restore();
     }
 }

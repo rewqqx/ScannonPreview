@@ -1,6 +1,7 @@
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
 import {PlayerController} from "./controller/implementation/PlayerController.mjs";
+import {readTaskFromFile} from "./utils/TaskReader.mjs";
 
 let c = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -21,3 +22,5 @@ setInterval(tick, 10);
 function tick() {
     scene.tick();
 }
+
+console.log(tasks);

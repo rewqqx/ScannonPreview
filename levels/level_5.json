@@ -1,0 +1,69 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 8 / 2 = 370 / 5"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 16 = 370"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "32 / 16 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "2 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 5 * 2"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 10"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 37"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "2*d + 12*d \u2013 8 = 37 \u2013 15"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "-2*d + 12*d \u2013 8 = 37 \u2013 15"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "-2*d + 12*d  = 37 \u2013 15 + 8"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "10*d  = 40"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "10*d  = 30"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "3 = d"
+    }
+  ]
+}

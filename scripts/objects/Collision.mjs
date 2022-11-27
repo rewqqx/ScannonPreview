@@ -32,6 +32,9 @@ export class Collision {
         }
     }
 
+
+    // TODO: Квадрат с квадратом не нужен, и круг с кругом не нужен
+
     collideBox(collision) {
         if (collision.type === 'circle') {
             let x = Math.abs(collision.drawable.x + collision.offsetX - this.drawable.x - this.offsetX);

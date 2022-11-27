@@ -22,10 +22,11 @@ export class Cannon extends Drawable {
         this.targetX = x;
         this.targetY = y;
 
-        this.calculateAngle();
+        this.calculateAngleByLookAtPoint();
     }
 
-    calculateAngle() {
+
+    calculateAngleByLookAtPoint() {
         let x = this.x - this.targetX;
         let y = this.y - this.targetY;
 

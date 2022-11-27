@@ -3,7 +3,7 @@ import {TaskFactory} from "../factory/TaskFactory.mjs";
 export class Scene {
     constructor(context) {
         this.context = context;
-        this.factory = new TaskFactory(this);
+        this.factory = new TaskFactory(this, "./levels/level_0.json");
         this.items = []
     }
 

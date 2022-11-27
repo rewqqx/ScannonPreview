@@ -1,0 +1,69 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "630 / (4*y \u2013 5 \u2013 9 + 2*y) \u2013 56 = 7"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "630 \u2013 56 = 7*(4*y \u2013 5 \u2013 9 + 2*y)"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "630 / (4*y \u2013 5 \u2013 9 + 2*y) = 63"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "630 * 4*y \u2013 5 \u2013 9 + 2*y = 63"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "630 = 63 * (4*y \u2013 5 \u2013 9 + 2*y)"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "630 = 63*4*y \u2013 5 \u2013 9 + 2*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "630 / 63 = 4*y \u2013 5 \u2013 9 + 2*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "10 = 4*y \u2013 5 \u2013 9 + 2*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "10 + 5 = 4*y \u2013 9 + 2*y"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "10 + 5 \u2013 9 = 4*y + 2*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "10 + 5 + 9 = 4*y + 2*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "24 = 6*y"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "4 = y"
+    }
+  ]
+}

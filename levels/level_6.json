@@ -1,0 +1,44 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "5*(с + 6 * с) = 2*с - 12 + 78"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "5*с + 6*с = 2*с \u2013 12 + 78"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "5*с + 30*с = 2*с \u2013 12 + 78"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "5*с + 30*с + 2*с = 12 + 78"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "5*с + 30*с - 2*с = -12 + 78"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "33*с = 66"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "3 = с"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "2 = с"
+    }
+  ]
+}

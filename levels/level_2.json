@@ -1,0 +1,49 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "20 \u2013 d*7 \u2013 12 \u2013 d*5 + d + 7"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "20 \u2013 7*d \u2013 6*d \u2013 12 + 7"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "20 \u2013 7*d \u2013 4*d + 5"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "20 \u2013 7*d \u2013 4*d \u2013 12 + 7"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "20 \u2013 7*d \u2013 4*d \u2013 5"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "20 \u2013 3*d \u2013 5"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "20 \u2013 11*d \u2013 5"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "15 \u2013 11*d"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "4*d"
+    }
+  ]
+}

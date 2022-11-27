@@ -1,0 +1,44 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "61-m*5-m-16+2*m"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "61-5*m -16 + m"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "61-5*m + 2*m \u2013 m \u2013 16"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "35 \u2013 5*m + m"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "61 \u2013 5*m + m \u2013 16"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "61 \u2013 4*m \u2013 16"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "55 \u2013 4*m"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "45 \u2013 4*m"
+    }
+  ]
+}

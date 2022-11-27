@@ -14,9 +14,6 @@ export class Task extends Drawable {
         this.collision = new Collision('rectangle', this);
         this.collision.setSize(300, 150);
         this.collision.setOffset(150, 75);
-
-        this.color = 'grey'
-        this.text = 'x + 5 = 10'
     }
 
     draw() {
@@ -48,8 +45,9 @@ export class Task extends Drawable {
         this.y += this.speedY;
     }
 
-    setText(text) {
-        this.text = text;
+    setData(data) {
+        this.data = data;
+        this.text = data.expression;
     }
 
     selectBorderColor() {

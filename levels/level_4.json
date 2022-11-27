@@ -1,0 +1,59 @@
+{
+  "sequence": [
+    {
+      "scoreForHit": 0,
+      "scoreForSkip": 0,
+      "unicode": "320 * (78 \u2013 5*x \u2013 2*x) / 2 / 8 = 440"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "320 * (78 \u2013 5*x \u2013 2*x) / 16 = 440"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "20 * (78 \u2013 5*x \u2013 2*x) = 440"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "20 * 78 \u2013 5*x \u2013 2*x = 440"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "78 \u2013 5*x \u2013 2*x = 440 / 20"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "78 \u2013 5*x \u2013 2*x = 20"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "78 \u2013 5*x \u2013 2*x = 22"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "78 \u2013 7*x = 22"
+    },
+    {
+      "scoreForHit": 30,
+      "scoreForSkip": -30,
+      "unicode": "7*x = 100"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "56 = 7*x"
+    },
+    {
+      "scoreForHit": -30,
+      "scoreForSkip": 30,
+      "unicode": "8 = x"
+    }
+  ]
+}
