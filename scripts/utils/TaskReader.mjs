@@ -1,4 +1,4 @@
-import {STask} from "../objects/Task.mjs";
+import {STask} from "../objects/STask.mjs";
 
 export function readTaskFromFile(path) {
     let result = [];

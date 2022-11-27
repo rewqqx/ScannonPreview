@@ -15,8 +15,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,7 +55,7 @@
       <recent name="D:\Projects\ScannonPreview\objects\implementations" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.index.js">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/scannonPreview/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -64,8 +64,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
