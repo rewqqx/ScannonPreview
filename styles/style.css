@@ -30,35 +30,6 @@ body, html {
     background: transparent;
 }
 
-.button {
-    align-self: center;
-
-    margin-top: 200px;
-
-    border: none;
-    width: 250px;
-    padding: 16px 32px;
-    text-align: center;
-    stroke: none;
-    display: inline-block;
-    transition-duration: 0.4s;
-    cursor: pointer;
-
-    font-size: 75px;
-    font-family: Fredoka One;
-    background: -webkit-linear-gradient(#fcfffe, #fcfffe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #d871b8;
-}
-
-.button:hover {
-    background-image: -webkit-linear-gradient(#fa60c4, #f541b0);
-    -webkit-text-stroke-color: #ffb8ff;
-    -webkit-background-clip: text;
-}
-
 
 .header {
     margin-top: 30px;
@@ -75,19 +46,90 @@ body, html {
 
 }
 
-.level {
+.level_card {
     width: 200px;
     height: 300px;
 
     align-self: center;
 
-    border-radius: 10px;
+    border-radius: 20px;
+}
 
-    background: orange;
+.level_design {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    border-radius: 20px;
+
+    background: #ffb938;
+
+    background: repeating-linear-gradient(
+            45deg,
+            #ffb938,
+            #ffb938 20px,
+            #ffbe57 20px,
+            #ffbe57 40px
+    );
 
     border: solid;
-    border-width: 6px;
-    border-color: #fcfffe;
+    border-width: 4px;
+    border-color: #eeab33;
 
-    box-shadow: 3px 3px black;
+    outline: solid;
+    outline-width: 6px;
+    outline-color: #fcfffe;
+}
+
+.level_design:hover {
+    background: repeating-linear-gradient(
+            45deg,
+            #ec26a2,
+            #ec26a2 20px,
+            #ed4ea9 20px,
+            #ed4ea9 40px
+    );
+
+    border-color: #da2296;
+}
+
+.spliter {
+    background: #fcfffe;
+    height: 0px;
+
+    outline: solid;
+    outline-width: 4px;
+    outline-color: #fcfffe;
+}
+
+.button {
+    align-self: center;
+
+    padding-bottom: 15px;
+    padding-top: 5px;
+
+    border: none;
+    width: 250px;
+    text-align: center;
+    stroke: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    font-size: 35px;
+    font-family: Fredoka One;
+    background: -webkit-linear-gradient(#fcfffe, #fcfffe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.fit-picture {
+    padding-top: 25px;
+    width: 192px;
+    height: 192px;
+}
+
+.button:hover {
+    -webkit-text-stroke-color: #da2296;
 }
