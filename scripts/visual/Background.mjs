@@ -19,9 +19,9 @@ export class Background {
         for (let i = 1; i <= 16; i++) {
 
             if (i % 2 == 0) {
-                this.context.fillStyle = "#67befd";
+                this.context.fillStyle = "#fed934";
             } else {
-                this.context.fillStyle = "#b4e2fc";
+                this.context.fillStyle = "#fabc26";
             }
 
             this.context.rotate(-delta);
