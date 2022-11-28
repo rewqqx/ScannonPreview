@@ -65,19 +65,18 @@ body, html {
     height: 100%;
     border-radius: 20px;
 
-    background: #ffb938;
 
     background: repeating-linear-gradient(
             45deg,
-            #ffb938,
-            #ffb938 20px,
-            #ffbe57 20px,
-            #ffbe57 40px
+            #6bd7f2,
+            #6bd7f2 20px,
+            #31c8ec 20px,
+            #31c8ec 40px
     );
 
     border: solid;
     border-width: 4px;
-    border-color: #eeab33;
+    border-color: #31c8ec;
 
     outline: solid;
     outline-width: 6px;
