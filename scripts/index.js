@@ -18,6 +18,20 @@ let context = canvas.getContext("2d");
 canvas.style.display = "none";
 
 
+var f = new FontFace('FredokaOne', 'url(./fonts/FredokaOne-Regular.ttf)');
+
+f.load().then(function(font) {
+
+    // Ready to use the font in a canvas context
+    console.log('Font ready: FredokaOne');
+
+    // Add font on the html page
+    document.fonts.add(font);
+
+    context.font = '48px FredokaOne';
+});
+
+
 let scene = new Scene(context);
 
 let cannon = new Cannon(context, scene, 0, 500);

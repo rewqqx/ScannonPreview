@@ -16,8 +16,8 @@ export function readTaskFromFile(path) {
                     let task = new STask();
 
                     task.setExpression(node.unicode);
-                    task.setReward(task.scoreForHit);
-                    task.setPunishment(task.scoreForSkip);
+                    task.setReward(node.scoreForHit);
+                    task.setPunishment(node.scoreForSkip);
 
                     result.push(task);
                 }

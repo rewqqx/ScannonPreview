@@ -85,9 +85,6 @@ export class Collision {
             let x = Math.abs(collision.drawable.x + collision.offsetX - this.drawable.x - this.offsetX);
             let y = Math.abs(collision.drawable.y + collision.offsetY - this.drawable.y - this.offsetY);
 
-            console.log(collision.drawable.y  + " and " + this.drawable.y);
-            console.log(y + " of " + (collision.height / 2 + this.radius));
-
             if (x > (collision.width / 2 + this.radius)) {
                 return false;
             }

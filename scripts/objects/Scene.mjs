@@ -1,10 +1,13 @@
 import {TaskFactory} from "../factory/TaskFactory.mjs";
+import {Background} from "../visual/Background.mjs";
 
 export class Scene {
     constructor(context) {
         this.context = context;
         this.factory = new TaskFactory(this, "./levels/level_0.json");
         this.items = []
+
+        this.backgroundDrawer = new Background(context);
     }
 
     addItem(item) {
@@ -44,10 +47,12 @@ export class Scene {
     }
 
     tick() {
+
+
         this.factory.tick();
         this.collideTick();
 
-        this.clearItems();
+        this.backgroundDrawer.drawBackground();
 
         this.items.forEach(value => {
             value.tick();

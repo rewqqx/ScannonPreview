@@ -17,19 +17,21 @@ export class Task extends Drawable {
     }
 
     draw() {
-        this.context.fillStyle = this.selectBorderColor();
-        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 10);
+        this.context.fillStyle = this.selectBackgroundColor();
+
+        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
+
+        this.context.strokeStyle = this.selectBorderColor();
+        this.context.lineWidth = 6;
+        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 20, false);
 
         this.context.fillStyle = 'white'
-        this.roundedRect(this.context, this.x + 3, this.y + 3, this.width - 6, this.height - 6, 10);
-
-        this.context.fillStyle = 'black'
-        this.context.font = '48px serif';
-        this.context.fillText(this.text, this.x + 25, this.y + this.height / 2 + 12);
+        this.context.font = '48px FredokaOne';
+        this.context.fillText(this.text, this.x + 25, this.y + this.height / 2 + 16);
     }
 
     clear() {
-        this.context.clearRect(this.x - 1, this.y - 1, this.width + 2, this.height + 2);
+        this.context.clearRect(this.x - 5, this.y - 5, this.width + 10, this.height + 10);
     }
 
     getName() {
@@ -47,9 +49,14 @@ export class Task extends Drawable {
 
     setData(data) {
         this.data = data;
-        this.text = data.expression;
+        this.text = data.expression.split("*").join("∙");
 
-        this.context.font = '48px serif';
+        this.context.font = '48px FredokaOne';
+
+        this.reward = data.reward;
+        this.punishment = data.punishment;
+
+        console.log(this.reward)
 
         const metrics = this.context.measureText(this.text);
 
@@ -57,12 +64,18 @@ export class Task extends Drawable {
     }
 
     selectBorderColor() {
-        if (!this.isCollided) {
-            return 'grey';
-        }
+        return 'white';
+    }
 
+    selectBackgroundColor() {
         if (this.isCollided) {
-            return 'green';
+            if (this.reward > 0) {
+                return '#84ff00';
+            } else {
+                return '#ff00a5';
+            }
+        } else {
+            return '#32c9eb';
         }
     }
 

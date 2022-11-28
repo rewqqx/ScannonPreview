@@ -24,7 +24,6 @@ export class Drawable {
         image.onload = function () {
             self.context.drawImage(image, self.x, self.y, self.width, self.height);
             self.image = image;
-            console.log(self.image.src);
         }
         image.src = path;
     }
@@ -53,14 +52,18 @@ export class Drawable {
     }
 
 
-    roundedRect(context, x, y, width, height, radius) {
+    roundedRect(context, x, y, width, height, radius, fill) {
         context.beginPath();
         context.moveTo(x, y + radius);
         context.arcTo(x, y + height, x + radius, y + height, radius);
         context.arcTo(x + width, y + height, x + width, y + height - radius, radius);
         context.arcTo(x + width, y, x + width - radius, y, radius);
         context.arcTo(x, y, x, y + radius, radius);
-        context.fill();
+        if (fill) {
+            context.fill();
+        } else {
+            context.stroke();
+        }
     }
 
     // TODO: Rename function and arguments:
@@ -68,7 +71,6 @@ export class Drawable {
     // drawImage -> transformAndDraw
     // h,w,x,y
     drawImage(context, image, x, y, w, h, degrees) {
-        context.clearRect(x, y, w, h);
         context.save();
         context.translate(x + w / 2, y + h / 2);
         context.rotate(degrees);
