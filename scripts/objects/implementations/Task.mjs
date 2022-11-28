@@ -61,6 +61,7 @@ export class Task extends Drawable {
         const metrics = this.context.measureText(this.text);
 
         this.setSize(metrics.width + 50, 100);
+        this.collision.setSize(metrics.width + 50, 100);
     }
 
     selectBorderColor() {
@@ -79,9 +80,11 @@ export class Task extends Drawable {
         }
     }
 
-    collideAction() {
+    collideAction(instigator) {
         if (!this.isCollided) {
             this.isCollided = true;
+
+            instigator.owner.controller.addScore(this.reward);
         }
     }
 }

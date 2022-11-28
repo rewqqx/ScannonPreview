@@ -3,7 +3,7 @@ import {Collision} from "../Collision.mjs";
 
 export class Ball extends Drawable {
 
-    constructor(context, x, y) {
+    constructor(context, x, y, owner) {
         super(context, x, y);
 
         this.setSpeed(0, 0);
@@ -13,6 +13,8 @@ export class Ball extends Drawable {
         this.collision.setOffset(32, 32);
 
         this.setImage('scripts/resources/stone.svg')
+
+        this.owner = owner;
     }
 
     getName() {

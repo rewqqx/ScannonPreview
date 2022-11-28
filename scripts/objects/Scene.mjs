@@ -36,8 +36,8 @@ export class Scene {
 
                     if (collisionA !== undefined && collisionB !== undefined) {
                         if (collisionA.collide(collisionB) && collisionB.collide(collisionA)) {
-                            collisionA.collideAction();
-                            collisionB.collideAction();
+                            collisionA.collideAction(collisionB.drawable);
+                            collisionB.collideAction(collisionA.drawable);
                         }
                     }
                 }

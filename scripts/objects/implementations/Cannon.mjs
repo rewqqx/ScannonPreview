@@ -1,5 +1,7 @@
 import {Drawable} from "../Drawable.mjs";
 import {Ball} from "./Ball.mjs";
+import {PlayerController} from "../../controller/implementation/PlayerController.mjs";
+import {Score} from "./Score.js";
 
 export class Cannon extends Drawable {
 
@@ -16,6 +18,14 @@ export class Cannon extends Drawable {
         this.setSize(196, 196);
 
         this.setImage('scripts/resources/cannon.svg')
+    }
+
+    setController(controller) {
+        if (controller === "player") {
+            this.controller = new PlayerController(this);
+        }
+
+        this.score = new Score(this.context, 50, 30, this.controller);
     }
 
     setLookAtLocation(x, y) {
@@ -45,11 +55,15 @@ export class Cannon extends Drawable {
         } catch (e) {
 
         }
+
+        if (this.score !== undefined) {
+            this.score.draw();
+        }
     }
 
 
     action() {
-        let ball = new Ball(this.context, this.x + this.width / 2, this.y + this.height / 2);
+        let ball = new Ball(this.context, this.x + this.width / 2, this.y + this.height / 2, this);
 
         let x = this.targetX - this.x;
         let y = this.targetY - this.y;

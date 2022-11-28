@@ -20,8 +20,8 @@ export class Collision {
         this.height = y;
     }
 
-    collideAction() {
-        this.drawable.collideAction();
+    collideAction(instigator) {
+        this.drawable.collideAction(instigator);
     }
 
     collide(collision) {

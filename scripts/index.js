@@ -33,12 +33,11 @@ f.load().then(function(font) {
 
 
 let scene = new Scene(context);
+let cannon = new Cannon(context, scene, 75, 650);
+cannon.setController("player");
 
-let cannon = new Cannon(context, scene, 0, 500);
 
 scene.addItem(cannon);
-let controller = new PlayerController(cannon);
-
 let gameStarted = false;
 
 setInterval(tick, 10);
