@@ -30,7 +30,7 @@ export class Cannon extends Drawable {
             this.controller = new BotController(this);
         }
 
-        this.score = new Score(this.context, 50, 30, this.controller);
+        this.score = new Score(this.context, this.x, 30, this.controller);
     }
 
     tick(){
