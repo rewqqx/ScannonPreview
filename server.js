@@ -9,7 +9,7 @@ const host = '0.0.0.0';
 // приложение
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/static'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');

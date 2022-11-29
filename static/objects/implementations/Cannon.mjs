@@ -15,7 +15,7 @@ export class Cannon extends Drawable {
 
         this.setSize(196, 196);
 
-        this.setImage('scripts/resources/cannon.svg')
+        this.setImage('/resources/cannon.svg')
     }
 
     setLookAtLocation(x, y) {

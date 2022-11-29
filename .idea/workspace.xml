@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="" />
+    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/controller/Controller.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/controller/Controller.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/controller/implementation/PlayerController.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/factory/TaskFactory.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/factory/TaskFactory.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Collision.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/Collision.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Drawable.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/Drawable.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/Scene.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Ball.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/implementations/Ball.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Cannon.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/implementations/Cannon.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/static/objects/implementations/Task.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/resources/cannon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/resources/cannon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/resources/stone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/resources/stone.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +89,7 @@
       <updated>1669040685990</updated>
       <workItem from="1669040687115" duration="14674000" />
       <workItem from="1669056923243" duration="4972000" />
-      <workItem from="1669133575154" duration="1930000" />
+      <workItem from="1669133575154" duration="2621000" />
     </task>
     <servers />
   </component>
@@ -95,7 +111,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/objects/Collision.mjs</url>
+          <url>file://$PROJECT_DIR$/static/objects/Collision.mjs</url>
           <line>56</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
