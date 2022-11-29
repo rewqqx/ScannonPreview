@@ -14,7 +14,7 @@ export class BotController extends Controller {
             return;
         }
 
-        let x = this.targetTask.x;
+        let x = this.targetTask.x + this.targetTask.width / 2;
         let y = this.targetTask.y;
 
         let deltaX = x - this.controllable.targetX;
@@ -22,8 +22,8 @@ export class BotController extends Controller {
 
         let norm = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 
-        deltaX /= norm;
-        deltaY /= norm;
+        deltaX /= norm / 6;
+        deltaY /= norm / 6;
 
         this.calcShoot();
 
@@ -35,7 +35,7 @@ export class BotController extends Controller {
     }
 
     calcShoot() {
-        let randValue = this.getRandomInt(100);
+        let randValue = this.getRandomInt(50);
         if (randValue == 0) {
             this.controllable.action();
         }
