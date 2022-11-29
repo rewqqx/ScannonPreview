@@ -25,7 +25,20 @@ export class BotController extends Controller {
         deltaX /= norm;
         deltaY /= norm;
 
+        this.calcShoot();
+
         this.controllable.setLookAtLocation(this.controllable.targetX + deltaX, this.controllable.targetY + deltaY);
+    }
+
+    getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    calcShoot() {
+        let randValue = this.getRandomInt(100);
+        if (randValue == 0) {
+            this.controllable.action();
+        }
     }
 
 }

@@ -23,6 +23,7 @@ export class Ball extends Drawable {
 
     tick() {
         this.move();
+        this.setSpeed(this.speedX, this.speedY + 0.02);
     }
 
     move() {

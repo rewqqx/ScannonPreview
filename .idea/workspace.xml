@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/controller/Controller.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/Controller.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/factory/TaskFactory.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/factory/TaskFactory.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Cannon.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Cannon.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Ball.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Ball.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1669194381056" duration="197000" />
       <workItem from="1669536857368" duration="7437000" />
       <workItem from="1669645610768" duration="11283000" />
-      <workItem from="1669725203595" duration="1810000" />
+      <workItem from="1669725203595" duration="3034000" />
     </task>
     <servers />
   </component>
