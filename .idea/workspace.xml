@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Ball.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Ball.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Collision.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Collision.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1669194381056" duration="197000" />
       <workItem from="1669536857368" duration="7437000" />
       <workItem from="1669645610768" duration="11283000" />
-      <workItem from="1669725203595" duration="3034000" />
+      <workItem from="1669725203595" duration="3638000" />
     </task>
     <servers />
   </component>
@@ -104,17 +103,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/objects/Collision.mjs</url>
-          <line>59</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
