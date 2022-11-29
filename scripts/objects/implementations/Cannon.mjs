@@ -2,6 +2,7 @@ import {Drawable} from "../Drawable.mjs";
 import {Ball} from "./Ball.mjs";
 import {PlayerController} from "../../controller/implementation/PlayerController.mjs";
 import {Score} from "./Score.js";
+import {BotController} from "../../controller/implementation/BotController.mjs";
 
 export class Cannon extends Drawable {
 
@@ -25,7 +26,15 @@ export class Cannon extends Drawable {
             this.controller = new PlayerController(this);
         }
 
+        if(controller === "bot"){
+            this.controller = new BotController(this);
+        }
+
         this.score = new Score(this.context, 50, 30, this.controller);
+    }
+
+    tick(){
+        this.controller.tick();
     }
 
     setLookAtLocation(x, y) {

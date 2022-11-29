@@ -7,4 +7,7 @@ export class Controller {
     addScore(add) {
         this.score += add;
     }
+
+    tick() {
+    }
 }

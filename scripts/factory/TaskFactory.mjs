@@ -6,19 +6,19 @@ export class TaskFactory {
     constructor(scene, levelPath) {
         this.counter = 0;
         this.counterLimit = 200;
-
         this.index = 0;
-
         this.tasks = readTaskFromFile(levelPath);
-
         this.scene = scene;
+        this.createdTasks = []
     }
 
     createTask(data) {
         let task = new Task(this.scene.context, 300, 0);
         task.setData(data);
 
+
         this.scene.items.push(task);
+        this.createdTasks.push(task);
     }
 
     incrementCounter() {
@@ -33,5 +33,15 @@ export class TaskFactory {
 
     tick() {
         this.incrementCounter();
+    }
+
+    getLastNotHitTask() {
+        for (let i = 0; i < this.createdTasks.length; i++) {
+            let task = this.createdTasks[i];
+            if(task.reward !== undefined && task.reward > 0 && !task.isCollided){
+                return task
+            }
+        }
+        return undefined;
     }
 }
