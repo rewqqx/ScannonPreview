@@ -33,11 +33,11 @@ function initScene() {
 
     let scene = new Scene(context);
 
-    let cannon = new Cannon(context, scene, 75, 650);
+    let cannon = new Cannon(context, scene, 75, 350);
     cannon.setController("player");
     scene.addItem(cannon);
 
-    let botCannon = new Cannon(context, scene, 1000, 650);
+    let botCannon = new Cannon(context, scene, 1600, 350);
     botCannon.setController("bot");
     scene.addItem(botCannon);
 

@@ -15,7 +15,7 @@ export class BotController extends Controller {
         }
 
         let x = this.targetTask.x;
-        let y = this.targetTask.y;
+        let y = this.targetTask.y - 100;
 
         let deltaX = x - this.controllable.targetX;
         let deltaY = y - this.controllable.targetY;

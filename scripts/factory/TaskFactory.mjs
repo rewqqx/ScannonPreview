@@ -13,7 +13,7 @@ export class TaskFactory {
     }
 
     createTask(data) {
-        let task = new Task(this.scene.context, 300, 0);
+        let task = new Task(this.scene.context, 700, 0);
         task.setData(data);
 
 

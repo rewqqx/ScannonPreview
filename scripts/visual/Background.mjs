@@ -7,7 +7,7 @@ export class Background {
     drawBackground() {
 
         this.context.fillStyle = "#67befd";
-        this.curAngle += 0.1;
+        this.curAngle += 0.03;
 
         this.context.translate(1920/2, 200);
 
