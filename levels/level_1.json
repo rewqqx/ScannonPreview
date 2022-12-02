@@ -3,37 +3,44 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "8 + p*6 + 12 \u2013 p \u2013 6 \u2013 p*5"
+      "unicode": "8 + p*6 + 12 \u2013 p \u2013 6 \u2013 p*5",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "8 + 6*p  - 6*p + 12 \u2013 6"
+      "unicode": "8 + 6*p  - 6*p + 12 \u2013 6",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "8 + p + 6"
+      "unicode": "8 + p + 6",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "8 + 12 \u2013 6"
+      "unicode": "8 + 12 \u2013 6",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "14 \u2013 12"
+      "unicode": "14 \u2013 12",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "20 \u2013 6"
+      "unicode": "20 \u2013 6",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "14"
+      "unicode": "14",
+      "types": []
     }
   ]
 }

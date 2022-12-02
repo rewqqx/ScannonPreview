@@ -3,57 +3,68 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "12 * (a+3) \u2013 3 * (2 + 2*a) = 42"
+      "unicode": "12 * (a+3) \u2013 3 * (2 + 2*a) = 42",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "12*a + 36 \u2013 3 * (2 + 2*a) = 42"
+      "unicode": "12*a + 36 \u2013 3 * (2 + 2*a) = 42",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "12*a + 36 \u2013 3 * 2 + 2*a = 42"
+      "unicode": "12*a + 36 \u2013 3 * 2 + 2*a = 42",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "12*a + 36 \u2013 3 * 2 - 3*2*a = 42"
+      "unicode": "12*a + 36 \u2013 3 * 2 - 3*2*a = 42",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "12*a + 36 \u2013 3 * 2 - 6*a = 42"
+      "unicode": "12*a + 36 \u2013 3 * 2 - 6*a = 42",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "12*a + 42 - 6*a = 42"
+      "unicode": "12*a + 42 - 6*a = 42",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "6*a  = 0"
+      "unicode": "6*a  = 0",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "12*a + 30 - 6*a = 42"
+      "unicode": "12*a + 30 - 6*a = 42",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "6*a  = 42 \u2013 30"
+      "unicode": "6*a  = 42 \u2013 30",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "6*a  = 72"
+      "unicode": "6*a  = 72",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "2 = a"
+      "unicode": "2 = a",
+      "types": []
     }
   ]
 }

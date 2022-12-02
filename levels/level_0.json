@@ -3,42 +3,50 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "61-m*5-m-16+2*m"
+      "unicode": "61-m*5-m-16+2*m",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "61-5*m -16 + m"
+      "unicode": "61-5*m -16 + m",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "61-5*m + 2*m \u2013 m \u2013 16"
+      "unicode": "61-5*m + 2*m \u2013 m \u2013 16",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "35 \u2013 5*m + m"
+      "unicode": "35 \u2013 5*m + m",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "61 \u2013 5*m + m \u2013 16"
+      "unicode": "61 \u2013 5*m + m \u2013 16",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "61 \u2013 4*m \u2013 16"
+      "unicode": "61 \u2013 4*m \u2013 16",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "55 \u2013 4*m"
+      "unicode": "55 \u2013 4*m",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "45 \u2013 4*m"
+      "unicode": "45 \u2013 4*m",
+      "types": []
     }
   ]
 }

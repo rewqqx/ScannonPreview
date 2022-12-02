@@ -3,67 +3,80 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 8 / 2 = 370 / 5"
+      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 8 / 2 = 370 / 5",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 16 = 370"
+      "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 16 = 370",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "32 / 16 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5"
+      "unicode": "32 / 16 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "2 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5"
+      "unicode": "2 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 5 * 2"
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 5 * 2",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 10"
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 10",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 37"
+      "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 37",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "2*d + 12*d \u2013 8 = 37 \u2013 15"
+      "unicode": "2*d + 12*d \u2013 8 = 37 \u2013 15",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "-2*d + 12*d \u2013 8 = 37 \u2013 15"
+      "unicode": "-2*d + 12*d \u2013 8 = 37 \u2013 15",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "-2*d + 12*d  = 37 \u2013 15 + 8"
+      "unicode": "-2*d + 12*d  = 37 \u2013 15 + 8",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "10*d  = 40"
+      "unicode": "10*d  = 40",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "10*d  = 30"
+      "unicode": "10*d  = 30",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "3 = d"
+      "unicode": "3 = d",
+      "types": []
     }
   ]
 }

@@ -3,42 +3,50 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "5*(с + 6 * с) = 2*с - 12 + 78"
+      "unicode": "5*(с + 6 * с) = 2*с - 12 + 78",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "5*с + 6*с = 2*с \u2013 12 + 78"
+      "unicode": "5*с + 6*с = 2*с \u2013 12 + 78",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "5*с + 30*с = 2*с \u2013 12 + 78"
+      "unicode": "5*с + 30*с = 2*с \u2013 12 + 78",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "5*с + 30*с + 2*с = 12 + 78"
+      "unicode": "5*с + 30*с + 2*с = 12 + 78",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "5*с + 30*с - 2*с = -12 + 78"
+      "unicode": "5*с + 30*с - 2*с = -12 + 78",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "33*с = 66"
+      "unicode": "33*с = 66",
+      "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "3 = с"
+      "unicode": "3 = с",
+      "types": []
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "2 = с"
+      "unicode": "2 = с",
+      "types": []
     }
   ]
 }
