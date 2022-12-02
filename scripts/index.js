@@ -1,6 +1,7 @@
 import {Background} from "./visual/Background.mjs";
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
+import {MainMenu} from './menu/implementations/MainMenu.mjs'
 
 let gameStarted = false;
 
@@ -19,9 +20,8 @@ function tick() {
     }
 }
 
-
-document.getElementById("playButton").onclick = btnPlay;
-
+let menu = new MainMenu(document.getElementById("ui"), btnPlay);
+menu.generateMenu();
 
 function initScene() {
     let canvas = document.getElementById("canvas");
@@ -33,7 +33,9 @@ function initScene() {
     context.width = 1920;
     context.height = 1080;
 
-    let scene = new Scene(context);
+    let uiContext = document.getElementById("ui");
+
+    let scene = new Scene(context, uiContext);
 
     let cannon = new Cannon(context, scene, 75, 350);
     cannon.setController("player");

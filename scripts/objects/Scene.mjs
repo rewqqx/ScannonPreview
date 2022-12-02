@@ -1,9 +1,11 @@
 import {TaskFactory} from "../factory/TaskFactory.mjs";
 import {Background} from "../visual/Background.mjs";
+import {GameEndMenu} from "../menu/implementations/GameEndMenu.mjs"
 
 export class Scene {
-    constructor(context) {
+    constructor(context, uiContext) {
         this.context = context;
+        this.uiContext = uiContext;
         this.factory = new TaskFactory(this, "./levels/level_0.json");
         this.items = []
         this.hasGameStarted = false;
@@ -60,7 +62,9 @@ export class Scene {
     }
 
     tick() {
-        console.log(this.checkGameEnd());
+        if (this.checkGameEnd()) {
+            this.endGame();
+        }
 
         this.factory.tick();
         this.collideTick();
@@ -72,5 +76,11 @@ export class Scene {
         })
 
         this.drawItems();
+    }
+
+    endGame() {
+        this.hasGameStarted = false;
+        this.menu = new GameEndMenu(this.uiContext);
+        this.menu.generateMenu();
     }
 }

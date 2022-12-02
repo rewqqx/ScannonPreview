@@ -30,6 +30,25 @@ body, html {
     background: transparent;
 }
 
+.panel {
+    align-self: center;
+    background: repeating-linear-gradient(
+            45deg,
+            #6bd7f2,
+            #6bd7f2 20px,
+            #31c8ec 20px,
+            #31c8ec 40px
+    );
+    width: 800px;
+    height: 600px;
+
+    border-radius: 20px;
+
+    outline: solid;
+    outline-width: 6px;
+    outline-color: #fcfffe;
+}
+
 
 .header {
     margin-top: 30px;
@@ -44,6 +63,15 @@ body, html {
 
     text-align: center;
 
+}
+
+.ui{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
 }
 
 .level_card {
