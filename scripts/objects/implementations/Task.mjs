@@ -1,5 +1,6 @@
 import {Drawable} from "../Drawable.mjs";
 import {Collision} from "../Collision.mjs";
+import {roundedRect} from "../../utils/DrawUtils.mjs"
 
 export class Task extends Drawable {
 
@@ -19,11 +20,11 @@ export class Task extends Drawable {
     draw() {
         this.context.fillStyle = this.selectBackgroundColor();
 
-        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
+        roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
 
         this.context.strokeStyle = this.selectBorderColor();
         this.context.lineWidth = 6;
-        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 20, false);
+        roundedRect(this.context, this.x, this.y, this.width, this.height, 20, false);
 
         this.context.fillStyle = 'white'
         this.context.font = '48px FredokaOne';

@@ -1,4 +1,5 @@
 import {Drawable} from "../Drawable.mjs";
+import {roundedRect} from "../../utils/DrawUtils.mjs"
 
 export class Score extends Drawable {
     constructor(context, x, y, controller) {
@@ -13,7 +14,7 @@ export class Score extends Drawable {
     draw() {
 
         this.context.fillStyle = "#222226";
-        this.roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
+        roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
         this.context.fillStyle = 'white'
         this.context.font = '36px FredokaOne';
         this.context.fillText(this.controller.score, this.x + 45, this.y + this.height / 2 + 13);

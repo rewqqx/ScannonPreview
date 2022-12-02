@@ -38,10 +38,19 @@ export class TaskFactory {
     getLastNotHitTask() {
         for (let i = 0; i < this.createdTasks.length; i++) {
             let task = this.createdTasks[i];
-            if(task.reward !== undefined && task.reward > 0 && !task.isCollided){
+            if (task.reward !== undefined && task.reward > 0 && !task.isCollided) {
                 return task
             }
         }
         return undefined;
+    }
+
+    deleteExpiredChildren() {
+        for (let i = 0; i < this.createdTasks.length; i++) {
+            let task = this.createdTasks[i];
+            if (task.reward !== undefined && task.reward > 0 && !task.isCollided) {
+                return task
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ import {Ball} from "./Ball.mjs";
 import {PlayerController} from "../../controller/implementation/PlayerController.mjs";
 import {Score} from "./Score.js";
 import {BotController} from "../../controller/implementation/BotController.mjs";
+import {drawImage} from "../../utils/DrawUtils.mjs";
 
 export class Cannon extends Drawable {
 
@@ -26,14 +27,14 @@ export class Cannon extends Drawable {
             this.controller = new PlayerController(this);
         }
 
-        if(controller === "bot"){
+        if (controller === "bot") {
             this.controller = new BotController(this);
         }
 
         this.score = new Score(this.context, this.x, 30, this.controller);
     }
 
-    tick(){
+    tick() {
         this.controller.tick();
     }
 
@@ -60,7 +61,7 @@ export class Cannon extends Drawable {
 
     draw() {
         try {
-            this.drawImage(this.context, this.image, this.x, this.y, this.width, this.height, this.rotation + this.relativeRotation);
+            drawImage(this.context, this.image, this.x, this.y, this.width, this.height, this.rotation + this.relativeRotation);
         } catch (e) {
 
         }
