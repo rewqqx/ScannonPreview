@@ -57,8 +57,6 @@ export class Task extends Drawable {
         this.reward = data.reward;
         this.punishment = data.punishment;
 
-        console.log(this.reward)
-
         const metrics = this.context.measureText(this.text);
 
         this.setSize(metrics.width + 50, 100);

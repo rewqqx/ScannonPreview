@@ -33,24 +33,35 @@ export class TaskFactory {
 
     tick() {
         this.incrementCounter();
+        this.deleteExpiredChildren();
+
     }
 
     getLastNotHitTask() {
         for (let i = 0; i < this.createdTasks.length; i++) {
             let task = this.createdTasks[i];
             if (task.reward !== undefined && task.reward > 0 && !task.isCollided) {
-                return task
+                return task;
             }
         }
         return undefined;
     }
 
     deleteExpiredChildren() {
-        for (let i = 0; i < this.createdTasks.length; i++) {
+        let tasksToRemove = [];
+
+
+        for (let i = this.createdTasks.length - 1; i >= 0; i--) {
             let task = this.createdTasks[i];
-            if (task.reward !== undefined && task.reward > 0 && !task.isCollided) {
-                return task
+            if (task.isExpired()) {
+                tasksToRemove.push(i);
             }
         }
+
+        for (let i = 0; i < tasksToRemove.length; i++) {
+            let index = tasksToRemove[i];
+            this.createdTasks.splice(index, 1);
+        }
+
     }
 }

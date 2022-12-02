@@ -51,4 +51,24 @@ export class Drawable {
 
     }
 
+    isExpired() {
+        if (this.y > this.context.height + this.height) {
+            return true;
+        }
+
+        if (this.x > this.context.width + this.width) {
+            return true;
+        }
+
+        if (this.x < -this.width) {
+            return true;
+        }
+
+        if (this.y < -this.height) {
+            return true;
+        }
+
+        return false;
+    }
+
 }

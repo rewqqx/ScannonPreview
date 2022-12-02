@@ -30,6 +30,8 @@ function initScene() {
     canvas.style.display = "none";
 
     let context = canvas.getContext("2d");
+    context.width = 1920;
+    context.height = 1080;
 
     let scene = new Scene(context);
 

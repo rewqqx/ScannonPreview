@@ -6,6 +6,7 @@ export class Scene {
         this.context = context;
         this.factory = new TaskFactory(this, "./levels/level_0.json");
         this.items = []
+        this.hasGameStarted = false;
 
         this.backgroundDrawer = new Background(context);
     }
@@ -46,8 +47,20 @@ export class Scene {
         }
     }
 
-    tick() {
+    checkGameEnd() {
+        if (!this.hasGameStarted && this.factory.createdTasks.length !== 0) {
+            this.hasGameStarted = true;
+        }
 
+        if (this.hasGameStarted && this.factory.createdTasks.length === 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    tick() {
+        console.log(this.checkGameEnd());
 
         this.factory.tick();
         this.collideTick();

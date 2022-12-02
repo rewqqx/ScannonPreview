@@ -12,7 +12,6 @@ export class Score extends Drawable {
     }
 
     draw() {
-
         this.context.fillStyle = "#222226";
         roundedRect(this.context, this.x, this.y, this.width, this.height, 20, true);
         this.context.fillStyle = 'white'
