@@ -31,22 +31,35 @@ body, html {
 }
 
 .panel {
+    margin-top: 100px;
+
     align-self: center;
-    background: repeating-linear-gradient(
-            45deg,
-            #6bd7f2,
-            #6bd7f2 20px,
-            #31c8ec 20px,
-            #31c8ec 40px
-    );
-    width: 800px;
-    height: 600px;
+    background: #6bd7f2;
+    width: 1200px;
+    height: 700px;
+
 
     border-radius: 20px;
 
     outline: solid;
     outline-width: 6px;
     outline-color: #fcfffe;
+}
+
+.sub_header {
+    margin-top: 30px;
+
+    font-size: 120px;
+    font-family: Fredoka One;
+    background: #222222;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+
+    text-align: center;
+
 }
 
 
@@ -65,7 +78,7 @@ body, html {
 
 }
 
-.ui{
+.ui {
     width: 100%;
     height: 100%;
     position: absolute;

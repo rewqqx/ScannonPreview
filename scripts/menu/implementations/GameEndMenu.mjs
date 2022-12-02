@@ -8,10 +8,19 @@ export class GameEndMenu extends Menu {
     generateMenu() {
         console.log("Game end");
 
+        let content = document.createElement("div");
+        content.setAttribute("class", "content");
+
         let panel = document.createElement("div");
         panel.setAttribute("class", "panel");
+        content.appendChild(panel);
 
-        this.context.appendChild(panel);
+        let header = document.createElement("h1");
+        header.setAttribute("class", "sub_header");
+        header.innerHTML = "Game finished"
+        panel.appendChild(header);
+
+        this.context.appendChild(content);
     }
 
 
