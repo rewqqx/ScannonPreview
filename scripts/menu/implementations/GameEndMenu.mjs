@@ -29,16 +29,16 @@ export class GameEndMenu extends Menu {
         panel.appendChild(splitter);
 
         let infoPanel = document.createElement("div");
-        infoPanel.setAttribute("class","flexbox_horizontal");
+        infoPanel.setAttribute("class", "flexbox_horizontal");
 
         panel.appendChild(infoPanel);
 
         let leftColumn = document.createElement("div");
-        leftColumn.setAttribute("class","flexbox_vertical");
+        leftColumn.setAttribute("class", "flexbox_vertical");
         infoPanel.appendChild(leftColumn);
 
         let rightColumn = document.createElement("div");
-        rightColumn.setAttribute("class","flexbox_vertical");
+        rightColumn.setAttribute("class", "flexbox_vertical");
         infoPanel.appendChild(rightColumn);
 
         let errorText = document.createElement("h1");
@@ -56,7 +56,28 @@ export class GameEndMenu extends Menu {
         scoreText.innerHTML = "Score: 2500";
         leftColumn.appendChild(scoreText);
 
+        leftColumn.appendChild(this.generateStars());
+
+
         this.context.appendChild(content);
+    }
+
+    generateStars() {
+        let starsPanel = document.createElement("div");
+        starsPanel.setAttribute("class", "flexbox_horizontal");
+        starsPanel.setAttribute("style","margin-left: 20px; margin-top: 80px");
+
+        for (let i = 0; i < 5; i++) {
+            let star = document.createElement("div");
+            star.setAttribute("class", "margin_20");
+            let img = document.createElement("img");
+            img.setAttribute("class", "fit-picture-small");
+            img.setAttribute("src", "../../icons/star.png");
+            star.appendChild(img);
+            starsPanel.appendChild(star);
+        }
+
+        return starsPanel;
     }
 
 
