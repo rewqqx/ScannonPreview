@@ -15,10 +15,14 @@ export class GameEndMenu extends Menu {
         panel.setAttribute("class", "panel");
         content.appendChild(panel);
 
+        let topLine = document.createElement("div");
+        topLine.setAttribute("class", "topline");
+        panel.appendChild(topLine)
+
         let header = document.createElement("h1");
-        header.setAttribute("class", "sub_header");
+        header.setAttribute("class", "header_white");
         header.innerHTML = "Game finished"
-        panel.appendChild(header);
+        topLine.appendChild(header);
 
         this.context.appendChild(content);
     }

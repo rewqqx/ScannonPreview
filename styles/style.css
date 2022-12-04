@@ -38,6 +38,9 @@ body, html {
     width: 1200px;
     height: 700px;
 
+    display: flex;
+    flex-direction: column;
+
 
     border-radius: 20px;
 
@@ -46,16 +49,15 @@ body, html {
     outline-color: #fcfffe;
 }
 
-.sub_header {
-    margin-top: 30px;
+.header_white {
+    text-shadow: -1px -1px 1px white;
 
     font-size: 120px;
     font-family: Fredoka One;
-    background: #222222;
+    background: #11111155;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 
 
     text-align: center;
@@ -97,6 +99,21 @@ body, html {
     align-self: center;
 
     border-radius: 20px;
+}
+
+
+.topline {
+    border-radius: 20px;
+    background: repeating-linear-gradient(
+            45deg,
+            #6bd7f2,
+            #6bd7f2 20px,
+            #31c8ec 20px,
+            #31c8ec 40px
+    );
+
+    display: flex;
+    flex-direction: column;
 }
 
 .level_design {
