@@ -3,50 +3,50 @@
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
-      "unicode": "61-m*5-m-16+2*m",
+      "unicode": "61 - m*5 - m - 16 + 2*m",
       "types": []
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
-      "unicode": "61-5*m -16 + m",
-      "types": []
+      "unicode": "61 – 5*m – 16 + m",
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
-      "unicode": "61-5*m + 2*m \u2013 m \u2013 16",
-      "types": []
+      "unicode": "61 \u2013 5*m + 2*m \u2013 m \u2013 16",
+      "types": ["multiplication_commutativity"]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "35 \u2013 5*m + m",
-      "types": []
+      "types": ["big_amount_of_transformations", "sum_operation_mistake"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "61 \u2013 5*m + m \u2013 16",
-      "types": []
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "61 \u2013 4*m \u2013 16",
-      "types": []
+      "types": ["sum_operation_mistake", "additional_operands_reducing"]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "55 \u2013 4*m",
-      "types": []
+      "types": ["sum_operation_mistake"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "45 \u2013 4*m",
-      "types": []
+      "types": ["sum_operation_mistake"]
     }
   ]
 }
