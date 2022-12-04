@@ -38,7 +38,7 @@ export class GameEndMenu extends Menu {
         infoPanel.appendChild(leftColumn);
 
         let rightColumn = document.createElement("div");
-        rightColumn.setAttribute("class", "flexbox_vertical");
+        rightColumn.setAttribute("class", "flexbox_vertical_reverse");
         infoPanel.appendChild(rightColumn);
 
         let errorText = document.createElement("h1");
@@ -58,6 +58,10 @@ export class GameEndMenu extends Menu {
 
         leftColumn.appendChild(this.generateStars());
 
+        let button = document.createElement("div");
+        button.setAttribute("class", "small_button");
+        button.innerHTML = "FINISH";
+        rightColumn.appendChild(button);
 
         this.context.appendChild(content);
     }
@@ -65,7 +69,7 @@ export class GameEndMenu extends Menu {
     generateStars() {
         let starsPanel = document.createElement("div");
         starsPanel.setAttribute("class", "flexbox_horizontal");
-        starsPanel.setAttribute("style","margin-left: 20px; margin-top: 80px");
+        starsPanel.setAttribute("style", "margin-left: 20px; margin-top: 80px");
 
         for (let i = 0; i < 5; i++) {
             let star = document.createElement("div");
