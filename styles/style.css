@@ -27,7 +27,7 @@ body, html {
     bottom: 0;
     right: 0;
     left: 0;
-    background: transparent;
+    background: #22222222;
 }
 
 .panel {
@@ -61,6 +61,21 @@ body, html {
 
 
     text-align: center;
+
+}
+
+.text_white {
+    text-shadow: -1px -1px 1px white;
+
+    font-size: 60px;
+    font-family: Fredoka One;
+    background: #11111155;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-left: 40px;
+    margin-top: 30px;
 
 }
 
@@ -192,4 +207,17 @@ body, html {
 
 .button:hover {
     -webkit-text-stroke-color: #da2296;
+}
+
+.flexbox_vertical {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.flexbox_horizontal {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }

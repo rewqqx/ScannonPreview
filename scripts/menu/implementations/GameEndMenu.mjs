@@ -24,6 +24,38 @@ export class GameEndMenu extends Menu {
         header.innerHTML = "Game finished"
         topLine.appendChild(header);
 
+        let splitter = document.createElement("div");
+        splitter.setAttribute("class", "spliter");
+        panel.appendChild(splitter);
+
+        let infoPanel = document.createElement("div");
+        infoPanel.setAttribute("class","flexbox_horizontal");
+
+        panel.appendChild(infoPanel);
+
+        let leftColumn = document.createElement("div");
+        leftColumn.setAttribute("class","flexbox_vertical");
+        infoPanel.appendChild(leftColumn);
+
+        let rightColumn = document.createElement("div");
+        rightColumn.setAttribute("class","flexbox_vertical");
+        infoPanel.appendChild(rightColumn);
+
+        let errorText = document.createElement("h1");
+        errorText.setAttribute("class", "text_white");
+        errorText.innerHTML = "Mistakes: 2";
+        leftColumn.appendChild(errorText);
+
+        let hitsText = document.createElement("h1");
+        hitsText.setAttribute("class", "text_white");
+        hitsText.innerHTML = "Hits: 2";
+        leftColumn.appendChild(hitsText);
+
+        let scoreText = document.createElement("h1");
+        scoreText.setAttribute("class", "text_white");
+        scoreText.innerHTML = "Score: 2500";
+        leftColumn.appendChild(scoreText);
+
         this.context.appendChild(content);
     }
 
