@@ -56,6 +56,7 @@ export class Task extends Drawable {
 
         this.reward = data.reward;
         this.punishment = data.punishment;
+        this.types = data.errors;
 
         const metrics = this.context.measureText(this.text);
 
@@ -81,9 +82,31 @@ export class Task extends Drawable {
 
     collideAction(instigator) {
         if (!this.isCollided) {
+            this.calculateStatistics(this.reward);
             this.isCollided = true;
-
             instigator.owner.controller.addScore(this.reward);
         }
     }
+
+    calculateStatistics(value) {
+        let prefix = "correct";
+
+        if (value <= 0) {
+            prefix = "error";
+        }
+
+        for (let i = 0; i < this.types.length; i++) {
+            let type = this.types[i];
+            let old = window.statistics.get(prefix + "_" + type);
+
+            if (old === undefined) {
+                old = 0;
+            }
+            
+            old += 1;
+
+            window.statistics.set(prefix + "_" + type, old);
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ export class GameEndMenu extends Menu {
 
     generateMenu() {
         console.log("Game end");
+        console.log(window.statistics);
 
         let content = document.createElement("div");
         content.setAttribute("class", "content");

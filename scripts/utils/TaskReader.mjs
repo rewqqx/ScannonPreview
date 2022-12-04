@@ -18,6 +18,7 @@ export function readTaskFromFile(path) {
                     task.setExpression(node.unicode);
                     task.setReward(node.scoreForHit);
                     task.setPunishment(node.scoreForSkip);
+                    task.setErrors(node.types);
 
                     result.push(task);
                 }

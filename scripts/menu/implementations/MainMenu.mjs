@@ -8,7 +8,6 @@ export class MainMenu extends Menu {
     }
 
     generateMenu() {
-        console.log("Game end");
 
         let panel = document.createElement("div");
         panel.setAttribute("id", "menu");

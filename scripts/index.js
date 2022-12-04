@@ -5,6 +5,8 @@ import {MainMenu} from './menu/implementations/MainMenu.mjs'
 
 let gameStarted = false;
 
+window.statistics = new Map();
+
 loadFont();
 
 let background = initBackground();

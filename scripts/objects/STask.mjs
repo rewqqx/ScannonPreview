@@ -13,4 +13,8 @@ export class STask {
     setPunishment(punishment) {
         this.punishment = punishment;
     }
+
+    setErrors(errors) {
+        this.errors = errors;
+    }
 }
