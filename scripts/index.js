@@ -10,7 +10,7 @@ window.statistics = new Map();
 loadFont();
 
 let background = initBackground();
-let scene = initScene();
+window.scene = initScene();
 
 
 setInterval(tick, 10);
@@ -18,12 +18,12 @@ setInterval(tick, 10);
 function tick() {
     background.drawBackground();
     if (gameStarted) {
-        scene.tick();
+        window.scene.tick();
     }
 }
 
-let menu = new MainMenu(document.getElementById("ui"), btnPlay);
-menu.generateMenu();
+window.mainmenu = new MainMenu(document.getElementById("ui"), btnPlay);
+window.mainmenu.generateMenu();
 
 function initScene() {
     let canvas = document.getElementById("canvas");
@@ -72,7 +72,7 @@ function loadFont() {
 function btnPlay() {
     gameStarted = true;
     document.getElementById("background").style.display = "none";
-    document.getElementById("menu").style.display = "none";
+    document.getElementById("ui").style.display = "none";
     document.getElementById("canvas").style.display = "";
 }
 

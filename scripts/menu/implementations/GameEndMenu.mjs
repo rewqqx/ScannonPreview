@@ -3,11 +3,12 @@ import {Menu} from "../Menu.mjs";
 export class GameEndMenu extends Menu {
     constructor(context) {
         super(context);
+        this.context = context;
     }
 
     generateMenu() {
-        console.log("Game end");
-        console.log(window.statistics);
+        this.context.innerHTML = "";
+        document.getElementById("ui").style.display = "";
 
         let content = document.createElement("div");
         content.setAttribute("class", "content");
@@ -62,9 +63,14 @@ export class GameEndMenu extends Menu {
         let button = document.createElement("div");
         button.setAttribute("class", "small_button");
         button.innerHTML = "FINISH";
+        button.onclick = this.gotoMainMenu;
         rightColumn.appendChild(button);
 
         this.context.appendChild(content);
+    }
+
+    gotoMainMenu(){
+        window.mainmenu.generateMenu();
     }
 
     generateStars() {

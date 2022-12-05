@@ -1,0 +1,89 @@
+import {Menu} from "../Menu.mjs";
+import {readExpressionTypes} from "../../utils/JSONReader.mjs";
+
+export class StatisticsMenu extends Menu {
+    constructor(context) {
+        super(context);
+        this.context = context;
+    }
+
+    generateMenu() {
+        this.context.innerHTML = "";
+        document.getElementById("ui").style.display = "";
+
+        let content = document.createElement("div");
+        content.setAttribute("class", "content");
+
+        let panel = document.createElement("div");
+        panel.setAttribute("class", "panel");
+        content.appendChild(panel);
+
+        let topLine = document.createElement("div");
+        topLine.setAttribute("class", "topline");
+        panel.appendChild(topLine)
+
+        let header = document.createElement("h1");
+        header.setAttribute("class", "header_white");
+        header.innerHTML = "Statistics"
+        topLine.appendChild(header);
+
+        let splitter = document.createElement("div");
+        splitter.setAttribute("class", "spliter");
+        panel.appendChild(splitter);
+
+
+        panel.appendChild(this.generateStats());
+
+
+        this.context.appendChild(content);
+    }
+
+    gotoMainMenu() {
+        window.mainmenu.generateMenu();
+    }
+
+    generateStats() {
+        let types = readExpressionTypes("./config/expression_types.json");
+        console.log(types);
+
+        let infoPanel = document.createElement("div");
+        infoPanel.setAttribute("class", "scroll");
+
+        for (let i = 0; i < types.length; i++) {
+            let sType = types[i];
+
+            let stat = document.createElement("div");
+            stat.setAttribute("class", "flexbox_horizontal");
+
+            let name = document.createElement("h1");
+            name.setAttribute("class", "text_white");
+            let margin = 20;
+            if (sType.name.length > 21) {
+                margin = 5;
+            }
+
+            name.setAttribute("style", "margin-top: " + margin + "px;font-size: 30px; width: 500px")
+            name.innerHTML = sType.name;
+
+            stat.appendChild(name);
+
+            let bar = document.createElement("div");
+            bar.setAttribute("class", "progress-container");
+
+            let fill = document.createElement("div");
+            fill.setAttribute("class", "progress");
+            fill.setAttribute("style", "width:50%;")
+            bar.appendChild(fill);
+
+
+            stat.setAttribute("style", "height: 100px;");
+            stat.appendChild(bar)
+
+            infoPanel.appendChild(stat);
+        }
+
+        return infoPanel;
+    }
+
+
+}

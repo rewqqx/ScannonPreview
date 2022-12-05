@@ -1,0 +1,32 @@
+{
+  "types": [
+    {
+      "type": "brackets_open_only_for_first_argument",
+      "eng": "Brackets wrong open"
+    },
+    {
+      "type": "negative_first_number",
+      "eng": "Negative first number"
+    },
+    {
+      "type": "minus_on_minus_is_plus",
+      "eng": "Minus multiply minus"
+    },
+    {
+      "type": "multiplication_commutativity",
+      "eng": "Multiplication commutative"
+    },
+    {
+      "type": "additional_operands_reducing",
+      "eng": "Additional operands"
+    },
+    {
+      "type": "big_amount_of_transformations",
+      "eng": "Big amount of transformations"
+    },
+    {
+      "type": "sum_operation_mistake",
+      "eng": "Wrong sum operation"
+    }
+  ]
+}

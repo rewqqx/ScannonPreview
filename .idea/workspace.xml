@@ -15,8 +15,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="package.json" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -93,6 +93,7 @@
       <workItem from="1669972299256" duration="8383000" />
       <workItem from="1670095655521" duration="306000" />
       <workItem from="1670152075854" duration="8715000" />
+      <workItem from="1670225203735" duration="8127000" />
     </task>
     <servers />
   </component>

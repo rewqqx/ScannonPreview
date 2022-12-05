@@ -1,0 +1,32 @@
+:root {
+    --scrollbarBg: #31c8ec;
+    --scrollbarThumb: rgba(255, 255, 255, 0.8);
+    --scrollbarWidth: 18px;
+    --scrollbarBorder: 3px solid var(--scrollbarBg);
+    --scrollbarBorderRadius: 20px;
+}
+.scroll {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 5px;
+
+    scrollbar-width: var(--scrollbarWidth);
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
+}
+.scroll::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+}
+.scroll::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+    border-radius: var(--scrollbarBorderRadius);
+}
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+    border-radius: var(--scrollbarBorderRadius);
+    border: var(--scrollbarBorder);
+}
+
+.scroll {
+    overflow: auto;
+}

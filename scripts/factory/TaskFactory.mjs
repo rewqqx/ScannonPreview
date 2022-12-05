@@ -1,5 +1,5 @@
 import {Task} from '../objects/implementations/Task.mjs'
-import {readTaskFromFile} from "../utils/TaskReader.mjs";
+import {readTaskFromFile} from "../utils/JSONReader.mjs";
 
 export class TaskFactory {
 

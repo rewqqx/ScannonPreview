@@ -1,4 +1,5 @@
 import {Menu} from "../Menu.mjs";
+import {StatisticsMenu} from "./StatisticsMenu.mjs";
 
 export class MainMenu extends Menu {
     constructor(context, func) {
@@ -8,10 +9,22 @@ export class MainMenu extends Menu {
     }
 
     generateMenu() {
+        document.getElementById("background").style.display = "";
+        document.getElementById("canvas").style.display = "none";
+
+        this.context.innerHTML = "";
 
         let panel = document.createElement("div");
         panel.setAttribute("id", "menu");
         panel.setAttribute("class", "content");
+
+        let stats = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("class", "fit-picture-small-button");
+        img.setAttribute("src", "./icons/trophy.png");
+        stats.appendChild(img);
+        stats.onclick = this.openStatistics;
+        panel.appendChild(stats);
 
         let div = document.createElement("div");
         panel.appendChild(div);
@@ -24,6 +37,11 @@ export class MainMenu extends Menu {
         panel.appendChild(this.createLevelCard());
 
         this.context.appendChild(panel);
+    }
+
+    openStatistics() {
+        let stats = new StatisticsMenu(document.getElementById("ui"));
+        stats.generateMenu();
     }
 
     createLevelCard() {
