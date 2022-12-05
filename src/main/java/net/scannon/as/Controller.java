@@ -1,6 +1,7 @@
 package net.scannon.as;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
+import net.scannon.as.database.adapter.implementation.UsersAdapter;
 import net.scannon.as.security.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,7 @@ import java.util.Map;
 @RestController
 public class Controller {
 
-    private DatabaseAdapter databaseAdapter = new DatabaseAdapter();
+    private UsersAdapter usersAdapter = new UsersAdapter();
 
 
     @Autowired
@@ -34,6 +35,11 @@ public class Controller {
     public boolean login(@RequestBody Map<String, String> body) {
         System.out.println(body);
         return true;
+    }
+
+    @GetMapping("/{name}/{password}")
+    public String getUserKey(@PathVariable(value = "name") String name, @PathVariable(value = "password") String password) {
+        return usersAdapter.generateUserKey(name, password);
     }
 
 
