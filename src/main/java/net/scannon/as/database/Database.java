@@ -5,10 +5,16 @@ import net.scannon.as.exceptions.DatabaseException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class Database {
 
     private static volatile Database singleton;
+
+    private String ip = "127.0.0.1";
+    private String port = "55000";
+    private String login = "postgres";
+    private String password = "postgrespw";
 
     private Connection connection;
 
@@ -17,7 +23,10 @@ public class Database {
     }
 
     protected void initDatabase() throws SQLException {
-        this.connection = DriverManager.getConnection("jdbc:postgresql:[//127.0.0.1[:port]/][database][?property1=value1[&property2=value2]...]");
+        Properties props = new Properties();
+        props.setProperty("user", login);
+        props.setProperty("password", password);
+        this.connection = DriverManager.getConnection("jdbc:postgresql://" + ip + ":" + port + "/postgres?", props);
     }
 
     public static Database getDatabase() throws DatabaseException {

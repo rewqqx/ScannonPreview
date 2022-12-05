@@ -1,5 +1,6 @@
 package net.scannon.as;
 
+import net.scannon.as.database.adapter.DatabaseAdapter;
 import net.scannon.as.security.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,8 @@ import java.util.Map;
 @RestController
 public class Controller {
 
-    private static final Logger log = LoggerFactory.getLogger(Controller.class);
+    private DatabaseAdapter databaseAdapter = new DatabaseAdapter();
+
 
     @Autowired
     AppConfig appConfig;

@@ -8,8 +8,12 @@ public class DatabaseAdapter {
     protected Database database;
     protected String tableName = "";
 
-    public DatabaseAdapter() throws DatabaseException {
-        this.database = Database.getDatabase();
+    public DatabaseAdapter() {
+        try {
+            this.database = Database.getDatabase();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

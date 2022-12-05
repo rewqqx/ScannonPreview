@@ -95,46 +95,5 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<!-- tag::asciidoc[] -->
-			<plugin>
-				<groupId>org.asciidoctor</groupId>
-				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>2.2.2</version>
-				<dependencies>
-					<dependency> <!-- Add Asciidoctor Doxia Parser Module -->
-						<groupId>org.asciidoctor</groupId>
-						<artifactId>asciidoctor-maven-plugin</artifactId>
-						<version>2.2.2</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<id>generate-docs</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>process-asciidoc</goal>
-						</goals>
-						<configuration>
-							<sourceDocumentName>index.adoc</sourceDocumentName>
-							<backend>html</backend>
-							<attributes>
-								<snippets>${project.build.directory}/snippets</snippets>
-							</attributes>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- end::asciidoc[] -->
-		</plugins>
-	</build>
-
 </project>
