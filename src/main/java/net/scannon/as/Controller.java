@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @RestController
 public class Controller {
@@ -25,6 +26,12 @@ public class Controller {
     @GetMapping("/")
     public String main() {
         return ".";
+    }
+
+    @PostMapping("/login")
+    public boolean login(@RequestBody Map<String, String> body) {
+        System.out.println(body);
+        return true;
     }
 
 
