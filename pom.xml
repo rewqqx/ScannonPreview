@@ -8,7 +8,7 @@
 		<version>2.6.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>net.zamess</groupId>
+	<groupId>net.scannon</groupId>
 	<artifactId>as</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>as</name>
