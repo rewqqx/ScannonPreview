@@ -14,8 +14,17 @@ export class StatisticsMenu extends Menu {
         let content = document.createElement("div");
         content.setAttribute("class", "content");
 
+        let button = document.createElement("div");
+        button.setAttribute("class", "small_button");
+        button.setAttribute("style", "align-self: start; margin-left: 20px; margin-top:20px");
+        button.innerHTML = "BACK";
+        button.onclick = this.gotoMainMenu;
+
+        content.appendChild(button);
+
         let panel = document.createElement("div");
         panel.setAttribute("class", "panel");
+        panel.setAttribute("style", "margin-top:20px");
         content.appendChild(panel);
 
         let topLine = document.createElement("div");
@@ -89,6 +98,10 @@ export class StatisticsMenu extends Menu {
         }
 
         return infoPanel;
+    }
+
+    gotoMainMenu() {
+        window.mainmenu.generateMenu();
     }
 
 
