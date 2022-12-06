@@ -1,5 +1,6 @@
-import {STask} from "../objects/STask.mjs";
-import {SType} from "../objects/SType.js";
+import {STask} from "../structures/STask.mjs";
+import {SType} from "../structures/SType.mjs";
+import {SStatistic} from "../structures/SStatistic.mjs";
 
 export function readTaskFromFile(path) {
     let result = [];
@@ -53,5 +54,36 @@ export function readExpressionTypes(path) {
         }
     }
     request.send(null);
+    return result;
+}
+
+
+export function readStatistics(url) {
+    let result = []
+    let request = new XMLHttpRequest();
+    request.open("GET", url, false);
+    request.setRequestHeader("key", "03090a2d-a7bd-4a0d-97d2-95d74015f26b");
+    request.setRequestHeader("name", "admin");
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                console.log(content);
+                let json = JSON.parse(content);
+                let statistics = json.array;
+
+                for (let i = 0; i < statistics.length; i++) {
+                    let node = statistics[i];
+                    let sStatistic = new SStatistic();
+                    sStatistic.setType(node.type);
+                    sStatistic.setID(node.id);
+                    sStatistic.setPosAmount(node.pos_amount);
+                    sStatistic.setNegAmount(node.neg_amount);
+                    result.push(sStatistic);
+                }
+            }
+        }
+    }
+    request.send();
     return result;
 }

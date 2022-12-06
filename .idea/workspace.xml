@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="" />
+    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/structures/SStatistic.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/STask.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/structures/STask.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/SType.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/structures/SType.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +61,7 @@
       <recent name="D:\Projects\ScannonPreview\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/structures" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="D:\Projects\ScannonPreview\objects\implementations" />
     </key>
@@ -94,6 +102,7 @@
       <workItem from="1670095655521" duration="306000" />
       <workItem from="1670152075854" duration="8715000" />
       <workItem from="1670225203735" duration="8127000" />
+      <workItem from="1670332860171" duration="4304000" />
     </task>
     <servers />
   </component>
@@ -110,6 +119,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
+          <line>62</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
+          <line>69</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
+          <line>67</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

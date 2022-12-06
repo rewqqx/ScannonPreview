@@ -2,8 +2,11 @@ import {Background} from "./visual/Background.mjs";
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
 import {MainMenu} from './menu/implementations/MainMenu.mjs'
+import {readStatistics} from "./utils/JSONReader.mjs";
 
 let gameStarted = false;
+
+console.log(readStatistics("http://localhost:8080/users/admin/statistics"));
 
 window.statistics = new Map();
 
