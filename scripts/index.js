@@ -5,10 +5,14 @@ import {MainMenu} from './menu/implementations/MainMenu.mjs'
 import {readStatistics} from "./utils/JSONReader.mjs";
 
 let gameStarted = false;
-
-console.log(readStatistics("http://localhost:8080/users/admin/statistics"));
-
+let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
 window.statistics = new Map();
+
+for (let i = 0; i < staticsMap.length; i++) {
+    let stat = staticsMap[i];
+    window.statistics.set(stat.type, stat);
+}
+
 
 loadFont();
 

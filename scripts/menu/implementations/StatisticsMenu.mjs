@@ -44,16 +44,22 @@ export class StatisticsMenu extends Menu {
 
     generateStats() {
         let types = readExpressionTypes("./config/expression_types.json");
-        console.log(types);
+        let stats = window.statistics;
 
         let infoPanel = document.createElement("div");
         infoPanel.setAttribute("class", "scroll");
 
         for (let i = 0; i < types.length; i++) {
             let sType = types[i];
+            let stat = stats.get(sType.type);
+            let percent = 0;
 
-            let stat = document.createElement("div");
-            stat.setAttribute("class", "flexbox_horizontal");
+            if (stat.getSum() !== 0) {
+                percent = (stat.posAmount / stat.getSum()) * 100;
+            }
+
+            let box = document.createElement("div");
+            box.setAttribute("class", "flexbox_horizontal");
 
             let name = document.createElement("h1");
             name.setAttribute("class", "text_white");
@@ -65,21 +71,21 @@ export class StatisticsMenu extends Menu {
             name.setAttribute("style", "margin-top: " + margin + "px;font-size: 30px; width: 500px")
             name.innerHTML = sType.name;
 
-            stat.appendChild(name);
+            box.appendChild(name);
 
             let bar = document.createElement("div");
             bar.setAttribute("class", "progress-container");
 
             let fill = document.createElement("div");
             fill.setAttribute("class", "progress");
-            fill.setAttribute("style", "width:50%;")
+            fill.setAttribute("style", "width:" + percent + "%;")
             bar.appendChild(fill);
 
 
-            stat.setAttribute("style", "height: 100px;");
-            stat.appendChild(bar)
+            box.setAttribute("style", "height: 100px;");
+            box.appendChild(bar)
 
-            infoPanel.appendChild(stat);
+            infoPanel.appendChild(box);
         }
 
         return infoPanel;

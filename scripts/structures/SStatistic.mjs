@@ -17,4 +17,8 @@ export class SStatistic{
     setNegAmount(amount){
         this.negAmount = amount;
     }
+
+    getSum(){
+        return this.negAmount + this.posAmount;
+    }
 }
