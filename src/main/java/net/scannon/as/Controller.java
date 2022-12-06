@@ -38,9 +38,11 @@ public class Controller {
     }
 
     @PostMapping("/users/{name}")
-    public boolean setStatistic(@PathVariable(value = "name") String name, @RequestBody Map<String, String> body) {
+    public boolean setStatistic(@PathVariable(value = "name") String name, @RequestBody Map<String, String> body, @RequestHeader(name = "name") String token) {
 
-        System.out.println(body);
+        if (!name.equals(token)) {
+            return false;
+        }
 
         return true;
     }
