@@ -1,6 +1,8 @@
 package net.scannon.as.objects;
 
-public class User {
+import net.scannon.as.inerfaces.JSONElement;
+
+public class User implements JSONElement {
 
     private int id;
     private String name;
@@ -46,7 +48,7 @@ public class User {
         this.key = key;
     }
 
-
+    @Override
     public String toJSON() {
         return "{\"id\":" + id + ",\"name\":\"" + name + "\", \"password\":\"" + password + "\", \"key\":\"" + key + "\"}";
     }

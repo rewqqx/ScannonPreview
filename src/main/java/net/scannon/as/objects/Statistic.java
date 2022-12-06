@@ -1,11 +1,15 @@
 package net.scannon.as.objects;
 
-public class Statistic {
+import net.scannon.as.inerfaces.JSONElement;
+
+public class Statistic implements JSONElement {
 
     private int userID = -1;
     private int statisticID = -1;
     private int posAmount = 0;
     private int negAmount = 0;
+
+    private String type = "none";
 
     public Statistic(int userID, int statisticID, int posAmount, int negAmount) {
         this.userID = userID;
@@ -46,10 +50,17 @@ public class Statistic {
         this.negAmount = negAmount;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String toString() {
-
         return "(" + userID + ", " + statisticID + ", " + posAmount + ", " + negAmount + ")";
+    }
 
+    @Override
+    public String toJSON() {
+        return "{\"id\":" + statisticID + ", \"type\": \"" + type + "\", \"pos_amount\":" + posAmount + ", \"neg_amount\":" + negAmount + "}";
     }
 
 }
