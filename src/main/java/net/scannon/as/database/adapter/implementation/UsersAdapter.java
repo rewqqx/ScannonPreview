@@ -63,7 +63,7 @@ public class UsersAdapter extends DatabaseAdapter {
         UUID randomUUID = UUID.randomUUID();
         String key = randomUUID.toString();
         try (Statement statement = connection.createStatement()) {
-            String query = "UPDATE users SET key='" + key + "' WHERE name = '" + name + "' AND password = '" + password + "';";
+            String query = "UPDATE " + tableName + " SET key='" + key + "' WHERE name = '" + name + "' AND password = '" + password + "';";
             statement.execute(query);
             return key;
         } catch (SQLException e) {
