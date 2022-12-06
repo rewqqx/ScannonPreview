@@ -27,7 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private CustomTokenAuthenticationProvider customTokenAuthenticationProvider;
 
     private RequestMatcher getRequestMatchers() {
-        return new OrRequestMatcher(new AntPathRequestMatcher("/api/**"));
+        return new OrRequestMatcher(new AntPathRequestMatcher("/users/**"));
     }
 
     private Filter getFilter() throws Exception {

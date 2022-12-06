@@ -1,5 +1,6 @@
 package net.scannon.as.security;
 
+import net.scannon.as.database.adapter.implementation.UsersAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
@@ -14,15 +15,29 @@ public class CustomTokenAuthenticationProvider implements AuthenticationProvider
 
     private static final Logger log = LoggerFactory.getLogger(CustomTokenAuthenticationProvider.class);
 
+    UsersAdapter usersAdapter = new UsersAdapter();
+
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String customToken = (String) authentication.getCredentials();
-        return getValidationToken(customToken);
+        String[] customToken;
+        try {
+            customToken = (String[]) authentication.getCredentials();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return getValidationToken(customToken[0], customToken[1]);
     }
 
-    private Authentication getValidationToken(String customToken) {
-        return new PreAuthenticatedAuthenticationToken("admin", customToken);
+    private Authentication getValidationToken(String name, String key) {
+
+
+        if (!usersAdapter.checkUserKey(name, key)) {
+            return null;
+        }
+        String[] customToken = new String[]{name, key};
+        return new PreAuthenticatedAuthenticationToken(name, customToken);
     }
 
     @Override

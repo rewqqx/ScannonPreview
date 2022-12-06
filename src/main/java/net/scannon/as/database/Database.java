@@ -12,7 +12,7 @@ public class Database {
     private static volatile Database singleton;
 
     private String ip = "127.0.0.1";
-    private String port = "55000";
+    private String port = "49153";
     private String login = "postgres";
     private String password = "postgrespw";
 

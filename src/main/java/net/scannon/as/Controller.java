@@ -31,15 +31,18 @@ public class Controller {
         return ".";
     }
 
-    @PostMapping("/login")
-    public boolean login(@RequestBody Map<String, String> body) {
-        System.out.println(body);
-        return true;
-    }
 
     @GetMapping("/{name}/{password}")
     public String getUserKey(@PathVariable(value = "name") String name, @PathVariable(value = "password") String password) {
         return usersAdapter.generateUserKey(name, password);
+    }
+
+    @PostMapping("/users/{name}")
+    public boolean setStatistic(@PathVariable(value = "name") String name, @RequestBody Map<String, String> body) {
+
+        System.out.println(body);
+
+        return true;
     }
 
 

@@ -47,6 +47,16 @@ public class UsersAdapter extends DatabaseAdapter {
     }
 
 
+    public boolean checkUserKey(String name, String key) {
+        String user = getUserByKey(key);
+
+        if (user == null) {
+            return false;
+        }
+
+        return user.equals(name);
+    }
+
     public String generateUserKey(String name, String password) {
         Connection connection = database.getConnection();
         UUID randomUUID = UUID.randomUUID();
@@ -58,6 +68,24 @@ public class UsersAdapter extends DatabaseAdapter {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
+    }
+
+    public String getUserByKey(String key){
+        Connection connection = database.getConnection();
+
+        try (Statement statement = connection.createStatement()) {
+            String query = "SELECT * FROM " + tableName + " WHERE key = '" + key + "';";
+
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                String name = resultSet.getString("name");
+                return name;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 }

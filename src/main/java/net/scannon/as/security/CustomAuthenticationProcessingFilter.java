@@ -30,8 +30,10 @@ public class CustomAuthenticationProcessingFilter extends AbstractAuthentication
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws AuthenticationException {
-        String header = request.getHeader("X-Vault-Token");
-        PreAuthenticatedAuthenticationToken token = new PreAuthenticatedAuthenticationToken(null, header);
+        String key = request.getHeader("key");
+        String name = request.getHeader("name");
+        String[] values = new String[]{name, key};
+        PreAuthenticatedAuthenticationToken token = new PreAuthenticatedAuthenticationToken(null, values);
         return getAuthenticationManager().authenticate(token);
     }
 
