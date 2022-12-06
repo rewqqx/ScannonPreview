@@ -1,6 +1,7 @@
 package net.scannon.as.database.adapter.implementation;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
+import net.scannon.as.objects.User;
 
 
 import java.sql.Connection;
@@ -71,7 +72,7 @@ public class UsersAdapter extends DatabaseAdapter {
         return null;
     }
 
-    public String getUserByKey(String key){
+    public String getUserByKey(String key) {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
@@ -81,6 +82,26 @@ public class UsersAdapter extends DatabaseAdapter {
             while (resultSet.next()) {
                 String name = resultSet.getString("name");
                 return name;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public User getUserInfo(String name) {
+        Connection connection = database.getConnection();
+
+        try (Statement statement = connection.createStatement()) {
+            String query = "SELECT * FROM " + tableName + " WHERE name = '" + name + "';";
+
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                String password = resultSet.getString("password");
+                String key = resultSet.getString("key");
+                int id = resultSet.getInt("id");
+                return new User(id, name, password, key);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -47,5 +47,14 @@ public class Controller {
         return true;
     }
 
+    @GetMapping("/users/{name}")
+    public String getUser(@PathVariable(value = "name") String name, @RequestHeader(name = "name") String token) {
+        if (!name.equals(token)) {
+            return null;
+        }
+
+        return usersAdapter.getUserInfo(name).toJSON();
+    }
+
 
 }
