@@ -1,7 +1,10 @@
 package net.scannon.as;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
+import net.scannon.as.database.adapter.implementation.StatisticAdapter;
 import net.scannon.as.database.adapter.implementation.UsersAdapter;
+import net.scannon.as.objects.Statistic;
+import net.scannon.as.objects.User;
 import net.scannon.as.security.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +18,7 @@ import java.util.Map;
 public class Controller {
 
     private UsersAdapter usersAdapter = new UsersAdapter();
+    private StatisticAdapter statisticAdapter = new StatisticAdapter();
 
 
     @Autowired
@@ -43,6 +47,14 @@ public class Controller {
         if (!name.equals(token)) {
             return false;
         }
+
+        User user = usersAdapter.getUserInfo(name);
+
+        body.keySet().forEach(k -> {
+            String val = body.get(k);
+            statisticAdapter.getStatistic(user.getId(), Integer.parseInt(k));
+            statisticAdapter.setStatistics(new Statistic(user.getId(), Integer.parseInt(k), Integer.parseInt(val), 0));
+        });
 
         return true;
     }

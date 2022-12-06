@@ -21,7 +21,7 @@ public class StatisticAdapter extends DatabaseAdapter {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "INSERT INTO users (user_id, error_id, pos_amount, neg_amount) VALUES " + statistic.toString() + ";";
+            String query = "INSERT INTO " + tableName + " (user_id, error_id, pos_amount, neg_amount) VALUES " + statistic.toString() + ";";
             return statement.execute(query);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class StatisticAdapter extends DatabaseAdapter {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "UPDATE users SET pos_amount=" + statistic.getPosAmount() + ", neg_amount = " + statistic.getNegAmount() + " WHERE user_id = " + statistic.getUserID() + " AND error_id = " + statistic.getStatisticID() + ";";
+            String query = "UPDATE " + tableName + " SET pos_amount=" + statistic.getPosAmount() + ", neg_amount = " + statistic.getNegAmount() + " WHERE user_id = " + statistic.getUserID() + " AND error_id = " + statistic.getStatisticID() + ";";
             return statement.execute(query);
         } catch (SQLException e) {
             e.printStackTrace();
