@@ -6,7 +6,7 @@ export class Scene {
     constructor(context, uiContext) {
         this.context = context;
         this.uiContext = uiContext;
-        this.factory = new TaskFactory(this, "./levels/level_0.json");
+        this.factory = new TaskFactory(this, "./levels/sequence_0.json");
         this.items = []
         this.hasGameStarted = false;
 

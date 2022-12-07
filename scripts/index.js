@@ -6,6 +6,7 @@ import {readStatistics} from "./utils/JSONReader.mjs";
 
 let gameStarted = false;
 let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
+
 window.statistics = new Map();
 
 for (let i = 0; i < staticsMap.length; i++) {

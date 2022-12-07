@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/groups/group_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/levels/level_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/structures/SGroup.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/structures/SLevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/StatisticsMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/StatisticsMenu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/level_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +66,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -66,6 +77,7 @@
       <recent name="D:\Projects\ScannonPreview\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\ScannonPreview\levels\sequences" />
       <recent name="$PROJECT_DIR$/scripts/structures" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="D:\Projects\ScannonPreview\objects\implementations" />
@@ -108,7 +120,8 @@
       <workItem from="1670152075854" duration="8715000" />
       <workItem from="1670225203735" duration="8127000" />
       <workItem from="1670332860171" duration="4766000" />
-      <workItem from="1670351880213" duration="941000" />
+      <workItem from="1670351880213" duration="4706000" />
+      <workItem from="1670404192874" duration="1670000" />
     </task>
     <servers />
   </component>
