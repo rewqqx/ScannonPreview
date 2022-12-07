@@ -10,4 +10,8 @@ export class SLevel {
     addSequence(sequence) {
         this.sequences.push(sequence);
     }
+
+    getRandomSequence() {
+        return this.sequences[Math.floor(Math.random() * this.sequences.length)];
+    }
 }

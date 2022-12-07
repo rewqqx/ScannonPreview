@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/structures/SLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/structures/SLevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +113,7 @@
       <workItem from="1670332860171" duration="4766000" />
       <workItem from="1670351880213" duration="4706000" />
       <workItem from="1670404192874" duration="3521000" />
-      <workItem from="1670412403220" duration="1621000" />
+      <workItem from="1670412403220" duration="4794000" />
     </task>
     <servers />
   </component>
@@ -130,19 +135,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
-          <line>59</line>
+          <url>file://$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs</url>
+          <line>140</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/utils/JSONReader.mjs</url>
-          <line>65</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="result[&quot;0&quot;].levels" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

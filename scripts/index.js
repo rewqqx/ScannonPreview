@@ -28,12 +28,10 @@ setInterval(tick, 10);
 
 function tick() {
     background.drawBackground();
-    if (gameStarted) {
-        window.scene.tick();
-    }
+    window.scene.tick();
 }
 
-window.mainmenu = new MainMenu(document.getElementById("ui"), btnPlay);
+window.mainmenu = new MainMenu(document.getElementById("ui"));
 window.mainmenu.generateMenu();
 
 function initScene() {
@@ -80,12 +78,6 @@ function loadFont() {
     });
 }
 
-function btnPlay() {
-    gameStarted = true;
-    document.getElementById("background").style.display = "none";
-    document.getElementById("ui").style.display = "none";
-    document.getElementById("canvas").style.display = "";
-}
 
 function readLevelGroups() {
     let result = [];

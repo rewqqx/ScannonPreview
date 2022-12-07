@@ -9,7 +9,7 @@ export class Scene {
         this.factory = new TaskFactory(this, "./levels/sequence_0.json");
         this.items = []
         this.hasGameStarted = false;
-
+        this.doTick = false;
         this.backgroundDrawer = new Background(context);
     }
 
@@ -62,6 +62,10 @@ export class Scene {
     }
 
     tick() {
+        if (!this.doTick) {
+            return;
+        }
+
         if (this.checkGameEnd()) {
             this.endGame();
         }
@@ -76,6 +80,16 @@ export class Scene {
         })
 
         this.drawItems();
+    }
+
+    setDoTick(doTick) {
+        this.doTick = doTick;
+    }
+
+    loadNewGame(path) {
+        this.factory = new TaskFactory(this, path);
+        this.doTick = true;
+        this.hasGameStarted = false;
     }
 
     endGame() {

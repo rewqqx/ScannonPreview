@@ -2,10 +2,8 @@ import {Menu} from "../Menu.mjs";
 import {StatisticsMenu} from "./StatisticsMenu.mjs";
 
 export class MainMenu extends Menu {
-    constructor(context, func) {
+    constructor(context) {
         super(context);
-
-        this.func = func;
     }
 
     generateMenu() {
@@ -34,7 +32,12 @@ export class MainMenu extends Menu {
         topic.innerHTML = "Scannon";
         div.appendChild(topic);
 
-        panel.appendChild(this.createLevelCard());
+        let groupBox = document.createElement("div");
+        groupBox.setAttribute("class", "flexbox_horizontal");
+        panel.appendChild(groupBox);
+        this.groupBox = groupBox;
+
+        this.generateGroupsCars()
 
         this.context.appendChild(panel);
     }
@@ -44,18 +47,36 @@ export class MainMenu extends Menu {
         stats.generateMenu();
     }
 
-    createLevelCard() {
+    generateGroupsCars() {
+        this.groupBox.innerHTML = "";
+
+        for (let i = 0; i < window.levelGroups.length; i++) {
+            let group = window.levelGroups[i];
+            this.groupBox.appendChild(this.createGroupCard(group));
+        }
+
+    }
+
+    createGroupCard(group) {
         let levelCard = document.createElement("div");
         levelCard.setAttribute("class", "level_card");
+        levelCard.setAttribute("style", "align-self: center; margin-left: 20px; margin-right: 20px;");
 
         let playButton = document.createElement("div");
         playButton.setAttribute("class", "level_design");
         playButton.setAttribute("id", "playButton");
-        playButton.onclick = this.func;
+
+        let menu = this;
+
+        //playButton.onclick = this.func;
+        playButton.type = "button";
+        playButton.addEventListener("click", function () {
+            menu.generateLevels(group.levels);
+        })
 
         let button = document.createElement("div");
         button.setAttribute("class", "button");
-        button.innerHTML = "Equations";
+        button.innerHTML = group.name;
         playButton.appendChild(button);
 
         let splitter = document.createElement("div");
@@ -65,13 +86,64 @@ export class MainMenu extends Menu {
         let div = document.createElement("div");
         let img = document.createElement("img");
         img.setAttribute("class", "fit-picture");
-        img.setAttribute("src", "./icons/calculator.png");
+        img.setAttribute("src", "./icons/" + group.iconPath);
         div.appendChild(img);
         playButton.appendChild(div);
 
         levelCard.appendChild(playButton);
 
         return levelCard;
+    }
+
+    createLevelCard(level) {
+        let levelCard = document.createElement("div");
+        levelCard.setAttribute("class", "level_card");
+        levelCard.setAttribute("style", "align-self: center; margin-left: 20px; margin-right: 20px;");
+
+        let playButton = document.createElement("div");
+        playButton.setAttribute("class", "level_design");
+        playButton.setAttribute("id", "playButton");
+
+        let menu = this;
+        let path = level.getRandomSequence();
+
+        //playButton.onclick = this.func;
+        playButton.type = "button";
+        playButton.addEventListener("click", function () {
+            document.getElementById("background").style.display = "none";
+            document.getElementById("ui").style.display = "none";
+            document.getElementById("canvas").style.display = "";
+            window.scene.loadNewGame(path);
+        })
+
+        let button = document.createElement("div");
+        button.setAttribute("class", "button");
+        button.innerHTML = level.name;
+        playButton.appendChild(button);
+
+        let splitter = document.createElement("div");
+        splitter.setAttribute("class", "spliter");
+        playButton.appendChild(splitter);
+
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("class", "fit-picture");
+        img.setAttribute("src", "./icons/" + level.iconPath);
+        div.appendChild(img);
+        playButton.appendChild(div);
+
+        levelCard.appendChild(playButton);
+
+        return levelCard;
+    }
+
+    generateLevels(levels) {
+        this.groupBox.innerHTML = "";
+
+        for (let i = 0; i < levels.length; i++) {
+            let level = levels[i];
+            this.groupBox.appendChild(this.createLevelCard(level));
+        }
     }
 
 
