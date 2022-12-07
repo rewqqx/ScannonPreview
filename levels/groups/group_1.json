@@ -1,7 +1,8 @@
 {
   "name": "Calculation",
   "levels": [
-    "level_1"
+    "level_1",
+    "level_2"
   ],
   "icon": "calculator.png"
 }

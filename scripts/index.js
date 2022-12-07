@@ -5,7 +5,9 @@ import {MainMenu} from './menu/implementations/MainMenu.mjs'
 import {readGroupFromFile, readGroupPathsFromConfig, readStatistics} from "./utils/JSONReader.mjs";
 
 let gameStarted = false;
-windows.levelGroups = readLevelGroups();
+window.levelGroups = readLevelGroups();
+console.log(window.levelGroups);
+
 /*let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
 
 window.statistics = new Map();
