@@ -2,10 +2,11 @@ import {Background} from "./visual/Background.mjs";
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
 import {MainMenu} from './menu/implementations/MainMenu.mjs'
-import {readStatistics} from "./utils/JSONReader.mjs";
+import {readGroupFromFile, readGroupPathsFromConfig, readStatistics} from "./utils/JSONReader.mjs";
 
 let gameStarted = false;
-let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
+windows.levelGroups = readLevelGroups();
+/*let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
 
 window.statistics = new Map();
 
@@ -13,7 +14,7 @@ for (let i = 0; i < staticsMap.length; i++) {
     let stat = staticsMap[i];
     window.statistics.set(stat.type, stat);
 }
-
+*/
 
 loadFont();
 
@@ -84,4 +85,13 @@ function btnPlay() {
     document.getElementById("canvas").style.display = "";
 }
 
+function readLevelGroups() {
+    let result = [];
+    let groupPaths = readGroupPathsFromConfig("./levels/game/game_config.json");
+    for (let i = 0; i < groupPaths.length; i++) {
+        let path = groupPaths[i];
+        result.push(readGroupFromFile(path));
+    }
+    return result;
+}
 

@@ -1,6 +1,8 @@
 import {STask} from "../structures/STask.mjs";
 import {SType} from "../structures/SType.mjs";
 import {SStatistic} from "../structures/SStatistic.mjs";
+import {SLevel} from "../structures/SLevel.js";
+import {SGroup} from "../structures/SGroup.mjs";
 
 export function readTaskFromFile(path) {
     let result = [];
@@ -23,6 +25,81 @@ export function readTaskFromFile(path) {
                     task.setErrors(node.types);
 
                     result.push(task);
+                }
+            }
+        }
+    }
+    request.send(null);
+    return result;
+}
+
+export function readLevelFromFile(path) {
+    let result = new SLevel();
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+                let sequences = json.sequences;
+
+                for (let i = 0; i < sequences.length; i++) {
+                    let node = sequences[i];
+                    let sequencePath = "./levels/sequences/" + node + ".json";
+                    result.addSequence(sequencePath);
+                }
+            }
+        }
+    }
+    request.send(null);
+    return result;
+}
+
+export function readGroupFromFile(path) {
+    let result = new SGroup();
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+
+                let levels = json.levels;
+
+                result.setName(json.name);
+                result.setIconPath(json.icon);
+
+                for (let i = 0; i < levels.length; i++) {
+                    let node = levels[i];
+                    let levelPath = "./levels/levels/" + node + ".json";
+                    let sLevel = readLevelFromFile(levelPath);
+                    result.addLevel(sLevel);
+                }
+            }
+        }
+    }
+    request.send(null);
+    return result;
+}
+
+export function readGroupPathsFromConfig(path) {
+    let result = []
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+
+                let groups = json.groups;
+
+                for (let i = 0; i < groups.length; i++) {
+                    let node = groups[i];
+                    let groupPath = "./levels/groups/" + node + ".json";
+                    result.push(groupPath);
                 }
             }
         }

@@ -11,4 +11,8 @@ export class SGroup {
         this.levels.push(level);
     }
 
+    setIconPath(path) {
+        this.iconPath = path;
+    }
+
 }
