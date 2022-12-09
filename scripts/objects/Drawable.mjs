@@ -71,4 +71,34 @@ export class Drawable {
         return false;
     }
 
+    getSpeedScaler() {
+        let mode = window.speed;
+
+        let scaler = 1;
+
+        if (mode === undefined) {
+            return scaler;
+        }
+
+        if (mode === 0) {
+            return 0.2;
+        }
+
+        if (mode === 1) {
+            return 0.6;
+        }
+
+        if (mode === 2) {
+            return 1;
+        }
+
+        if (mode === 3) {
+            return 1.5;
+        }
+
+        if (mode === 4) {
+            return 2;
+        }
+    }
+
 }

@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/menu/implementations/InGameMenu.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/ingame.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/js/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/js/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/preview/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/factory/TaskFactory.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/factory/TaskFactory.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Drawable.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Drawable.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/structures/SLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/structures/SLevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/JSONReader.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +32,8 @@
         <option value="tsconfig.json" />
         <option value="package.json" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -78,12 +84,16 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/scannonPreview/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="menu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ScannonPreview/preview/js/menu.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/index.js" working-dir="$PROJECT_DIR$/scripts">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.menu.html" />
         <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
@@ -114,6 +124,7 @@
       <workItem from="1670351880213" duration="4706000" />
       <workItem from="1670404192874" duration="3521000" />
       <workItem from="1670412403220" duration="4794000" />
+      <workItem from="1670574359729" duration="7333000" />
     </task>
     <servers />
   </component>
@@ -137,7 +148,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs</url>
           <line>140</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

@@ -30,6 +30,16 @@ body, html {
     background: #22222222;
 }
 
+.content_reverse {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #22222222;
+}
+
 .panel {
     margin-top: 100px;
 
@@ -88,7 +98,6 @@ body, html {
     background: -webkit-linear-gradient(#fa60c4, #f541b0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #fcfffe;
 
     text-align: center;
@@ -278,15 +287,9 @@ body, html {
     width: 96px;
     height: 96px;
 
-    -webkit-filter: drop-shadow(2px 2px 1px #22222222)
-    drop-shadow(-2px 2px 1px #22222222)
-    drop-shadow(2px -2px 1px #22222222)
-    drop-shadow(-2px -2px 1px #22222222);
+    -webkit-filter: drop-shadow(2px 2px 1px #22222222) drop-shadow(-2px 2px 1px #22222222) drop-shadow(2px -2px 1px #22222222) drop-shadow(-2px -2px 1px #22222222);
 
-    filter: drop-shadow(2px 2px 1px #22222222)
-    drop-shadow(-2px 2px 1px #22222222)
-    drop-shadow(2px -2px 1px #22222222)
-    drop-shadow(-2px -2px 1px #22222222);
+    filter: drop-shadow(2px 2px 1px #22222222) drop-shadow(-2px 2px 1px #22222222) drop-shadow(2px -2px 1px #22222222) drop-shadow(-2px -2px 1px #22222222);
 }
 
 .fit-picture-small-button:hover {
@@ -295,15 +298,9 @@ body, html {
     width: 96px;
     height: 96px;
 
-    -webkit-filter: drop-shadow(2px 2px 1px #DDDDDD22)
-    drop-shadow(-2px 2px 1px #DDDDDD22)
-    drop-shadow(2px -2px 1px #DDDDDD22)
-    drop-shadow(-2px -2px 1px #DDDDDD22);
+    -webkit-filter: drop-shadow(2px 2px 1px #DDDDDD22) drop-shadow(-2px 2px 1px #DDDDDD22) drop-shadow(2px -2px 1px #DDDDDD22) drop-shadow(-2px -2px 1px #DDDDDD22);
 
-    filter: drop-shadow(2px 2px 1px #DDDDDD22)
-    drop-shadow(-2px 2px 1px #DDDDDD22)
-    drop-shadow(2px -2px 1px #DDDDDD22)
-    drop-shadow(-2px -2px 1px #DDDDDD22);
+    filter: drop-shadow(2px 2px 1px #DDDDDD22) drop-shadow(-2px 2px 1px #DDDDDD22) drop-shadow(2px -2px 1px #DDDDDD22) drop-shadow(-2px -2px 1px #DDDDDD22);
 }
 
 .margin_20 {

@@ -1,0 +1,61 @@
+.rectangle_button {
+    align-self: center;
+    border-radius: 15px;
+
+
+    outline: solid;
+    outline-width: 3px;
+    outline-color: #fcfffe;
+    align-content: center;
+
+    border: none;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    stroke: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    font-size: 35px;
+    font-family: Fredoka One;
+    color: white;
+    background: #6bd7f2;
+
+}
+
+.speed_button {
+    align-self: center;
+    border-radius: 15px;
+
+
+    outline: solid;
+    outline-width: 3px;
+    outline-color: #fcfffe;
+    align-content: center;
+
+    border: none;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    stroke: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    font-size: 35px;
+    font-family: Fredoka One;
+    color: white;
+    background: #31c8ec;
+
+}
+
+.rectangle_button:hover {
+    color: white;
+    background: #da2296;
+}
+
+.speed_button:hover {
+    color: white;
+    background: forestgreen;
+}

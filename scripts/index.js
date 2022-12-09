@@ -8,7 +8,7 @@ let gameStarted = false;
 window.levelGroups = readLevelGroups();
 console.log(window.levelGroups);
 
-/*let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
+let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
 
 window.statistics = new Map();
 
@@ -16,7 +16,7 @@ for (let i = 0; i < staticsMap.length; i++) {
     let stat = staticsMap[i];
     window.statistics.set(stat.type, stat);
 }
-*/
+
 
 loadFont();
 

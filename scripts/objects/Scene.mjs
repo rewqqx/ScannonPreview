@@ -1,6 +1,7 @@
 import {TaskFactory} from "../factory/TaskFactory.mjs";
 import {Background} from "../visual/Background.mjs";
 import {GameEndMenu} from "../menu/implementations/GameEndMenu.mjs"
+import {InGameMenu} from "../menu/implementations/InGameMenu.mjs";
 
 export class Scene {
     constructor(context, uiContext) {
@@ -90,6 +91,9 @@ export class Scene {
         this.factory = new TaskFactory(this, path);
         this.doTick = true;
         this.hasGameStarted = false;
+
+        let inGameMenu = new InGameMenu(this.uiContext);
+        inGameMenu.generateMenu();
     }
 
     endGame() {

@@ -44,8 +44,8 @@ export class Task extends Drawable {
     }
 
     move() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+        this.x += this.speedX * this.getSpeedScaler();
+        this.y += this.speedY * this.getSpeedScaler();
     }
 
     setData(data) {
@@ -102,7 +102,7 @@ export class Task extends Drawable {
             if (old === undefined) {
                 old = 0;
             }
-            
+
             old += 1;
 
             window.statistics.set(prefix + "_" + type, old);

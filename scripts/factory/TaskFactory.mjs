@@ -22,7 +22,7 @@ export class TaskFactory {
     }
 
     incrementCounter() {
-        this.counter += 1;
+        this.counter += 1 * this.getSpeedScaler();
 
         if (this.counter > this.counterLimit && this.index < this.tasks.length) {
             this.createTask(this.tasks[this.index]);
@@ -63,5 +63,35 @@ export class TaskFactory {
             this.createdTasks.splice(index, 1);
         }
 
+    }
+
+    getSpeedScaler() {
+        let mode = window.speed;
+
+        let scaler = 1;
+
+        if (mode === undefined) {
+            return scaler;
+        }
+
+        if (mode === 0) {
+            return 0.2;
+        }
+
+        if (mode === 1) {
+            return 0.6;
+        }
+
+        if (mode === 2) {
+            return 1;
+        }
+
+        if (mode === 3) {
+            return 1.5;
+        }
+
+        if (mode === 4) {
+            return 2;
+        }
     }
 }
