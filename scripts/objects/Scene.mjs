@@ -2,6 +2,7 @@ import {TaskFactory} from "../factory/TaskFactory.mjs";
 import {Background} from "../visual/Background.mjs";
 import {GameEndMenu} from "../menu/implementations/GameEndMenu.mjs"
 import {InGameMenu} from "../menu/implementations/InGameMenu.mjs";
+import {PauseMenu} from "../menu/implementations/PauseMenu.mjs";
 
 export class Scene {
     constructor(context, uiContext) {
@@ -9,13 +10,18 @@ export class Scene {
         this.uiContext = uiContext;
         this.factory = new TaskFactory(this, "./levels/sequence_0.json");
         this.items = []
+        this.fixedItems = []
         this.hasGameStarted = false;
         this.doTick = false;
         this.backgroundDrawer = new Background(context);
     }
 
     addItem(item) {
-        this.items.push(item)
+        this.items.push(item);
+    }
+
+    addFixedItem(item) {
+        this.fixedItems.push(item);
     }
 
     drawItems() {
@@ -23,10 +29,18 @@ export class Scene {
         this.items.forEach(value => {
             value.draw();
         })
+
+        this.fixedItems.forEach(value => {
+            value.draw();
+        })
     }
 
     clearItems() {
         this.items.forEach(value => {
+            value.clear();
+        })
+
+        this.fixedItems.forEach(value => {
             value.clear();
         })
     }
@@ -80,6 +94,10 @@ export class Scene {
             value.tick();
         })
 
+        this.fixedItems.forEach(value => {
+            value.tick();
+        })
+
         this.drawItems();
     }
 
@@ -88,12 +106,34 @@ export class Scene {
     }
 
     loadNewGame(path) {
+        window.gamePaused = false;
+        this.lastGamePath = path;
         this.factory = new TaskFactory(this, path);
         this.doTick = true;
         this.hasGameStarted = false;
 
         let inGameMenu = new InGameMenu(this.uiContext);
         inGameMenu.generateMenu();
+    }
+
+    pauseGame() {
+        this.doTick = false;
+        window.gamePaused = true;
+        let pauseMenu = new PauseMenu(this.uiContext);
+        pauseMenu.generateMenu();
+    }
+
+    unpauseGame() {
+        this.doTick = true;
+        window.gamePaused = false;
+        let inGameMenu = new InGameMenu(this.uiContext);
+        inGameMenu.generateMenu();
+    }
+
+
+    restartGame() {
+        this.items = [];
+        this.loadNewGame(this.lastGamePath);
     }
 
     endGame() {

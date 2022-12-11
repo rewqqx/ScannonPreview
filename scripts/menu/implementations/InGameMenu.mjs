@@ -38,7 +38,7 @@ export class InGameMenu extends Menu {
     }
 
     pauseGame() {
-
+        window.scene.pauseGame();
     }
 
     generateSpeedControl(container) {
