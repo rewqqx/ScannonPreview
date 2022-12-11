@@ -10,43 +10,43 @@
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "5*с + 6*с = 2*с \u2013 12 + 78",
-      "types": []
+      "types": ["brackets_open_only_for_first_argument"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "5*с + 30*с = 2*с \u2013 12 + 78",
-      "types": []
+      "types": ["brackets_open_only_for_first_argument"]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "5*с + 30*с + 2*с = 12 + 78",
-      "types": []
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "5*с + 30*с - 2*с = -12 + 78",
-      "types": []
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "33*с = 66",
-      "types": []
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "3 = с",
-      "types": []
+      "types": ["additional_operands_reducing"]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "2 = с",
-      "types": []
+      "types": ["additional_operands_reducing"]
     }
   ]
 }

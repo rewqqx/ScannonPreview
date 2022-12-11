@@ -20,6 +20,12 @@ export class Scene {
         this.items.push(item);
     }
 
+    removeItem(item) {
+        console.log(item);
+        let index = this.items.indexOf(item);
+        this.items = this.items.splice(index, 1);
+    }
+
     addFixedItem(item) {
         this.fixedItems.push(item);
     }

@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/objects/implementations/Hint.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/InGameMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/InGameMenu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/PauseMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/PauseMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +31,8 @@
         <option value="tsconfig.json" />
         <option value="package.json" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -118,7 +124,8 @@
       <workItem from="1670404192874" duration="3521000" />
       <workItem from="1670412403220" duration="4794000" />
       <workItem from="1670574359729" duration="8886000" />
-      <workItem from="1670747931267" duration="874000" />
+      <workItem from="1670747931267" duration="2738000" />
+      <workItem from="1670753173155" duration="1819000" />
     </task>
     <servers />
   </component>

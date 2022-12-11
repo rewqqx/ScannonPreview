@@ -1,6 +1,7 @@
 import {Drawable} from "../Drawable.mjs";
 import {Collision} from "../Collision.mjs";
 import {roundedRect} from "../../utils/DrawUtils.mjs"
+import {Hint} from "./Hint.mjs";
 
 export class Task extends Drawable {
 
@@ -85,6 +86,17 @@ export class Task extends Drawable {
             this.calculateStatistics(this.reward);
             this.isCollided = true;
             instigator.owner.controller.addScore(this.reward);
+
+            if (this.types === undefined) {
+                return;
+            }
+
+            if (this.reward < 0) {
+                let hint = new Hint(this.context, 0, 0);
+                console.log(this.types)
+                hint.setText(this.types.toString());
+                window.scene.addItem(hint);
+            }
         }
     }
 
