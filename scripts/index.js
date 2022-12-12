@@ -4,9 +4,7 @@ import {Cannon} from './objects/implementations/Cannon.mjs'
 import {MainMenu} from './menu/implementations/MainMenu.mjs'
 import {readGroupFromFile, readGroupPathsFromConfig, readStatistics} from "./utils/JSONReader.mjs";
 
-let gameStarted = false;
 window.levelGroups = readLevelGroups();
-console.log(window.levelGroups);
 
 let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
 
@@ -32,7 +30,6 @@ function tick() {
 }
 
 window.mainmenu = new MainMenu(document.getElementById("ui"));
-window.mainmenu.generateMenu();
 
 function initScene() {
     let canvas = document.getElementById("canvas");

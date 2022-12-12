@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/menu/implementations/SignInMenu.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/AuthUtils.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/CookieUtils.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/js/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/js/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/preview/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/SignInMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/SignInMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,8 @@
         <option value="tsconfig.json" />
         <option value="package.json" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -86,10 +87,14 @@
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/index.js" working-dir="$PROJECT_DIR$/scripts">
       <method v="2" />
     </configuration>
+    <configuration name="menu.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/preview/js/menu.js" working-dir="$PROJECT_DIR$/preview/js">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.menu.html" />
+        <item itemvalue="Node.js.menu.js" />
         <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
@@ -123,7 +128,7 @@
       <workItem from="1670574359729" duration="8886000" />
       <workItem from="1670747931267" duration="2738000" />
       <workItem from="1670753173155" duration="2416000" />
-      <workItem from="1670832577396" duration="7826000" />
+      <workItem from="1670832577396" duration="11726000" />
     </task>
     <servers />
   </component>
@@ -142,6 +147,16 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/menu/implementations/SignInMenu.mjs</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="result[&quot;0&quot;].levels" />

@@ -1,12 +1,21 @@
 import {Menu} from "../Menu.mjs";
 import {StatisticsMenu} from "./StatisticsMenu.mjs";
+import {SignInMenu} from "./SignInMenu.mjs";
 
 export class MainMenu extends Menu {
     constructor(context) {
         super(context);
+        if (window.userLogin === "" || window.userLogin === undefined) {
+            let loginMenu = new SignInMenu(context);
+            loginMenu.generateMenu();
+        } else {
+            console.log("User: " + window.userLogin);
+            this.generateMenu();
+        }
     }
 
     generateMenu() {
+        console.log("User: " + window.userLogin);
         document.getElementById("background").style.display = "";
         document.getElementById("canvas").style.display = "none";
 

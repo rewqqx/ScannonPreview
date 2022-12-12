@@ -1,8 +1,27 @@
 import {Menu} from "../Menu.mjs";
+import {getToken, tryLogin} from "../../utils/AuthUtils.mjs";
+import {createCookie, getCookie} from "../../utils/CookieUtils.mjs";
 
 export class SignInMenu extends Menu {
     constructor(context) {
         super(context);
+        this.tryOpenMenu();
+    }
+
+    tryOpenMenu() {
+        let token = getCookie("scannonToken");
+        if (token === "") {
+            return;
+        }
+        let loginResult = tryLogin(token);
+
+        if (loginResult !== "" && loginResult !== undefined && loginResult !== "null") {
+            window.userLogin = loginResult;
+            if (window.mainmenu === undefined) {
+                return;
+            }
+            window.mainmenu.generateMenu();
+        }
     }
 
     generateMenu() {
@@ -49,6 +68,19 @@ export class SignInMenu extends Menu {
     }
 
     tryLogin() {
-        console.log(document.getElementById('password').value);
+        let login = document.getElementById('login').value;
+        let pass = document.getElementById('password').value;
+        let token = getToken(login, pass);
+        createCookie("scannonToken", token, 1);
+
+        let loginResult = tryLogin(token);
+
+        if (loginResult !== "" && loginResult !== undefined && loginResult !== "null") {
+            window.userLogin = loginResult;
+            if (window.mainmenu === undefined) {
+                return;
+            }
+            window.mainmenu.generateMenu();
+        }
     }
 }
