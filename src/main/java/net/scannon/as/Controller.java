@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin
 @RestController
 public class Controller {
 
@@ -42,7 +43,38 @@ public class Controller {
 
     @GetMapping("/{name}/{password}")
     public String getUserKey(@PathVariable(value = "name") String name, @PathVariable(value = "password") String password) {
-        return usersAdapter.generateUserKey(name, password);
+        String key = usersAdapter.getUserKey(name, password);
+
+        if (key == null) {
+            key = usersAdapter.getUserKey(name, password);
+        }
+
+        return key;
+    }
+
+    @GetMapping("/{token}")
+    public String getUserByToken(@PathVariable(value = "token") String token) {
+        String login =  usersAdapter.getUserByKey(token);
+        return "{\"login\":\"" + login + "\"}";
+    }
+
+    @PostMapping("/register")
+    public String registerUser(@RequestBody Map<String, String> body) {
+        String name = body.get("name");
+        String password = body.get("password");
+
+        if (!usersAdapter.createUser(name, password)) {
+            String key = usersAdapter.getUserKey(name, password);
+
+            if (key == null) {
+                key = usersAdapter.getUserKey(name, password);
+            }
+
+            return "{\"token\":\"" + key + "\"}";
+        }
+
+        String key = usersAdapter.generateUserKey(name, password);
+        return "{\"token\":\"" + key + "\"}";
     }
 
     @PostMapping("/users/{name}")

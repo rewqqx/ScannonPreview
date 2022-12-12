@@ -19,17 +19,18 @@ public class UsersAdapter extends DatabaseAdapter {
         tableName = "users";
     }
 
-    private String getUserKey(String name, String password) {
+    public String getUserKey(String name, String password) {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "SELECT * FROM " + tableName + " WHERE name = '" + name + "' and " + "password = '" + password + "';";
+            String query = "SELECT * FROM " + tableName + " WHERE login = '" + name + "' and " + "password = '" + password + "';";
 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 String key = resultSet.getString("key");
                 return key;
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -37,14 +38,17 @@ public class UsersAdapter extends DatabaseAdapter {
         return null;
     }
 
-    public boolean checkUserKey(String name, String password, String key) {
-        String checkKey = getUserKey(name, password);
 
-        if (checkKey == null) {
-            return false;
+    public boolean createUser(String name, String password) {
+        Connection connection = database.getConnection();
+
+        try (Statement statement = connection.createStatement()) {
+            String query = "INSERT INTO " + tableName + " (login, password) VALUES ('" + name + "','" + password + "');";
+            statement.execute(query);
+            return true;
+        } catch (SQLException e) {
         }
-
-        return checkKey.equals(key);
+        return false;
     }
 
 
@@ -63,7 +67,7 @@ public class UsersAdapter extends DatabaseAdapter {
         UUID randomUUID = UUID.randomUUID();
         String key = randomUUID.toString();
         try (Statement statement = connection.createStatement()) {
-            String query = "UPDATE " + tableName + " SET key='" + key + "' WHERE name = '" + name + "' AND password = '" + password + "';";
+            String query = "UPDATE " + tableName + " SET key='" + key + "' WHERE login = '" + name + "' AND password = '" + password + "';";
             statement.execute(query);
             return key;
         } catch (SQLException e) {
@@ -80,7 +84,7 @@ public class UsersAdapter extends DatabaseAdapter {
 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
-                String name = resultSet.getString("name");
+                String name = resultSet.getString("login");
                 return name;
             }
         } catch (SQLException e) {
@@ -94,7 +98,7 @@ public class UsersAdapter extends DatabaseAdapter {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "SELECT * FROM " + tableName + " WHERE name = '" + name + "';";
+            String query = "SELECT * FROM " + tableName + " WHERE login = '" + name + "';";
 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {

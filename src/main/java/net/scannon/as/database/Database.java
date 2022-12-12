@@ -12,9 +12,9 @@ public class Database {
     private static volatile Database singleton;
 
     private String ip = "127.0.0.1";
-    private String port = "5432";
+    private String port = "49153";
     private String login = "postgres";
-    private String password = "";
+    private String password = "postgrespw";
 
     private Connection connection;
 
@@ -36,6 +36,8 @@ public class Database {
                     singleton = new Database();
                 }
             }
+
+            //TODO: Проверка connection. Если он отвалился пересоздай
 
             return singleton;
         } catch (Exception e) {
