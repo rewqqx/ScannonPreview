@@ -1,0 +1,27 @@
+.input_scannon {
+    background: #31c8ec;
+
+    border-radius: 10px;
+
+    outline: solid;
+    outline-width: 2px;
+    outline-color: #fcfffe;
+
+    border: transparent;
+
+    font-size: 20px;
+
+    color: white;
+
+    padding-left: 10px;
+
+    height: 48px;
+
+    margin: 15px;
+
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+
+    text-decoration: none;
+}

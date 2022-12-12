@@ -1,8 +1,6 @@
-import {GameEndMenu} from "../../scripts/menu/implementations/GameEndMenu.mjs";
-import {InGameMenu} from "../../scripts/menu/implementations/InGameMenu.mjs";
-import {PauseMenu} from "../../scripts/menu/implementations/PauseMenu.mjs";
+import {SignInMenu} from "../../scripts/menu/implementations/SignInMenu.mjs"
 
 
 let uiContext = document.getElementById("ui");
-let menu = new PauseMenu(uiContext);
+let menu = new SignInMenu(uiContext);
 menu.generateMenu();
