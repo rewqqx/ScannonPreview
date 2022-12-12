@@ -1,6 +1,8 @@
 package net.scannon.as.database;
 
 import net.scannon.as.exceptions.DatabaseException;
+import net.scannon.as.utils.Utils;
+import org.json.JSONObject;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,22 +13,29 @@ public class Database {
 
     private static volatile Database singleton;
 
-    private String ip = "127.0.0.1";
-    private String port = "49153";
-    private String login = "postgres";
-    private String password = "postgrespw";
+    private String ip, port, login, password;
+
 
     private Connection connection;
 
     private Database() throws SQLException {
+        readConfig();
         initDatabase();
+    }
+
+    private void readConfig() {
+        JSONObject conf = Utils.readConfig("conf.json");
+        ip = conf.getString("ip");
+        port = conf.getString("port");
+        login = conf.getString("login");
+        password = conf.getString("password");
     }
 
     protected void initDatabase() throws SQLException {
         Properties props = new Properties();
         props.setProperty("user", login);
         props.setProperty("password", password);
-        this.connection = DriverManager.getConnection("jdbc:postgresql://" + ip + ":" + port + "/postgres?", props);
+        this.connection = DriverManager.getConnection("jdbc:postgresql://" + ip + ":" + port + "/postgres", props);
     }
 
     public static Database getDatabase() throws DatabaseException {
