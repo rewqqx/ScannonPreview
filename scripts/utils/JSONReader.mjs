@@ -23,6 +23,7 @@ export function readTaskFromFile(path) {
                     task.setReward(node.scoreForHit);
                     task.setPunishment(node.scoreForSkip);
                     task.setErrors(node.types);
+                    task.setTutorial(node.tutorial);
 
                     result.push(task);
                 }
@@ -146,7 +147,6 @@ export function readStatistics(url) {
         if (request.readyState === 4) {
             if (request.status === 200 || request.status == 0) {
                 let content = request.responseText;
-                console.log(content);
                 let json = JSON.parse(content);
                 let statistics = json.array;
 

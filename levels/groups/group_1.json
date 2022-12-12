@@ -1,6 +1,7 @@
 {
   "name": "Calculation",
   "levels": [
+    "level_tutorial",
     "level_1",
     "level_2"
   ],

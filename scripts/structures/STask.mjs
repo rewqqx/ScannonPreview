@@ -17,4 +17,8 @@ export class STask {
     setErrors(errors) {
         this.errors = errors;
     }
+
+    setTutorial(tutorial) {
+        this.tutorial = tutorial;
+    }
 }
