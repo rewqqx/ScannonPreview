@@ -13,6 +13,7 @@ export class Scene {
         this.hasGameStarted = false;
         this.doTick = false;
         this.backgroundDrawer = new Background(context);
+        window.gamePaused = true;
     }
 
     addItem(item) {

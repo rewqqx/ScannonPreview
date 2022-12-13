@@ -166,7 +166,7 @@ export class MainMenu extends Menu {
             let level = levels[0];
             let path = level.getRandomSequence();
 
- 
+
             document.getElementById("background").style.display = "none";
             document.getElementById("ui").style.display = "none";
             document.getElementById("canvas").style.display = "";

@@ -15,10 +15,16 @@ export class PlayerController extends Controller {
     }
 
     mouseMoveEvent(event) {
+        if (window.gamePaused) {
+            return;
+        }
         this.controllable.setLookAtLocation(event.x, event.y);
     }
 
     mouseClickEvent(event) {
+        if (window.gamePaused) {
+            return;
+        }
         this.controllable.action();
     }
 }
