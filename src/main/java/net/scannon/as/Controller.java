@@ -94,7 +94,7 @@ public class Controller {
             String val = json.getString(k);
             JSONObject object = new JSONObject(val);
             statisticAdapter.getStatistic(user.getId(), object.getInt("id"));
-            statisticAdapter.setStatistics(new Statistic(user.getId(), object.getInt("id"), object.getInt("pos"), object.getInt("name")));
+            statisticAdapter.setStatistics(new Statistic(user.getId(), object.getInt("id"), object.getInt("pos"), object.getInt("neg")));
         });
 
         return true;
