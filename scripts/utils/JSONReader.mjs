@@ -165,3 +165,20 @@ export function readStatistics(url) {
     request.send();
     return result;
 }
+
+export function readBackendConfigFromFile(path) {
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+
+                window.ip = json.ip;
+                window.port = json.port;
+            }
+        }
+    }
+    request.send(null);
+}

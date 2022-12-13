@@ -2,7 +2,7 @@ export function getToken(name, password) {
     let token = "";
     let body = {"name": name, "password": password};
     let request = new XMLHttpRequest();
-    let url = "http://localhost:8081/register";
+    let url = "http://" + window.ip + ":" + window.port + "/register";
     request.open("POST", url, false);
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("charset", "utf-8");
@@ -22,7 +22,7 @@ export function getToken(name, password) {
 export function tryLogin(token) {
     let login = "";
     let request = new XMLHttpRequest();
-    let url = "http://localhost:8081/" + token;
+    let url = "http://" + window.ip + ":" + window.port + "/" + token;
     request.open("GET", url, false);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {

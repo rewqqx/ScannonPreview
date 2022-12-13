@@ -2,19 +2,16 @@ import {Background} from "./visual/Background.mjs";
 import {Scene} from './objects/Scene.mjs'
 import {Cannon} from './objects/implementations/Cannon.mjs'
 import {MainMenu} from './menu/implementations/MainMenu.mjs'
-import {readGroupFromFile, readGroupPathsFromConfig, readStatistics} from "./utils/JSONReader.mjs";
+import {
+    readBackendConfigFromFile,
+    readGroupFromFile,
+    readGroupPathsFromConfig,
+    readStatistics
+} from "./utils/JSONReader.mjs";
 
 window.levelGroups = readLevelGroups();
 
-let staticsMap = readStatistics("http://localhost:8081/users/admin/statistics");
-
-window.statistics = new Map();
-
-for (let i = 0; i < staticsMap.length; i++) {
-    let stat = staticsMap[i];
-    window.statistics.set(stat.type, stat);
-}
-
+readBackendConfigFromFile("./config/backend.json");
 
 loadFont();
 
