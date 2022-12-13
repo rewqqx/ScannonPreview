@@ -1,0 +1,7 @@
+{
+  "name": "Tutorial",
+  "levels": [
+    "level_tutorial"
+  ],
+  "icon": "tutorial.png"
+}

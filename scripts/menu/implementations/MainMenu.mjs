@@ -162,6 +162,17 @@ export class MainMenu extends Menu {
     generateLevels(levels) {
         this.groupBox.innerHTML = "";
 
+        if (levels.length == 1) {
+            let level = levels[0];
+            let path = level.getRandomSequence();
+
+ 
+            document.getElementById("background").style.display = "none";
+            document.getElementById("ui").style.display = "none";
+            document.getElementById("canvas").style.display = "";
+            window.scene.loadNewGame(path);
+        }
+
         for (let i = 0; i < levels.length; i++) {
             let level = levels[i];
             this.groupBox.appendChild(this.createLevelCard(level));
