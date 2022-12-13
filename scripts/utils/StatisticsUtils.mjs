@@ -32,22 +32,27 @@ export function readStatistics() {
 
 export function exportStatistics() {
     let url = "http://" + window.ip + ":" + window.port + "/users/" + window.userLogin;
-    let body = new Map();
+    let body = "{";
 
     window.statistics.forEach((value, key) => {
-        let json = {"id": value.id, "pos": value.posAmount, "neg": value.negAmount};
-        body.set(key, JSON.stringify(json));
+        let json = "\"{\\\"id\\\": " + value.id + ", \\\"pos\\\": " + value.posAmount + ", \\\"neg\\\": " + value.negAmount + "}\"";
+        body += "\"" + key + "\": " + json + ",";
     });
+
+    body = body.substring(0, body.length - 1) + "}";
 
     let request = new XMLHttpRequest();
     request.open("POST", url, false);
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("charset", "utf-8");
+    request.setRequestHeader("name", window.userLogin);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             if (request.status === 200 || request.status == 0) {
             }
         }
     }
+
+    console.log(body);
     request.send(body);
 }
