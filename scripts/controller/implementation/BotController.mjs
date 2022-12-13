@@ -7,8 +7,12 @@ export class BotController extends Controller {
         this.factory = this.controllable.scene.factory;
     }
 
+    getFactory(){
+        return this.controllable.scene.factory;
+    }
+
     tick() {
-        this.targetTask = this.factory.getLastNotHitTask()
+        this.targetTask = this.getFactory().getLastNotHitTask()
 
         if (this.targetTask === undefined) {
             return;

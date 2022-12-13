@@ -35,8 +35,8 @@ export function exportStatistics() {
     let body = new Map();
 
     window.statistics.forEach((value, key) => {
-        let json = {"pos": value.posAmount, "neg": value.negAmount};
-        posBody.set(key, JSON.stringify(json));
+        let json = {"id": value.id, "pos": value.posAmount, "neg": value.negAmount};
+        body.set(key, JSON.stringify(json));
     });
 
     let request = new XMLHttpRequest();
