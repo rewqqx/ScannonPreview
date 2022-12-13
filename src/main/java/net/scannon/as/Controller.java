@@ -8,6 +8,7 @@ import net.scannon.as.objects.Statistic;
 import net.scannon.as.objects.User;
 import net.scannon.as.security.AppConfig;
 import net.scannon.as.utils.Utils;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,8 +89,9 @@ public class Controller {
 
         body.keySet().forEach(k -> {
             String val = body.get(k);
-            statisticAdapter.getStatistic(user.getId(), Integer.parseInt(k));
-            statisticAdapter.setStatistics(new Statistic(user.getId(), Integer.parseInt(k), Integer.parseInt(val), 0));
+            JSONObject object = new JSONObject(val);
+            statisticAdapter.getStatistic(user.getId(), object.getInt("id"));
+            statisticAdapter.setStatistics(new Statistic(user.getId(), object.getInt("id"), object.getInt("pos"), object.getInt("name")));
         });
 
         return true;
