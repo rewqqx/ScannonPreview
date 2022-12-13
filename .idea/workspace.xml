@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/levels/levels/level_example.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/sequences/sequence_examples.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/groups/group_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/groups/group_1.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Projects/ScannonPreview/levels/groups",
+    "last_opened_file_path": "D:/Projects/ScannonPreview/levels/levels",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -61,9 +61,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\ScannonPreview\levels\groups" />
       <recent name="D:\Projects\ScannonPreview\levels\levels" />
       <recent name="D:\Projects\ScannonPreview\levels\sequences" />
+      <recent name="D:\Projects\ScannonPreview\levels\groups" />
       <recent name="D:\Projects\ScannonPreview\scripts\menu\implementations" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -128,7 +128,7 @@
       <workItem from="1670832577396" duration="11726000" />
       <workItem from="1670923444626" duration="37000" />
       <workItem from="1670932360244" duration="3160000" />
-      <workItem from="1670948896597" duration="1305000" />
+      <workItem from="1670948896597" duration="1694000" />
     </task>
     <servers />
   </component>
