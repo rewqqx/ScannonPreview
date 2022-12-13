@@ -1,7 +1,7 @@
 import {Menu} from "../Menu.mjs";
 import {StatisticsMenu} from "./StatisticsMenu.mjs";
 import {SignInMenu} from "./SignInMenu.mjs";
-import {readStatistics} from "../../utils/JSONReader.mjs";
+import {readStatistics} from "../../utils/StatisticsUtils.mjs";
 
 export class MainMenu extends Menu {
     constructor(context) {
@@ -15,9 +15,9 @@ export class MainMenu extends Menu {
         }
     }
 
-    updateStat(){
+    updateStat() {
         window.statistics = new Map();
-        let staticsMap = readStatistics("http://" + window.ip + ":" + window.port + "/users/" + window.userLogin + "/statistics");
+        let staticsMap = readStatistics();
 
         for (let i = 0; i < staticsMap.length; i++) {
             let stat = staticsMap[i];

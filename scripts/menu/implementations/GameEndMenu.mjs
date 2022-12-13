@@ -1,4 +1,5 @@
 import {Menu} from "../Menu.mjs";
+import {exportStatistics} from "../../utils/StatisticsUtils.mjs";
 
 export class GameEndMenu extends Menu {
     constructor(context) {
@@ -7,6 +8,7 @@ export class GameEndMenu extends Menu {
     }
 
     generateMenu() {
+
         this.context.innerHTML = "";
         document.getElementById("ui").style.display = "";
 
@@ -70,6 +72,7 @@ export class GameEndMenu extends Menu {
     }
 
     gotoMainMenu(){
+        exportStatistics();
         window.mainmenu.generateMenu();
     }
 

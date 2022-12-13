@@ -1,24 +1,32 @@
-export class SStatistic{
+export class SStatistic {
     constructor() {
     }
 
-    setID(id){
+    setID(id) {
         this.id = id;
     }
 
-    setType(type){
+    setType(type) {
         this.type = type;
     }
 
-    setPosAmount(amount){
+    setPosAmount(amount) {
         this.posAmount = amount;
     }
 
-    setNegAmount(amount){
+    setNegAmount(amount) {
         this.negAmount = amount;
     }
 
-    getSum(){
+    getSum() {
         return this.negAmount + this.posAmount;
+    }
+
+    incPosAmount() {
+        this.posAmount += 1;
+    }
+
+    incNegAmount() {
+        this.negAmount += 1;
     }
 }

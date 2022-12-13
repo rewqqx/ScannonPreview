@@ -5,8 +5,7 @@ import {MainMenu} from './menu/implementations/MainMenu.mjs'
 import {
     readBackendConfigFromFile,
     readGroupFromFile,
-    readGroupPathsFromConfig,
-    readStatistics
+    readGroupPathsFromConfig
 } from "./utils/JSONReader.mjs";
 
 window.levelGroups = readLevelGroups();

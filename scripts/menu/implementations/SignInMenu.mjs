@@ -20,6 +20,7 @@ export class SignInMenu extends Menu {
             if (window.mainmenu === undefined) {
                 return;
             }
+            window.userToken = token;
             window.mainmenu.generateMenu();
         }
     }
@@ -80,6 +81,7 @@ export class SignInMenu extends Menu {
             if (window.mainmenu === undefined) {
                 return;
             }
+            window.userToken = token;
             window.mainmenu.generateMenu();
         }
     }

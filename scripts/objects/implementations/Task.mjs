@@ -156,23 +156,15 @@ export class Task extends Drawable {
     }
 
     calculateStatistics(value) {
-        let prefix = "correct";
-
-        if (value <= 0) {
-            prefix = "error";
-        }
-
         for (let i = 0; i < this.types.length; i++) {
             let type = this.types[i];
-            let old = window.statistics.get(prefix + "_" + type);
+            let stat = window.statistics.get(type);
 
-            if (old === undefined) {
-                old = 0;
+            if(value > 0){
+                stat.incPosAmount();
+            } else {
+                stat.incNegAmount();
             }
-
-            old += 1;
-
-            window.statistics.set(prefix + "_" + type, old);
         }
     }
 
