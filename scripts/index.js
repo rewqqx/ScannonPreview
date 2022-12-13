@@ -6,7 +6,7 @@ import {readGroupFromFile, readGroupPathsFromConfig, readStatistics} from "./uti
 
 window.levelGroups = readLevelGroups();
 
-let staticsMap = readStatistics("http://localhost:8080/users/admin/statistics");
+let staticsMap = readStatistics("http://localhost:8081/users/admin/statistics");
 
 window.statistics = new Map();
 
