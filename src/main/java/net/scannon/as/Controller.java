@@ -79,16 +79,19 @@ public class Controller {
     }
 
     @PostMapping("/users/{name}")
-    public boolean setStatistic(@PathVariable(value = "name") String name, @RequestBody Map<String, String> body, @RequestHeader(name = "name") String token) {
+    public boolean setStatistic(@PathVariable(value = "name") String name, @RequestBody String body, @RequestHeader(name = "name") String token) {
 
         if (!name.equals(token)) {
             return false;
         }
 
+        JSONObject json = new JSONObject(body);
+
+
         User user = usersAdapter.getUserInfo(name);
 
-        body.keySet().forEach(k -> {
-            String val = body.get(k);
+        json.keySet().forEach(k -> {
+            String val = json.getString(k);
             JSONObject object = new JSONObject(val);
             statisticAdapter.getStatistic(user.getId(), object.getInt("id"));
             statisticAdapter.setStatistics(new Statistic(user.getId(), object.getInt("id"), object.getInt("pos"), object.getInt("name")));
