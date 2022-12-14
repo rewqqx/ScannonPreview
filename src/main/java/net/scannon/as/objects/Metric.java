@@ -127,6 +127,10 @@ public class Metric {
     }
 
     public String toValues() {
-        return "(" + userID + ", " + levelID + ", " + expressionID + ", '" + eventType + "', '" + errorType + "', '" + hitExpression + "', " + score + ", to_timestamp('" + dateFormat.format(time) + "', 'dd-mm-yyyy hh24:mi:ss'))";
+        if (time != null) {
+            return "(" + userID + ", " + levelID + ", " + expressionID + ", '" + eventType + "', '" + errorType + "', '" + hitExpression + "', " + score + ", to_timestamp('" + dateFormat.format(time) + "', 'dd-mm-yyyy hh24:mi:ss'))";
+        } else {
+            return "(" + userID + ", " + levelID + ", " + expressionID + ", '" + eventType + "', '" + errorType + "', '" + hitExpression + "', " + score + ", null)";
+        }
     }
 }
