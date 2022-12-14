@@ -1,13 +1,16 @@
 package net.scannon.as;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
+import net.scannon.as.database.adapter.implementation.MetricAdapter;
 import net.scannon.as.database.adapter.implementation.StatisticAdapter;
 import net.scannon.as.database.adapter.implementation.UsersAdapter;
 import net.scannon.as.inerfaces.JSONElement;
+import net.scannon.as.objects.Metric;
 import net.scannon.as.objects.Statistic;
 import net.scannon.as.objects.User;
 import net.scannon.as.security.AppConfig;
 import net.scannon.as.utils.Utils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +28,7 @@ public class Controller {
 
     private UsersAdapter usersAdapter = new UsersAdapter();
     private StatisticAdapter statisticAdapter = new StatisticAdapter();
-
+    private MetricAdapter metricAdapter = new MetricAdapter();
 
     @Autowired
     AppConfig appConfig;
@@ -53,9 +56,27 @@ public class Controller {
         return key;
     }
 
+
+    @PostMapping("/metrics")
+    public boolean pushMetrics(@RequestBody String body) {
+        JSONObject json = new JSONObject(body);
+        JSONArray array = json.getJSONArray("array");
+        List<Metric> metrics = new ArrayList<>();
+
+        for (int i = 0; i < array.length(); i++) {
+            JSONObject jsonMetric = array.getJSONObject(i);
+            Metric metric = new Metric(jsonMetric);
+            metrics.add(metric);
+        }
+
+        metricAdapter.pushMetrics(metrics);
+
+        return true;
+    }
+
     @GetMapping("/{token}")
     public String getUserByToken(@PathVariable(value = "token") String token) {
-        String login =  usersAdapter.getUserByKey(token);
+        String login = usersAdapter.getUserByKey(token);
         return "{\"login\":\"" + login + "\"}";
     }
 
