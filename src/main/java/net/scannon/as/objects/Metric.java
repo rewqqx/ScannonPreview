@@ -52,7 +52,7 @@ public class Metric {
 
         if (json.has("timestamp")) {
             try {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 time = dateFormat.parse(json.getString("timestamp"));
             } catch (Exception e) {
                 e.printStackTrace();
