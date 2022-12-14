@@ -8,6 +8,9 @@ import java.util.Date;
 
 public class Metric {
 
+    private String pattern = "dd-MM-yyyy HH:mm:ss";
+    private SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+
     private int userID = -1, levelID = -1, expressionID = -1;
     private String eventType = "", errorType = "", hitExpression = "";
 
@@ -52,7 +55,6 @@ public class Metric {
 
         if (json.has("timestamp")) {
             try {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 time = dateFormat.parse(json.getString("timestamp"));
             } catch (Exception e) {
                 e.printStackTrace();
@@ -125,6 +127,6 @@ public class Metric {
     }
 
     public String toValues() {
-        return "(" + userID + ", " + levelID + ", " + expressionID + ", '" + eventType + "', '" + errorType + "', '" + hitExpression + "', " + score + ", " + time + ")";
+        return "(" + userID + ", " + levelID + ", " + expressionID + ", '" + eventType + "', '" + errorType + "', '" + hitExpression + "', " + score + ", to_timestamp('" + dateFormat.format(time) + "', 'dd-mm-yyyy hh24:mi:ss'))";
     }
 }
