@@ -76,8 +76,8 @@ public class Controller {
 
     @GetMapping("/{token}")
     public String getUserByToken(@PathVariable(value = "token") String token) {
-        String login = usersAdapter.getUserByKey(token);
-        return "{\"login\":\"" + login + "\"}";
+        JSONObject json = usersAdapter.getUserByKey(token);
+        return json.toString();
     }
 
     @PostMapping("/register")

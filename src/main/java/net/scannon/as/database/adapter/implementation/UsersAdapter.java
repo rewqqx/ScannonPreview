@@ -2,6 +2,7 @@ package net.scannon.as.database.adapter.implementation;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
 import net.scannon.as.objects.User;
+import org.json.JSONObject;
 
 
 import java.sql.Connection;
@@ -53,7 +54,8 @@ public class UsersAdapter extends DatabaseAdapter {
 
 
     public boolean checkUserKey(String name, String key) {
-        String user = getUserByKey(key);
+        JSONObject json = getUserByKey(key);
+        String user = json.getString("login");
 
         if (user == null) {
             return false;
@@ -76,7 +78,7 @@ public class UsersAdapter extends DatabaseAdapter {
         return null;
     }
 
-    public String getUserByKey(String key) {
+    public JSONObject getUserByKey(String key) {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
@@ -85,7 +87,11 @@ public class UsersAdapter extends DatabaseAdapter {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 String name = resultSet.getString("login");
-                return name;
+                int id = resultSet.getInt("id");
+                JSONObject object = new JSONObject();
+                object.put("login", name);
+                object.put("id", id);
+                return object;
             }
         } catch (SQLException e) {
             e.printStackTrace();
