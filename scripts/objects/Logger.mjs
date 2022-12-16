@@ -8,7 +8,6 @@ export class Logger {
     pushMetric(metric) {
         metric.setDate(new Date().getTime());
         this.logs.push(metric);
-        console.log(metric);
     }
 
     cleanMetrics() {

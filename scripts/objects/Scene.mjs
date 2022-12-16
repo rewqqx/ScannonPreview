@@ -21,7 +21,6 @@ export class Scene {
     }
 
     removeItem(item) {
-        console.log(item);
         let index = this.items.indexOf(item);
         this.items = this.items.splice(index, 1);
     }

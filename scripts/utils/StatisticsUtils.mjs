@@ -53,6 +53,5 @@ export function exportStatistics() {
         }
     }
 
-    console.log(body);
     request.send(body);
 }

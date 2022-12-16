@@ -67,7 +67,6 @@ function loadFont() {
     let f = new FontFace('FredokaOne', 'url(./fonts/FredokaOne-Regular.ttf)');
 
     f.load().then(function (font) {
-        console.log('Font ready: FredokaOne');
         document.fonts.add(font);
         //context.font = '48px FredokaOne';
     });

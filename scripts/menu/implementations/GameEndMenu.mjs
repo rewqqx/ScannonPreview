@@ -71,8 +71,9 @@ export class GameEndMenu extends Menu {
         this.context.appendChild(content);
     }
 
-    gotoMainMenu(){
+    gotoMainMenu() {
         exportStatistics();
+        window.logger.export();
         window.mainmenu.generateMenu();
     }
 

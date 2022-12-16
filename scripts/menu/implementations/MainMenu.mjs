@@ -10,7 +10,6 @@ export class MainMenu extends Menu {
             let loginMenu = new SignInMenu(context);
             loginMenu.generateMenu();
         } else {
-            console.log("User: " + window.userLogin);
             this.generateMenu();
         }
     }
@@ -27,8 +26,7 @@ export class MainMenu extends Menu {
 
     generateMenu() {
         this.updateStat();
-
-        console.log("User: " + window.userLogin);
+        
         document.getElementById("background").style.display = "";
         document.getElementById("canvas").style.display = "none";
 

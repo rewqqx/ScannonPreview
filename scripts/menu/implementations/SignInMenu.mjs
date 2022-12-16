@@ -14,7 +14,6 @@ export class SignInMenu extends Menu {
             return;
         }
         let loginResult = tryLogin(token);
-        console.log(loginResult);
 
         if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
             window.userLogin = loginResult.login;
@@ -75,10 +74,8 @@ export class SignInMenu extends Menu {
         let pass = document.getElementById('password').value;
         let token = getToken(login, pass);
         createCookie("scannonToken", token, 1);
-        console.log(token);
 
         let loginResult = tryLogin(token);
-        console.log(loginResult);
 
         if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
             window.userLogin = loginResult.login;

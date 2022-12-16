@@ -10,7 +10,7 @@ export function pushMetrics(metrics) {
     array = array.substring(0, array.length - 1);
     array += "]"
 
-    let json = {"array": array};
+    let json = "{\"array\": " + array + "}";
 
     let url = "http://" + window.ip + ":" + window.port + "/metrics";
 
@@ -27,7 +27,6 @@ export function pushMetrics(metrics) {
         }
     }
 
-    console.log(json);
     request.send(json);
 }
 
