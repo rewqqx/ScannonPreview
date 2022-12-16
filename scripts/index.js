@@ -7,8 +7,10 @@ import {
     readGroupFromFile,
     readGroupPathsFromConfig
 } from "./utils/JSONReader.mjs";
+import {Logger} from "./objects/Logger.mjs";
 
 window.levelGroups = readLevelGroups();
+window.logger = new Logger();
 
 readBackendConfigFromFile("./config/backend.json");
 
