@@ -3,15 +3,27 @@ export class SMetric {
     }
 
     setUserID(id) {
-        this.userID = id;
+        if (id === undefined) {
+            this.userID = -1;
+        } else {
+            this.userID = id;
+        }
     }
 
     setLevelID(id) {
-        this.levelID = id;
+        if (id === undefined) {
+            this.levelID = -1;
+        } else {
+            this.levelID = id;
+        }
     }
 
     setExpression(id) {
-        this.expressionID = id;
+        if (id === undefined) {
+            this.expressionID = -1;
+        } else {
+            this.expressionID = id;
+        }
     }
 
     setEventType(type) {
@@ -27,7 +39,11 @@ export class SMetric {
     }
 
     setScore(score) {
-        this.score = score;
+        if (score !== undefined) {
+            this.score = 0;
+        } else {
+            this.score = score;
+        }
     }
 
     setDate(date) {

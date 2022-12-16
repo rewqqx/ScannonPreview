@@ -1,4 +1,5 @@
 import {Controller} from "../Controller.mjs";
+import {createClickMetric} from "../../utils/MetricsUtils.mjs";
 
 export class PlayerController extends Controller {
 
@@ -26,5 +27,6 @@ export class PlayerController extends Controller {
             return;
         }
         this.controllable.action();
+        createClickMetric();
     }
 }

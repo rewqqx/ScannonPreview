@@ -20,7 +20,7 @@ export function getToken(name, password) {
 }
 
 export function tryLogin(token) {
-    let login = "";
+    let login = "{\"login\": \"\"}";
     let request = new XMLHttpRequest();
     let url = "http://" + window.ip + ":" + window.port + "/" + token;
     request.open("GET", url, false);
@@ -28,8 +28,7 @@ export function tryLogin(token) {
         if (request.readyState === 4) {
             if (request.status === 200 || request.status == 0) {
                 let content = request.responseText;
-                let json = JSON.parse(content);
-                login = json.login;
+                login = JSON.parse(content);
             }
         }
     }

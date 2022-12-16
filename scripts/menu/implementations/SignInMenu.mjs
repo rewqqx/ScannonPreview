@@ -14,9 +14,11 @@ export class SignInMenu extends Menu {
             return;
         }
         let loginResult = tryLogin(token);
+        console.log(loginResult);
 
-        if (loginResult !== "" && loginResult !== undefined && loginResult !== "null") {
-            window.userLogin = loginResult;
+        if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
+            window.userLogin = loginResult.login;
+            window.userID = loginResult.login;
             if (window.mainmenu === undefined) {
                 return;
             }
@@ -73,11 +75,14 @@ export class SignInMenu extends Menu {
         let pass = document.getElementById('password').value;
         let token = getToken(login, pass);
         createCookie("scannonToken", token, 1);
+        console.log(token);
 
         let loginResult = tryLogin(token);
+        console.log(loginResult);
 
-        if (loginResult !== "" && loginResult !== undefined && loginResult !== "null") {
-            window.userLogin = loginResult;
+        if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
+            window.userLogin = loginResult.login;
+            window.userID = loginResult.id;
             if (window.mainmenu === undefined) {
                 return;
             }

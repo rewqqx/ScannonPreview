@@ -33,5 +33,8 @@ export function pushMetrics(metrics) {
 
 export function createClickMetric() {
     let metric = new SMetric();
-    metric.setUserID();
+    metric.setUserID(window.userID);
+    metric.setEventType("click");
+    metric.setLevelID(window.levelID);
+    window.logger.pushMetric(metric);
 }
