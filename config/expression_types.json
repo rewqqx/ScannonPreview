@@ -36,7 +36,7 @@
       "rus": "Неправильное сложение"
     },
     {
-      "type": "mul_error",
+      "type": "mul_mistake",
       "eng": "Wrong multiplication",
       "rus": "Неправильное умножение"
     }

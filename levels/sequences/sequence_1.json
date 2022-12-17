@@ -1,4 +1,5 @@
 {
+  "id": 1,
   "sequence": [
     {
       "scoreForHit": 0,
@@ -10,37 +11,50 @@
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "8 + 6*p  - 6*p + 12 \u2013 6",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "8 + p + 6",
-      "types": ["additional_operands_reducing", "big_amount_of_transformations"]
+      "types": [
+        "additional_operands_reducing",
+        "big_amount_of_transformations"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "8 + 12 \u2013 6",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "14 \u2013 12",
-      "types": ["sum_operation_mistake"]
+      "types": [
+        "sum_operation_mistake"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "20 \u2013 6",
-      "types": ["sum_operation_mistake"]
+      "types": [
+        "sum_operation_mistake"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "14",
-      "types": ["sum_operation_mistake"]
+      "types": [
+        "sum_operation_mistake"
+      ]
     }
   ]
 }

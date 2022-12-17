@@ -1,4 +1,5 @@
 {
+  "id": 5,
   "sequence": [
     {
       "scoreForHit": 0,
@@ -10,73 +11,99 @@
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "32 * (15 \u2013 2*d + 12 *d \u2013 8) / 16 = 370",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "32 / 16 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "2 * (15 \u2013 2*d + 12 *d \u2013 8) = 370 / 5",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 5 * 2",
-      "types": ["brackets_open_only_for_first_argument","big_amount_of_transformations"]
+      "types": [
+        "brackets_open_only_for_first_argument",
+        "big_amount_of_transformations"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 370 / 10",
-      "types": ["big_amount_of_transformations"]
+      "types": [
+        "big_amount_of_transformations"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "15 \u2013 2*d + 12 *d \u2013 8 = 37",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "2*d + 12*d \u2013 8 = 37 \u2013 15",
-      "types": ["negative_first_number","additional_operands_reducing"]
+      "types": [
+        "negative_first_number",
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "-2*d + 12*d \u2013 8 = 37 \u2013 15",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "-2*d + 12*d  = 37 \u2013 15 + 8",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "10*d  = 40",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "10*d  = 30",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "3 = d",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     }
   ]
 }

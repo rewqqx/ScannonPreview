@@ -1,46 +1,61 @@
 {
+  "id": 8,
   "sequence": [
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "7(x+3) = 7*x + 7*3",
-      "types": ["brackets_open_only_for_first_argument"]
+      "types": [
+        "brackets_open_only_for_first_argument"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "5(-x) = -5x",
-      "types": ["negative_first_number"]
+      "types": [
+        "negative_first_number"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "-3(-x) = 3x",
-      "types": ["minus_on_minus_is_plus"]
+      "types": [
+        "minus_on_minus_is_plus"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "5*x = x*5",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "5*x - 3*x = 2*x",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "3 + 5 + 8 - 2 = 14",
-      "types": ["big_amount_of_transformations"]
+      "types": [
+        "big_amount_of_transformations"
+      ]
     },
     {
       "scoreForHit": 0,
       "scoreForSkip": 0,
       "unicode": "5 + 5 = 10",
-      "types": ["sum_operation_mistake"]
+      "types": [
+        "sum_operation_mistake"
+      ]
     }
   ]
 }

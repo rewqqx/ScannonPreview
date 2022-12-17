@@ -37,3 +37,24 @@ export function createClickMetric() {
     metric.setLevelID(window.levelID);
     window.logger.pushMetric(metric);
 }
+
+export function createHitMetric(expressionID, score) {
+    let metric = new SMetric();
+    metric.setUserID(window.userID);
+    metric.setEventType("hit");
+    metric.setLevelID(window.levelID);
+    metric.setExpression(expressionID)
+    metric.setScore(score)
+    window.logger.pushMetric(metric);
+}
+
+export function createErrorMetric(expressionID, score, error) {
+    let metric = new SMetric();
+    metric.setUserID(window.userID);
+    metric.setEventType("error");
+    metric.setErrorType(error);
+    metric.setLevelID(window.levelID);
+    metric.setExpression(expressionID)
+    metric.setScore(score)
+    window.logger.pushMetric(metric);
+}

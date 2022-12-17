@@ -26,7 +26,7 @@ export class MainMenu extends Menu {
 
     generateMenu() {
         this.updateStat();
-        
+
         document.getElementById("background").style.display = "";
         document.getElementById("canvas").style.display = "none";
 

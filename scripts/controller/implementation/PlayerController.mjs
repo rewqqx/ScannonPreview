@@ -6,6 +6,8 @@ export class PlayerController extends Controller {
     constructor(controllable) {
         super(controllable);
 
+        window.playerController = this
+
         onmousemove = (event) => {
             this.mouseMoveEvent(event);
         };

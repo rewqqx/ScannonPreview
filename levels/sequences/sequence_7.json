@@ -1,4 +1,5 @@
 {
+  "id": 7,
   "sequence": [
     {
       "scoreForHit": 0,
@@ -10,61 +11,81 @@
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "12*a + 36 \u2013 3 * (2 + 2*a) = 42",
-      "types": ["brackets_open_only_for_first_argument"]
+      "types": [
+        "brackets_open_only_for_first_argument"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "12*a + 36 \u2013 3 * 2 + 2*a = 42",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "12*a + 36 \u2013 3 * 2 - 3*2*a = 42",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "12*a + 36 \u2013 3 * 2 - 6*a = 42",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "12*a + 42 - 6*a = 42",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "6*a  = 0",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "12*a + 30 - 6*a = 42",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "6*a  = 42 \u2013 30",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "6*a  = 72",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "2 = a",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     }
   ]
 }

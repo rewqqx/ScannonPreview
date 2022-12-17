@@ -1,4 +1,5 @@
 {
+  "id": 4,
   "sequence": [
     {
       "scoreForHit": 0,
@@ -10,61 +11,81 @@
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "320 * (78 \u2013 5*x \u2013 2*x) / 16 = 440",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "20 * (78 \u2013 5*x \u2013 2*x) = 440",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "20 * 78 \u2013 5*x \u2013 2*x = 440",
-      "types": ["brackets_open_only_for_first_argument"]
+      "types": [
+        "brackets_open_only_for_first_argument"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "78 \u2013 5*x \u2013 2*x = 440 / 20",
-      "types": ["multiplication_commutativity"]
+      "types": [
+        "multiplication_commutativity"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "78 \u2013 5*x \u2013 2*x = 20",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "78 \u2013 5*x \u2013 2*x = 22",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "78 \u2013 7*x = 22",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": 30,
       "scoreForSkip": -30,
       "unicode": "7*x = 100",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "56 = 7*x",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     },
     {
       "scoreForHit": -30,
       "scoreForSkip": 30,
       "unicode": "8 = x",
-      "types": ["additional_operands_reducing"]
+      "types": [
+        "additional_operands_reducing"
+      ]
     }
   ]
 }

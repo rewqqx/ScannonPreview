@@ -2,6 +2,7 @@ import {Drawable} from "../Drawable.mjs";
 import {Collision} from "../Collision.mjs";
 import {roundedRect} from "../../utils/DrawUtils.mjs"
 import {Hint} from "./Hint.mjs";
+import {createErrorMetric, createHitMetric} from "../../utils/MetricsUtils.mjs";
 
 export class Task extends Drawable {
 
@@ -57,7 +58,7 @@ export class Task extends Drawable {
 
         for (let i = 0; i < lines.length; i++) {
             let line = lines[i];
-            this.context.fillText(line, this.x + 25 + this.width + 10, this.y + this.height / 2 -8 + i * 32);
+            this.context.fillText(line, this.x + 25 + this.width + 10, this.y + this.height / 2 - 8 + i * 32);
         }
 
     }
@@ -113,6 +114,7 @@ export class Task extends Drawable {
         this.punishment = data.punishment;
         this.types = data.errors;
         this.tutorial = data.tutorial;
+        this.id = data.id;
 
         const metrics = this.context.measureText(this.text);
 
@@ -142,6 +144,12 @@ export class Task extends Drawable {
             this.isCollided = true;
             instigator.owner.controller.addScore(this.reward);
 
+            if (instigator.owner.controller !== window.playerController) {
+                return;
+            }
+
+            createHitMetric(this.id, window.playerController.score);
+
             if (this.types === undefined) {
                 return;
             }
@@ -150,6 +158,7 @@ export class Task extends Drawable {
                 let hint = new Hint(this.context, 0, 0);
                 hint.setText(this.types.toString());
                 window.scene.addItem(hint);
+                createErrorMetric(this.id, window.playerController.score, this.types[0]);
             }
         }
     }
@@ -159,7 +168,7 @@ export class Task extends Drawable {
             let type = this.types[i];
             let stat = window.statistics.get(type);
 
-            if(value > 0){
+            if (value > 0) {
                 stat.incPosAmount();
             } else {
                 stat.incNegAmount();
