@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/expression_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/expression_types.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_tutorial.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/MetricsUtils.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/MetricsUtils.mjs" afterDir="false" />
-    </list>
+    <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +42,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/ScannonPreview/levels/levels&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/ScannonPreview&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -143,6 +126,8 @@
       <workItem from="1670948896597" duration="1766000" />
       <workItem from="1671010391820" duration="234000" />
       <workItem from="1671183507075" duration="4283000" />
+      <workItem from="1671387801557" duration="415000" />
+      <workItem from="1671449118609" duration="1278000" />
     </task>
     <servers />
   </component>
