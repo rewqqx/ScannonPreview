@@ -82,6 +82,24 @@ public class Controller {
         return sequenceAdapter.insertSequence(json);
     }
 
+    @GetMapping("/levels/{id}")
+    public String getLevelByID(@PathVariable(value = "id") int id) {
+        JSONObject json = sequenceAdapter.getLevelByID(id);
+        return json.toString();
+    }
+
+    @GetMapping("/sequences/{id}")
+    public String getSequenceByID(@PathVariable(value = "id") int id) {
+        JSONObject json = sequenceAdapter.getSequenceByID(id);
+        return json.toString();
+    }
+
+    @GetMapping("/groups")
+    public String getGroups() {
+        JSONArray array = sequenceAdapter.getGroups();
+        return array.toString();
+    }
+
     @GetMapping("/{token}")
     public String getUserByToken(@PathVariable(value = "token") String token) {
         JSONObject json = usersAdapter.getUserByKey(token);
