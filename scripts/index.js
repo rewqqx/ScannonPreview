@@ -12,6 +12,7 @@ import {Logger} from "./objects/Logger.mjs";
 window.levelGroups = readLevelGroups();
 window.logger = new Logger();
 
+
 readBackendConfigFromFile("./config/backend.json");
 
 loadFont();

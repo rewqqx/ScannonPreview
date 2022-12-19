@@ -6,6 +6,11 @@
       "rus": "Неправильно открыл скобки"
     },
     {
+      "type": "brackets_open_mistake",
+      "eng": "Brackets wrong open",
+      "rus": "Неправильно открыл скобки"
+    },
+    {
       "type": "negative_first_number",
       "eng": "Negative first number",
       "rus": "Забыл минус у числа"
