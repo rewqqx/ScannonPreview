@@ -27,4 +27,4 @@ for line in lines:
 
 
 sequences.pop(0)
-print(sequences)
+print(str(sequences[0]).replace("'",'"'))
