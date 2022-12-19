@@ -1,3 +1,5 @@
+import requests
+
 file = open('tasks.csv', "r")
 lines = file.readlines()
 
@@ -5,7 +7,7 @@ sequences = []
 sequencesArr = []
 
 for line in lines:
-    arr = line.replace("\n", "").split(";")
+    arr = line.replace("\n", "").replace("п»ї","").split(";")
 
     if len(arr) == 2:
         if arr[1] == "new":
@@ -25,6 +27,9 @@ for line in lines:
         sequence = {"unicode": arr[0], "types": typeArr, "scoreForHit": scoreForHit, "scoreForSkip": scoreForNotHit}
         sequencesArr.append(sequence)
 
-
 sequences.pop(0)
-print(str(sequences[0]).replace("'",'"'))
+for seq in sequences:
+    body = str(seq).replace("'", '"')
+    print(body)
+    response = requests.post('http://217.25.88.166:8081/sequence', data=body)
+    print(response)
