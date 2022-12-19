@@ -2,6 +2,7 @@ package net.scannon.as;
 
 import net.scannon.as.database.adapter.DatabaseAdapter;
 import net.scannon.as.database.adapter.implementation.MetricAdapter;
+import net.scannon.as.database.adapter.implementation.SequenceAdapter;
 import net.scannon.as.database.adapter.implementation.StatisticAdapter;
 import net.scannon.as.database.adapter.implementation.UsersAdapter;
 import net.scannon.as.inerfaces.JSONElement;
@@ -29,6 +30,7 @@ public class Controller {
     private UsersAdapter usersAdapter = new UsersAdapter();
     private StatisticAdapter statisticAdapter = new StatisticAdapter();
     private MetricAdapter metricAdapter = new MetricAdapter();
+    private SequenceAdapter sequenceAdapter = new SequenceAdapter();
 
     @Autowired
     AppConfig appConfig;
@@ -72,6 +74,12 @@ public class Controller {
         metricAdapter.pushMetrics(metrics);
 
         return true;
+    }
+
+    @PostMapping("/sequence")
+    public boolean pushSequence(@RequestBody String body) {
+        JSONObject json = new JSONObject(body);
+        return sequenceAdapter.insertSequence(json);
     }
 
     @GetMapping("/{token}")
