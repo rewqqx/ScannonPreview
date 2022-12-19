@@ -19,7 +19,7 @@ public class SequenceAdapter extends DatabaseAdapter {
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "INSERT INTO " + tableName + " (expressions) VALUES (" + object.toString() + ");";
+            String query = "INSERT INTO " + tableName + " (expressions) VALUES ('" + object.toString() + "');";
             return statement.execute(query);
         } catch (SQLException e) {
             e.printStackTrace();
