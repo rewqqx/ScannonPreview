@@ -77,13 +77,13 @@ public class SequenceAdapter extends DatabaseAdapter {
         return new JSONObject();
     }
 
-    public JSONArray getGroups() {
+    public JSONObject getGroups() {
 
         JSONArray result = new JSONArray();
         Connection connection = database.getConnection();
 
         try (Statement statement = connection.createStatement()) {
-            String query = "SELECT * FROM group;";
+            String query = "SELECT * FROM \"group\";";
 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
@@ -102,10 +102,12 @@ public class SequenceAdapter extends DatabaseAdapter {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getStackTrace());
         }
 
-        return result;
+        JSONObject out = new JSONObject();
+        out.put("array", result);
+        return out;
     }
 
 }

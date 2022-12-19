@@ -96,7 +96,7 @@ public class Controller {
 
     @GetMapping("/groups")
     public String getGroups() {
-        JSONArray array = sequenceAdapter.getGroups();
+        JSONObject array = sequenceAdapter.getGroups();
         return array.toString();
     }
 
