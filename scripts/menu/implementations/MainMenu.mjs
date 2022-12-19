@@ -20,6 +20,7 @@ export class MainMenu extends Menu {
 
         for (let i = 0; i < staticsMap.length; i++) {
             let stat = staticsMap[i];
+            // console.log(stat.type, stat);
             window.statistics.set(stat.type, stat);
         }
     }
@@ -157,10 +158,11 @@ export class MainMenu extends Menu {
         return levelCard;
     }
 
+
     generateLevels(levels) {
         this.groupBox.innerHTML = "";
 
-        if (levels.length == 1) {
+        if (levels.length == 1 && levels[0].name == 'Tutorial') {
             let level = levels[0];
             let path = level.getRandomSequence();
 

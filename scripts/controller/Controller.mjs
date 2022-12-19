@@ -8,6 +8,10 @@ export class Controller {
         this.score += add;
     }
 
+    resetScore(){
+        this.score = 0;
+    }
+
     tick() {
     }
 }

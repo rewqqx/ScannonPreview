@@ -107,7 +107,6 @@ export class Task extends Drawable {
     setData(data) {
         this.data = data;
         this.text = data.expression.split("*").join("∙");
-
         this.context.font = '48px FredokaOne';
 
         this.reward = data.reward;
@@ -153,12 +152,16 @@ export class Task extends Drawable {
             if (this.types === undefined) {
                 return;
             }
+            window.score += this.reward;
 
             if (this.reward < 0) {
+                window.negAmount++;
                 let hint = new Hint(this.context, 0, 0);
                 hint.setText(this.types.toString());
                 window.scene.addItem(hint);
                 createErrorMetric(this.id, window.playerController.score, this.types[0]);
+            } else {
+                window.posAmount++;
             }
         }
     }
@@ -170,7 +173,7 @@ export class Task extends Drawable {
 
             if (value > 0) {
                 stat.incPosAmount();
-            } else {
+            } else{
                 stat.incNegAmount();
             }
         }

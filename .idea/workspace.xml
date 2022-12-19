@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="954b17a2-55c2-4576-8e57-2824d205621e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/levels/groups/group_theory.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/theory/theory.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/menu/implementations/TheoryMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/expression_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/expression_types.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/sequences/sequence_tutorial.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/sequences/sequence_tutorial.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/PlayerController.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/game/game_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/levels/game/game_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/controller/Controller.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/Controller.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/controller/implementation/BotController.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/GameEndMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/GameEndMenu.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/MainMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/menu/implementations/StatisticsMenu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/menu/implementations/StatisticsMenu.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/objects/Scene.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/Scene.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/objects/implementations/Task.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/MetricsUtils.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/MetricsUtils.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +39,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/javascript" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9c330aee-b548-4598-9c15-91645e795d3b" />
+        <option name="url" value="https://github.com/bogdanspbm/ScannonPreview" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -161,15 +189,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/scripts/menu/implementations/SignInMenu.mjs</url>
-          <line>11</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="result[&quot;0&quot;].levels" />

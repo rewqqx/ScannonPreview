@@ -55,17 +55,25 @@ export class StatisticsMenu extends Menu {
         let types = readExpressionTypes("./config/expression_types.json");
         let stats = window.statistics;
 
+
         let infoPanel = document.createElement("div");
         infoPanel.setAttribute("class", "scroll");
 
         for (let i = 0; i < types.length; i++) {
             let sType = types[i];
-            let stat = stats.get(sType.type);
-            let percent = 0;
 
-            if (stat.getSum() !== 0) {
-                percent = (stat.posAmount / stat.getSum()) * 100;
+            // console.log(sType.type);
+            let stat = stats.get(sType.type);
+
+            let percent = 0;
+            if (stat !== undefined){
+                if (stat.getSum() !== 0) {
+                    percent = (stat.posAmount / stat.getSum()) * 100;
+                }
+            } else {
+                percent = 0;
             }
+
 
             let box = document.createElement("div");
             box.setAttribute("class", "flexbox_horizontal");

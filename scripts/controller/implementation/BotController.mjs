@@ -14,9 +14,12 @@ export class BotController extends Controller {
     tick() {
         this.targetTask = this.getFactory().getLastNotHitTask()
 
+
         if (this.targetTask === undefined) {
             return;
         }
+
+        console.log(this.getFactory().getLastNotHitTask().reward);
 
         let x = this.targetTask.x;
         let y = this.targetTask.y - 100;
