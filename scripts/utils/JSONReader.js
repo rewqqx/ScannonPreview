@@ -46,6 +46,8 @@ export function readLevelFromFile(path) {
                 let json = JSON.parse(content);
                 let sequences = json.sequences;
                 result.setName(json.name);
+                result.setType(json.type);
+                result.setIcon(json.icon);
 
                 for (let i = 0; i < sequences.length; i++) {
                     let node = sequences[i];

@@ -3,13 +3,14 @@ import {StatisticsMenu} from "./StatisticsMenu.js";
 import {SignInMenu} from "./SignInMenu.js";
 // import {readStatistics} from "../../utils/StatisticsUtils.js";
 import {readStatisticsAdapter} from "../../adapter/StatisticsAdapter.js";
+import {TheoryMenu} from "./TheoryMenu.js";
 
 export class MainMenu extends Menu {
     constructor(context) {
         super(context);
         if ((window.userLogin === "" || window.userLogin === undefined)) {
             let loginMenu = new SignInMenu(context);
-            if (!window.pingBd){
+            if (!window.pingBd) {
                 this.generateMenu();
             } else {
                 loginMenu.generateMenu();
@@ -137,10 +138,14 @@ export class MainMenu extends Menu {
         //playButton.onclick = this.func;
         playButton.type = "button";
         playButton.addEventListener("click", function () {
-            document.getElementById("background").style.display = "none";
-            document.getElementById("ui").style.display = "none";
-            document.getElementById("canvas").style.display = "";
-            window.scene.loadNewGame(path);
+            if (level.type !== "theory") {
+                document.getElementById("background").style.display = "none";
+                document.getElementById("ui").style.display = "none";
+                document.getElementById("canvas").style.display = "";
+                window.scene.loadNewGame(path);
+            } else {
+                menu.generateTheory(level);
+            }
         })
 
         let button = document.createElement("div");
@@ -164,6 +169,10 @@ export class MainMenu extends Menu {
         return levelCard;
     }
 
+    generateTheory(level) {
+        let theoryMenu = new TheoryMenu(this.context);
+        theoryMenu.generateMenu();
+    }
 
     generateLevels(levels) {
         this.groupBox.innerHTML = "";
@@ -171,7 +180,6 @@ export class MainMenu extends Menu {
         if (levels.length == 1 && levels[0].name == 'Tutorial') {
             let level = levels[0];
             let path = level.getRandomSequence();
-
 
             document.getElementById("background").style.display = "none";
             document.getElementById("ui").style.display = "none";

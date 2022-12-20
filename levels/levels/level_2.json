@@ -1,10 +1,12 @@
 {
   "name": "Name B",
+  "type": "default",
   "sequences": [
     "sequence_3",
     "sequence_4",
     "sequence_5",
     "sequence_6",
     "sequence_7"
-  ]
+  ],
+  "icon": "square-root.png"
 }

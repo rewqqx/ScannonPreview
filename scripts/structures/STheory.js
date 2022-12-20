@@ -1,6 +1,6 @@
 export class STheory {
     constructor(type) {
-        this.errorType = type;
+        this.type = type;
         this.examples = [];
     }
 
@@ -10,6 +10,10 @@ export class STheory {
 
     setExamples(examples) {
         this.examples = examples;
+    }
+
+    getRandomExample() {
+        return this.examples[Math.floor(Math.random() * this.examples.length)];
     }
 
 }

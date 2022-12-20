@@ -1,8 +1,10 @@
 {
   "name": "Name A",
+  "type": "default",
   "sequences": [
     "sequence_0",
     "sequence_1",
     "sequence_2"
-  ]
+  ],
+  "icon": "bracket.png"
 }

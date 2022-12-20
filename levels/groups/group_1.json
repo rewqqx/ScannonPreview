@@ -1,6 +1,7 @@
 {
   "name": "Calculation",
   "levels": [
+    "level_theory",
     "level_example",
     "level_1",
     "level_2"

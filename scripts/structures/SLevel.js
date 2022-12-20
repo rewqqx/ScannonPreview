@@ -1,10 +1,19 @@
 export class SLevel {
     constructor() {
         this.sequences = []
+        this.type = "default";
     }
 
     setName(name) {
         this.name = name;
+    }
+
+    setIcon(icon) {
+        this.iconPath = icon;
+    }
+
+    setType(type) {
+        this.type = type;
     }
 
     addSequence(sequence) {

@@ -1,7 +1,7 @@
 {
   "name": "Theory",
-  "levels": [
-    "theory"
+  "type": "theory",
+  "sequences": [
   ],
   "icon": "theory.png"
 }
