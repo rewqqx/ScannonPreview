@@ -44,10 +44,11 @@ export class Scene {
         this.items.forEach(value => {
             value.clear();
         })
-
         this.fixedItems.forEach(value => {
             value.clear();
+            value.controller.resetScore();
         })
+        window.score = 0;
     }
 
     collideTick() {
@@ -116,6 +117,7 @@ export class Scene {
         this.factory = new TaskFactory(this, path);
         this.doTick = true;
         this.hasGameStarted = false;
+        this.items = [];
 
         let inGameMenu = new InGameMenu(this.uiContext);
         inGameMenu.generateMenu();
@@ -137,7 +139,8 @@ export class Scene {
 
 
     restartGame() {
-        this.items = [];
+        // this.items = [];
+        this.clearItems();
         this.loadNewGame(this.lastGamePath);
     }
 
@@ -145,5 +148,6 @@ export class Scene {
         this.hasGameStarted = false;
         this.menu = new GameEndMenu(this.uiContext);
         this.menu.generateMenu();
+        this.clearItems();
     }
 }

@@ -19,6 +19,9 @@ loadFont();
 
 let background = initBackground();
 window.scene = initScene();
+window.score = 0;
+window.negAmount = 0;
+window.posAmount = 0;
 
 
 setInterval(tick, 10);

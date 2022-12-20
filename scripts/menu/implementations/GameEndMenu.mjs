@@ -1,6 +1,6 @@
 import {Menu} from "../Menu.mjs";
-import {exportStatistics} from "../../utils/StatisticsUtils.mjs";
-
+// import {exportStatistics} from "../../utils/StatisticsUtils.mjs";
+import {exportStatisticsAdapter} from "../../adapter/StatisticsAdapter.mjs";
 export class GameEndMenu extends Menu {
     constructor(context) {
         super(context);
@@ -47,17 +47,17 @@ export class GameEndMenu extends Menu {
 
         let errorText = document.createElement("h1");
         errorText.setAttribute("class", "text_white");
-        errorText.innerHTML = "Mistakes: 2";
+        errorText.innerHTML = "Mistakes: " + window.negAmount;
         leftColumn.appendChild(errorText);
 
         let hitsText = document.createElement("h1");
         hitsText.setAttribute("class", "text_white");
-        hitsText.innerHTML = "Hits: 2";
+        hitsText.innerHTML = "Hits: " + window.posAmount;
         leftColumn.appendChild(hitsText);
 
         let scoreText = document.createElement("h1");
         scoreText.setAttribute("class", "text_white");
-        scoreText.innerHTML = "Score: 2500";
+        scoreText.innerHTML = "Score: " + window.score;
         leftColumn.appendChild(scoreText);
 
         leftColumn.appendChild(this.generateStars());
@@ -72,7 +72,7 @@ export class GameEndMenu extends Menu {
     }
 
     gotoMainMenu() {
-        exportStatistics();
+        exportStatisticsAdapter();
         window.logger.export();
         window.mainmenu.generateMenu();
     }

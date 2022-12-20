@@ -1,4 +1,4 @@
-import {pushMetrics} from "../utils/MetricsUtils.mjs";
+import {pushMetricsAdapter} from "../adapter/MetricsAdapter.mjs";
 
 export class Logger {
     constructor() {
@@ -15,7 +15,7 @@ export class Logger {
     }
 
     export() {
-        pushMetrics(this.logs);
+        pushMetricsAdapter(this.logs);
         this.cleanMetrics();
     }
 

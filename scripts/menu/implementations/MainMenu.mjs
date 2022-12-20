@@ -1,25 +1,32 @@
 import {Menu} from "../Menu.mjs";
 import {StatisticsMenu} from "./StatisticsMenu.mjs";
 import {SignInMenu} from "./SignInMenu.mjs";
-import {readStatistics} from "../../utils/StatisticsUtils.mjs";
+// import {readStatistics} from "../../utils/StatisticsUtils.mjs";
+import {readStatisticsAdapter} from "../../adapter/StatisticsAdapter.mjs";
 
 export class MainMenu extends Menu {
     constructor(context) {
         super(context);
-        if (window.userLogin === "" || window.userLogin === undefined) {
+        if ((window.userLogin === "" || window.userLogin === undefined)) {
             let loginMenu = new SignInMenu(context);
-            loginMenu.generateMenu();
+            if (!window.pingBd){
+                this.generateMenu();
+            } else {
+                loginMenu.generateMenu();
+            }
         } else {
             this.generateMenu();
         }
     }
 
     updateStat() {
+        let staticsMap = readStatisticsAdapter();
         window.statistics = new Map();
-        let staticsMap = readStatistics();
-
+        console.log(123333);
+        console.log(staticsMap);
         for (let i = 0; i < staticsMap.length; i++) {
             let stat = staticsMap[i];
+            // console.log(stat.type, stat);
             window.statistics.set(stat.type, stat);
         }
     }
@@ -157,10 +164,11 @@ export class MainMenu extends Menu {
         return levelCard;
     }
 
+
     generateLevels(levels) {
         this.groupBox.innerHTML = "";
 
-        if (levels.length == 1) {
+        if (levels.length == 1 && levels[0].name == 'Tutorial') {
             let level = levels[0];
             let path = level.getRandomSequence();
 

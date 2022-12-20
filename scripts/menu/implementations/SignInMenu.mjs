@@ -1,6 +1,7 @@
 import {Menu} from "../Menu.mjs";
-import {getToken, tryLogin} from "../../utils/AuthUtils.mjs";
+import {getToken} from "../../utils/AuthUtils.mjs";
 import {createCookie, getCookie} from "../../utils/CookieUtils.mjs";
+import {tryLoginAdapter} from "../../adapter/AuthAdapter.mjs";
 
 export class SignInMenu extends Menu {
     constructor(context) {
@@ -13,9 +14,9 @@ export class SignInMenu extends Menu {
         if (token === "") {
             return;
         }
-        let loginResult = tryLogin(token);
+        let loginResult = tryLoginAdapter(token);
 
-        if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
+        if (loginResult && loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
             window.userLogin = loginResult.login;
             window.userID = loginResult.login;
             if (window.mainmenu === undefined) {
@@ -75,7 +76,7 @@ export class SignInMenu extends Menu {
         let token = getToken(login, pass);
         createCookie("scannonToken", token, 1);
 
-        let loginResult = tryLogin(token);
+        let loginResult = tryLoginAdapter(token);
 
         if (loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {
             window.userLogin = loginResult.login;
