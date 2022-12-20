@@ -11,9 +11,7 @@ export class SignInMenu extends Menu {
 
     tryOpenMenu() {
         let token = getCookie("scannonToken");
-        if (token === "") {
-            return;
-        }
+
         let loginResult = tryLoginAdapter(token);
 
         if (loginResult && loginResult.login !== "" && loginResult.login !== undefined && loginResult.login !== "null") {

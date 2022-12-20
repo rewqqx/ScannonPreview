@@ -10,7 +10,7 @@ export class MainMenu extends Menu {
         super(context);
         if ((window.userLogin === "" || window.userLogin === undefined)) {
             let loginMenu = new SignInMenu(context);
-            if (!window.pingBd) {
+            if (!window.pingBd && window.pingBd !== undefined) {
                 this.generateMenu();
             } else {
                 loginMenu.generateMenu();
