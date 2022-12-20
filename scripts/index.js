@@ -5,7 +5,7 @@ import {MainMenu} from './menu/implementations/MainMenu.js'
 import {
     readBackendConfigFromFile,
     readGroupFromFile,
-    readGroupPathsFromConfig
+    readGroupPathsFromConfig, readTheoryFromFile
 } from "./utils/JSONReader.js";
 import {Logger} from "./objects/Logger.js";
 
@@ -14,6 +14,8 @@ window.logger = new Logger();
 
 
 readBackendConfigFromFile("./config/backend.json");
+window.theory = readTheoryFromFile("./levels/theory/theory.json");
+console.log(window.theory);
 
 loadFont();
 

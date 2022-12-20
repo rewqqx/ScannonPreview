@@ -3,6 +3,7 @@ import {SType} from "../structures/SType.js";
 import {SStatistic} from "../structures/SStatistic.js";
 import {SLevel} from "../structures/SLevel.js";
 import {SGroup} from "../structures/SGroup.js";
+import {STheory} from "../structures/STheory.js";
 
 export function readTaskFromFile(path) {
     let result = [];
@@ -152,4 +153,28 @@ export function readBackendConfigFromFile(path) {
         }
     }
     request.send(null);
+}
+
+export function readTheoryFromFile(path) {
+    let result = [];
+    let request = new XMLHttpRequest();
+    request.open("GET", path, false);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200 || request.status == 0) {
+                let content = request.responseText;
+                let json = JSON.parse(content);
+                let array = json.theory;
+
+                for (let i = 0; i < array.length; i++) {
+                    let element = array[i];
+                    let sTheory = new STheory(element.type);
+                    sTheory.setExamples(element.examples);
+                    result.push(sTheory);
+                }
+            }
+        }
+    }
+    request.send();
+    return result;
 }
