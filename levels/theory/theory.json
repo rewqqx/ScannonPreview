@@ -1,3 +1,79 @@
 {
-
+  "theory": [
+    {
+      "type": "brackets_open_only_for_first_argument",
+      "examples": [
+        "Wrong: 3(x+2) = 3x + 2 | Correct: 3(x+2) = 3x + 6",
+        "Wrong: 4(1-x) = 4 - x | Correct: 4(1-x) = 4-4x",
+        "Wrong: (3x-2)4 = 3x - 8 | Correct: (3x-2)4 = 12x - 8"
+      ]
+    },
+    {
+      "type": "brackets_open_mistake",
+      "examples": [
+        "Wrong: 3(x+2) = 3x + 2 | Correct: 3(x+2) = 3x + 6",
+        "Wrong: 4(1-x) = 4 - x | Correct: 4(1-x) = 4-4x",
+        "Wrong: (3x-2)4 = 3x - 8 | Correct: (3x-2)4 = 12x - 8",
+        "Wrong: 3(-x+2) = 3x + 2 | Correct: 3(-x+2) = -3x + 6",
+        "Wrong: 4(1-x) = 4 + 4x | Correct: 4(1-x) = 4 - 4x",
+        "Wrong: (3x-2)4 = 12x + 8 | Correct: (3x-2)4 = 12x - 8"
+      ]
+    },
+    {
+      "type": "negative_first_number",
+      "examples": [
+        "Wrong: 3(-x+2) = 3x + 6 | Correct: 3(-x+2) = -3x + 6",
+        "Wrong: 2-x = 3 <=> x = 1  | Correct: 2-x = 3 <=> -x = 1",
+        "Wrong: x-5 = 2x <=> 5 = x  | Correct: x-5 = 2x <=> -5 = x"
+      ]
+    },
+    {
+      "type": "minus_on_minus_is_plus",
+      "examples": [
+        "Wrong: -3(-x+2) = -3x - 6 | Correct: -3(-x+2) = 3x - 6",
+        "Wrong: -2(2-x) = -4 - 2x  | Correct: -2(2-x) = -4 + 2x",
+        "Wrong: (x-1)(-3) = -3x - 3 | Correct: (x-1)(-3) = -3x + 3"
+      ]
+    },
+    {
+      "type": "multiplication_commutativity",
+      "examples": [
+        "Correct: 2x = x2",
+        "Correct: 3(x+1) = (x+1)3 ",
+        "Correct: (x-2)(x+1) = (x+1)(x-2)"
+      ]
+    },
+    {
+      "type": "additional_operands_reducing",
+      "examples": [
+        "Wrong: x + x3 = 3x | Correct: x + x3 = 4x",
+        "Wrong: 4k + x - 3k - k = 4k  | Correct: 4k + x - 3k - k = x",
+        "Wrong: 2p - 2p = 4p | Correct: 2p - 2p = 0"
+      ]
+    },
+    {
+      "type": "big_amount_of_transformations",
+      "examples": [
+        "Wrong: x + 2x - 5 + 3 = 3x - 1 | Correct: x + 2x - 5 + 3 = 3x - 2",
+        "Wrong: 4k + x - 3k - k - 2x = 4k  | Correct: 4k + x - 3k - k - 2x = -x",
+        "Wrong: 5p - 3p + 5 - 2 * 2 = 2p | Correct: 5p - 3p + 5 - 2 * 2 = 2p + 1"
+      ]
+    },
+    {
+      "type": "sum_operation_mistake",
+      "examples": [
+        "Wrong: 15 + 61 = 77 | Correct: 15 + 61 = 76",
+        "Wrong: 32 + 16 - 5 = 40 | Correct: 32 + 16 - 5 = 41",
+        "Wrong: 77 + 33 = 100 | Correct: 77 + 33 = 110"
+      ]
+    },
+    {
+      "type": "mul_mistake",
+      "examples": [
+        "Wrong: 15 * 61 = 660 | Correct: 15 * 61 = 915",
+        "Wrong: 43 * 2 = 85 | Correct: 43 * 2 = 86",
+        "Wrong: 77 / 11 = 6 | Correct: 77 / 11 = 7"
+      ]
+    }
+  ]
 }
