@@ -1,5 +1,5 @@
-import {Controller} from "../Controller.mjs";
-import {createClickMetric} from "../../utils/MetricsUtils.mjs";
+import {Controller} from "../Controller.js";
+import {createClickMetric} from "../../utils/MetricsUtils.js";
 
 export class PlayerController extends Controller {
 

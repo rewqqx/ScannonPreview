@@ -1,4 +1,4 @@
-import {SMetric} from "../structures/SMetric.mjs";
+import {SMetric} from "../structures/SMetric.js";
 
 export function pushMetrics(metrics) {
     let array = "[";

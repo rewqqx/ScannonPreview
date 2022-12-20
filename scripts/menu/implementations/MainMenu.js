@@ -1,8 +1,8 @@
-import {Menu} from "../Menu.mjs";
-import {StatisticsMenu} from "./StatisticsMenu.mjs";
-import {SignInMenu} from "./SignInMenu.mjs";
-// import {readStatistics} from "../../utils/StatisticsUtils.mjs";
-import {readStatisticsAdapter} from "../../adapter/StatisticsAdapter.mjs";
+import {Menu} from "../Menu.js";
+import {StatisticsMenu} from "./StatisticsMenu.js";
+import {SignInMenu} from "./SignInMenu.js";
+// import {readStatistics} from "../../utils/StatisticsUtils.js";
+import {readStatisticsAdapter} from "../../adapter/StatisticsAdapter.js";
 
 export class MainMenu extends Menu {
     constructor(context) {

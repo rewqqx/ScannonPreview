@@ -1,4 +1,4 @@
-import {pushMetricsAdapter} from "../adapter/MetricsAdapter.mjs";
+import {pushMetricsAdapter} from "../adapter/MetricsAdapter.js";
 
 export class Logger {
     constructor() {

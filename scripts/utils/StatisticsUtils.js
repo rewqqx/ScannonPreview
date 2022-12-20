@@ -1,4 +1,4 @@
-import {SStatistic} from "../structures/SStatistic.mjs";
+import {SStatistic} from "../structures/SStatistic.js";
 
 export function readStatistics() {
     let url = "http://" + window.ip + ":" + window.port + "/users/" + window.userLogin + "/statistics";

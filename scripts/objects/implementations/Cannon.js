@@ -1,9 +1,9 @@
-import {Drawable} from "../Drawable.mjs";
-import {Ball} from "./Ball.mjs";
-import {PlayerController} from "../../controller/implementation/PlayerController.mjs";
+import {Drawable} from "../Drawable.js";
+import {Ball} from "./Ball.js";
+import {PlayerController} from "../../controller/implementation/PlayerController.js";
 import {Score} from "./Score.js";
-import {BotController} from "../../controller/implementation/BotController.mjs";
-import {drawImage} from "../../utils/DrawUtils.mjs";
+import {BotController} from "../../controller/implementation/BotController.js";
+import {drawImage} from "../../utils/DrawUtils.js";
 
 export class Cannon extends Drawable {
 

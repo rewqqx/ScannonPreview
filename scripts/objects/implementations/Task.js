@@ -1,8 +1,8 @@
-import {Drawable} from "../Drawable.mjs";
-import {Collision} from "../Collision.mjs";
-import {roundedRect} from "../../utils/DrawUtils.mjs"
-import {Hint} from "./Hint.mjs";
-import {createErrorMetric, createHitMetric} from "../../utils/MetricsUtils.mjs";
+import {Drawable} from "../Drawable.js";
+import {Collision} from "../Collision.js";
+import {roundedRect} from "../../utils/DrawUtils.js"
+import {Hint} from "./Hint.js";
+import {createErrorMetric, createHitMetric} from "../../utils/MetricsUtils.js";
 
 export class Task extends Drawable {
 

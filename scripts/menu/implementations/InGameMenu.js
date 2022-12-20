@@ -1,4 +1,4 @@
-import {Menu} from "../Menu.mjs";
+import {Menu} from "../Menu.js";
 
 export class InGameMenu extends Menu {
 

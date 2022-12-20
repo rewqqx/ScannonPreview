@@ -1,13 +1,13 @@
-import {Background} from "./visual/Background.mjs";
-import {Scene} from './objects/Scene.mjs'
-import {Cannon} from './objects/implementations/Cannon.mjs'
-import {MainMenu} from './menu/implementations/MainMenu.mjs'
+import {Background} from "./visual/Background.js";
+import {Scene} from './objects/Scene.js'
+import {Cannon} from './objects/implementations/Cannon.js'
+import {MainMenu} from './menu/implementations/MainMenu.js'
 import {
     readBackendConfigFromFile,
     readGroupFromFile,
     readGroupPathsFromConfig
-} from "./utils/JSONReader.mjs";
-import {Logger} from "./objects/Logger.mjs";
+} from "./utils/JSONReader.js";
+import {Logger} from "./objects/Logger.js";
 
 window.levelGroups = readLevelGroups();
 window.logger = new Logger();

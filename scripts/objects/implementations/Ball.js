@@ -1,5 +1,5 @@
-import {Drawable} from "../Drawable.mjs";
-import {Collision} from "../Collision.mjs";
+import {Drawable} from "../Drawable.js";
+import {Collision} from "../Collision.js";
 
 export class Ball extends Drawable {
 

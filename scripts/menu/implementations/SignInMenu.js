@@ -1,7 +1,7 @@
-import {Menu} from "../Menu.mjs";
-import {getToken} from "../../utils/AuthUtils.mjs";
-import {createCookie, getCookie} from "../../utils/CookieUtils.mjs";
-import {tryLoginAdapter} from "../../adapter/AuthAdapter.mjs";
+import {Menu} from "../Menu.js";
+import {getToken} from "../../utils/AuthUtils.js";
+import {createCookie, getCookie} from "../../utils/CookieUtils.js";
+import {tryLoginAdapter} from "../../adapter/AuthAdapter.js";
 
 export class SignInMenu extends Menu {
     constructor(context) {

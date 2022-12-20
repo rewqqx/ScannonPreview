@@ -1,8 +1,8 @@
-import {STask} from "../structures/STask.mjs";
-import {SType} from "../structures/SType.mjs";
-import {SStatistic} from "../structures/SStatistic.mjs";
+import {STask} from "../structures/STask.js";
+import {SType} from "../structures/SType.js";
+import {SStatistic} from "../structures/SStatistic.js";
 import {SLevel} from "../structures/SLevel.js";
-import {SGroup} from "../structures/SGroup.mjs";
+import {SGroup} from "../structures/SGroup.js";
 
 export function readTaskFromFile(path) {
     let result = [];

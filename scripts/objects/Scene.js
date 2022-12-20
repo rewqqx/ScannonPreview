@@ -1,8 +1,8 @@
-import {TaskFactory} from "../factory/TaskFactory.mjs";
-import {Background} from "../visual/Background.mjs";
-import {GameEndMenu} from "../menu/implementations/GameEndMenu.mjs"
-import {InGameMenu} from "../menu/implementations/InGameMenu.mjs";
-import {PauseMenu} from "../menu/implementations/PauseMenu.mjs";
+import {TaskFactory} from "../factory/TaskFactory.js";
+import {Background} from "../visual/Background.js";
+import {GameEndMenu} from "../menu/implementations/GameEndMenu.js"
+import {InGameMenu} from "../menu/implementations/InGameMenu.js";
+import {PauseMenu} from "../menu/implementations/PauseMenu.js";
 
 export class Scene {
     constructor(context, uiContext) {

@@ -1,5 +1,5 @@
-import {readStatistics, exportStatistics} from "../utils/StatisticsUtils.mjs";
-import {SStatistic} from "../structures/SStatistic.mjs";
+import {readStatistics, exportStatistics} from "../utils/StatisticsUtils.js";
+import {SStatistic} from "../structures/SStatistic.js";
 
 export function readStatisticsAdapter(){
     console.log('132');

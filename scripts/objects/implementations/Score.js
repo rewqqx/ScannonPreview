@@ -1,5 +1,5 @@
-import {Drawable} from "../Drawable.mjs";
-import {roundedRect} from "../../utils/DrawUtils.mjs"
+import {Drawable} from "../Drawable.js";
+import {roundedRect} from "../../utils/DrawUtils.js"
 
 export class Score extends Drawable {
     constructor(context, x, y, controller) {

@@ -1,5 +1,5 @@
-import {SignInMenu} from "../../scripts/menu/implementations/SignInMenu.mjs"
-import {MainMenu} from "../../scripts/menu/implementations/MainMenu.mjs"
+import {SignInMenu} from "../../scripts/menu/implementations/SignInMenu.js"
+import {MainMenu} from "../../scripts/menu/implementations/MainMenu.js"
 
 let uiContext = document.getElementById("ui");
 let menu = new SignInMenu(uiContext);
