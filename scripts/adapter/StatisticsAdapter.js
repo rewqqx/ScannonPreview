@@ -1,9 +1,8 @@
 import {readStatistics, exportStatistics} from "../utils/StatisticsUtils.js";
 import {SStatistic} from "../structures/SStatistic.js";
 
-export function readStatisticsAdapter(){
-    console.log('132');
-    if (window.pingBd){
+export function readStatisticsAdapter() {
+    if (window.pingBd) {
         return readStatistics();
     } else {
         let result = [];
@@ -13,20 +12,20 @@ export function readStatisticsAdapter(){
             "multiplication_commutativity",
             "additional_operands_reducing",
             "big_amount_of_transformations",
-            "sum_operation_mistake"];
-        console.log(window.statistics);
-        if (window.statistics === undefined){
+            "sum_operation_mistake",
+            "mul_mistake"];
+        if (window.statistics === undefined) {
             window.statistics = new Map();
-            for (let i = 0; i < 7; i++){
+            for (let i = 0; i < tmpStatArr.length; i++) {
                 let sStatistic = new SStatistic();
                 sStatistic.setType(tmpStatArr[i]);
-                sStatistic.setID(i+1);
+                sStatistic.setID(i + 1);
                 sStatistic.setPosAmount(0);
                 sStatistic.setNegAmount(0);
                 result.push(sStatistic);
             }
         } else {
-            for (let i = 0; i < window.statistics.size; i++){
+            for (let i = 0; i < window.statistics.size; i++) {
                 result.push(window.statistics.get(tmpStatArr[i]))
             }
         }
@@ -34,8 +33,8 @@ export function readStatisticsAdapter(){
     }
 }
 
-export function exportStatisticsAdapter(){
-    if (window.pingBd){
+export function exportStatisticsAdapter() {
+    if (window.pingBd) {
         exportStatistics();
     }
 }

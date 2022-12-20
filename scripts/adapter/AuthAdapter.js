@@ -42,8 +42,10 @@ export function tryPing() {
     try {
         result = request.send();
         console.log("True");
+        window.pingBd = true;
         return result;
     } catch (e) {
+        window.pingBd = false;
         console.log("False");
         return false;
     }
